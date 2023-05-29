@@ -1,4 +1,8 @@
 import '@fortawesome/fontawesome-free/css/all.css';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import auth from './firebase';
 
 
 function Registration() {
@@ -39,6 +43,30 @@ function Registration() {
       'Lakshadweep',
       'Puducherry',
     ];
+
+
+   const navigate = useNavigate()
+   const [email, setEmail] = useState("");
+   const [password, setPassword] = useState("");
+   // const auth = getAuth()
+
+   // console.log(password);
+   // console.log(email);
+
+   const createUser = async (e) => {
+      e.preventDefault;
+      try {
+         const userCredential = await createUserWithEmailAndPassword(auth, email, password)
+         const user = userCredential.user
+         console.log("New user", user);
+
+         navigate("/")
+      }
+      catch(err) {
+         console.log(err);
+      }
+   }
+
 
    return (
 
@@ -163,7 +191,9 @@ function Registration() {
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">Email *</p>
-                     <input required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="Email Ex: aaa@aaa.com" />
+                     <input required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="Email Ex: aaa@aaa.com" value={email} onChange={(e) => {
+                        setEmail(e.target.value)
+                     }} />
                   </label>
                </div>
 
@@ -254,14 +284,16 @@ function Registration() {
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">Confirm Password *</p>
-                     <input required type="password" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Enter Password same as above" />
+                     <input required type="password" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Enter Password same as above" value={password} onChange={(e) => {
+                        setPassword(e.target.value)
+                     }} />
                   </label>
                </div>
             </div>
 
 
 
-            <button type="submit"  className="border-2 bg-green-500 py-1 rounded-[10px] mx-8 font-semibold my-20 px-4">Register</button>
+            <button type="submit"  className="border-2 bg-green-500 py-1 rounded-[10px] mx-8 font-semibold my-20 px-4" onClick={createUser}>Register</button>
 
 
             </form>
