@@ -175,8 +175,6 @@ function Registration() {
 
 
 
-
-
             <div className="mt-8 px-4">
                <p className="border-2 bg-blue-600 max-w-max rounded px-2 font-semibold text-white">Contact Details</p>
 
@@ -198,6 +196,10 @@ function Registration() {
                </div>
 
             </div>
+
+
+
+
 
             <div className="mt-8 px-4">
                <p className="border-2 bg-blue-600 max-w-max rounded px-2 font-semibold text-white">Your Bank Details</p>
@@ -240,8 +242,6 @@ function Registration() {
                   <p className="border-2 bg-blue-800 max-w-max rounded px-2 font-semibold text-white">Branch Name</p>
                </div>
             </div>
-
-
 
 
 
