@@ -78,7 +78,7 @@ function Registration() {
             <h2 className="text-orange-500 font-semibold"> रजिस्ट्रेशन</h2>
          </div>
 
-         <div className="border-2 w-[70%] h-auto min-h-screen rounded-[10px]">
+         <div className="border-2 w-[70%] h-auto min-h-screen rounded-[10px] mb-4">
             <div className="bg-green-300 rounded-tl-[5px] rounded-tr-[5px]  w-full text-left py-1 flex flex-row gap-2 pl-2 h-[8vh] items-center ">
                <i className="fas fa-file mb-2"></i>
                <h5>मेंबर रजिस्ट्रेशन</h5>
