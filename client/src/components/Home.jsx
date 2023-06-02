@@ -4,10 +4,10 @@ import Contact from './Contact'
 
 function Home() {
    return (
-      <div className="w-screen md:gap-16 gap-24 flex flex-row  flex-wrap ">
+      <div className="w-[80vw] ml-[20vw] gap-32 flex flex-col justify-start items-center ">
         <Slider />
 
-        <div className="w-[90vw] md:w-1/3">
+        <div className="w-[35vw]">
           <Login />
           <Contact />
         </div>

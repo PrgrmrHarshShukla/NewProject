@@ -3,7 +3,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 
 function Services() {
    return (
-      <div className="w-screen h-[73vh] flex flex-col  items-center">
+      <div className="w-[80vw] ml-[20vw] justify-center h-screen flex flex-col  items-center">
          <div className="flex flex-row gap-2 justify-start border-b-2 border-gray-400 mb-4 w-[62vw]">
             <h2 className="text-orange-500">
                <i className="fas fa-briefcase"></i>

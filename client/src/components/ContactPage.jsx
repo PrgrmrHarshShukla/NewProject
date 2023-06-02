@@ -1,10 +1,12 @@
 import '@fortawesome/fontawesome-free/css/all.css';
+import Footer from "./Footer"
+
 
 function ContactPage() {
    return (
-      <div className="h-[73vh] flex flex-col items-center">
+      <div className="h-[100vh] w-[80vw] flex flex-col items-center justify-center ml-[20vw]">
 
-         <div className="flex flex-row gap-2 justify-start border-b-2 border-gray-400 mb-4 w-[62vw]">
+         <div className="flex flex-row gap-2 justify-start border-b-2 border-gray-400 mb-4 w-[50vw]">
             <h2 className="text-orange-500">
                <i className="fas fa-globe"></i>
             </h2>
@@ -12,7 +14,7 @@ function ContactPage() {
          </div>
 
 
-         <div className="w-[65%] flex flex-row justify-center gap-2">
+         <div className="w-[65%] flex flex-row justify-center gap-2 mb-20">
 
 
 
@@ -73,8 +75,8 @@ function ContactPage() {
 
 
 
-
          </div>
+         <Footer />
       </div>
    )
 

@@ -54,7 +54,7 @@ function Registration() {
    // console.log(email);
 
    const createUser = async (e) => {
-      e.preventDefault;
+      e.preventDefault();
       try {
          const userCredential = await createUserWithEmailAndPassword(auth, email, password)
          const user = userCredential.user
@@ -65,27 +65,38 @@ function Registration() {
       catch(err) {
          console.log(err);
       }
+
+
+      const inputs = document.querySelectorAll("input[name='userData']")
+      const userData = []
+      for (const input of inputs) {
+         userData.push(input.value)
+      }
+      console.log(userData);
+
+      localStorage.setItem("data", JSON.stringify(userData))
+
    }
 
 
    return (
 
-      <div className="h-auto min-h-screen overflow-x-hidden w-screen flex flex-col  items-center">
-         <div className="flex flex-row gap-2 justify-start border-b-2 border-gray-400 mb-4 w-[62vw] mt-4">
+      <div className="h-auto min-h-screen overflow-x-hidden w-[80vw] ml-[20vw] mt-2 flex flex-col  items-center">
+         <div className="flex flex-row  overflow-x-hidden gap-2 justify-start border-b-2 border-gray-400 mb-4 w-[62vw] mt-4">
             <h2 className="text-orange-500">
                <i className="fas fa-user-plus"></i>
             </h2>
             <h2 className="text-orange-500 font-semibold"> रजिस्ट्रेशन</h2>
          </div>
 
-         <div className="border-2 w-[70%] h-auto min-h-screen rounded-[10px] mb-4">
+         <div className="border-2 w-[90%] overflow-x-hidden h-auto min-h-screen rounded-[10px] mb-4">
             <div className="bg-green-300 rounded-tl-[5px] rounded-tr-[5px]  w-full text-left py-1 flex flex-row gap-2 pl-2 h-[8vh] items-center ">
                <i className="fas fa-file mb-2"></i>
                <h5>मेंबर रजिस्ट्रेशन</h5>
             </div>     
 
 
-            <form>
+            <form id="userDataForm">
 
 
 
@@ -95,26 +106,26 @@ function Registration() {
                <div className="flex flex-row gap-4 mb-4">
                   <label htmlFor="">
                      <p className="mb-0">First Name *</p>
-                     <input required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="First Name" />
+                     <input name="userData" required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="First Name"  />
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">Middle Name *</p>
-                     <input required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="Middle Name" />
+                     <input name="userData" required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="Middle Name" />
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">Last Name *</p>
-                     <input required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="Last Name" />
+                     <input name="userData" required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="Last Name" />
                   </label>
                </div>
 
                <div className="flex flex-row gap-4 mb-4">
                   <label htmlFor="">
                      <p className="mb-0">Date of Birth *</p>
-                     <input required type="date" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Date of Birth" />
+                     <input name="userData" required type="date" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Date of Birth" />
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">Gender *</p>
-                     <select required className="border-2 pl-2 h-[4vh] rounded-[5px] w-[15vw]">
+                     <select name="userData" required className="border-2 pl-2 h-[4vh] rounded-[5px] w-[15vw]">
                         <option value="">Select Gender</option>
                         <option value="">Male</option>
                         <option value="">Female</option>
@@ -122,17 +133,17 @@ function Registration() {
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">PAN No. *</p>
-                     <input required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="PAN No." />
+                     <input name="userData" required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="PAN No." />
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">Aadhar Card No. *</p>
-                     <input required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Aadhar Card No." />
+                     <input name="userData" required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Aadhar Card No." />
                   </label>
                </div>
 
                <label htmlFor="" className="w-[100%]">
                   <p className="mb-0">Organisation Name *</p>
-                  <input required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[100%]" placeholder="Organisation Name" />
+                  <input name="userData" required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[100%]" placeholder="Organisation Name" />
                </label>
             </div>   
 
@@ -146,12 +157,12 @@ function Registration() {
                
                <label htmlFor="" className="w-[100%]">
                   <p className="mb-0">Address *</p>
-                  <textarea required type="text" className="pl-2 h-[8vh] border-2 rounded-[5px] w-[100%]" placeholder="Address Ex. Flat/Area/Village" />
+                  <textarea name="userData" required type="text" className="pl-2 h-[8vh] border-2 rounded-[5px] w-[100%]" placeholder="Address Ex. Flat/Area/Village" />
                </label>
                <div className="flex flex-row gap-4">
                   <label htmlFor="">
                      <p className="mb-0">Select State *</p>
-                     <select className="border-2 pl-2 h-[4vh] rounded-[5px] w-[20vw]">
+                     <select name="userData" className="border-2 pl-2 h-[4vh] rounded-[5px] w-[20vw]">
                         <option value="">Select State</option>
                         {
                            statesOfIndia.map((element) => (
@@ -162,11 +173,11 @@ function Registration() {
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">Enter City *</p>
-                     <input required className="border-2 pl-2 h-[4vh] rounded-[5px] w-[20vw]" placeholder="Enter City" />
+                     <input name="userData" required className="border-2 pl-2 h-[4vh] rounded-[5px] w-[20vw]" placeholder="Enter City" />
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">Pin Code *</p>
-                     <input required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="PIN/ZIP code Ex, 000000" />
+                     <input name="userData" required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="PIN/ZIP code Ex, 000000" />
                   </label>
                </div>
             </div>    
@@ -185,11 +196,11 @@ function Registration() {
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">Mobile Number *</p>
-                     <input required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="Mobile Number" />
+                     <input name="userData" required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="Mobile Number" />
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">Email *</p>
-                     <input required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="Email Ex: aaa@aaa.com" value={email} onChange={(e) => {
+                     <input name="userData" required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="Email Ex: aaa@aaa.com" value={email} onChange={(e) => {
                         setEmail(e.target.value)
                      }} />
                   </label>
@@ -207,19 +218,19 @@ function Registration() {
                <div className="flex flex-row gap-4 mb-4">
                   <label htmlFor="">
                      <p className="mb-0">Bank Name *</p>
-                     <input type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Bank Name Ex: SBI" />
+                     <input name="userData" type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Bank Name Ex: SBI" />
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">Account Number *</p>
-                     <input required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Account Number" />
+                     <input name="userData" required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Account Number" />
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">IFSC Code *</p>
-                     <input required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="IFSC Code" />
+                     <input name="userData" required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="IFSC Code" />
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">Branch code *</p>
-                     <input required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Branch code" />
+                     <input name="userData" required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Branch code" />
                   </label>
                </div>
 
@@ -253,19 +264,19 @@ function Registration() {
                <div>
                   <label htmlFor="">
                      <p className="mb-0">Your Photo *</p>
-                     <input required type="file" className="h-[4vh] w-[15vw]" />
+                     <input name="userData" required type="file" className="h-[4vh] w-[15vw]" />
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">Aadhar Photo *</p>
-                     <input required type="file" className="h-[4vh] w-[15vw]" />
+                     <input name="userData" required type="file" className="h-[4vh] w-[15vw]" />
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">PAN Card Photo *</p>
-                     <input required type="file" className="h-[4vh] w-[15vw]" />
+                     <input name="userData" required type="file" className="h-[4vh] w-[15vw]" />
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">Attach Payment Proof *</p>
-                     <input required type="file" className="h-[4vh] w-[15vw]" />
+                     <input name="userData" required type="file" className="h-[4vh] w-[15vw]" />
                   </label>
                </div>
             </div>
@@ -280,11 +291,11 @@ function Registration() {
                <div>
                   <label htmlFor="">
                      <p className="mb-0">Password *</p>
-                     <input type="password" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Enter Password" />
+                     <input name="userData" type="password" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Enter Password" />
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">Confirm Password *</p>
-                     <input required type="password" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Enter Password same as above" value={password} onChange={(e) => {
+                     <input name="userData" required type="password" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Enter Password same as above" value={password} onChange={(e) => {
                         setPassword(e.target.value)
                      }} />
                   </label>
@@ -293,7 +304,7 @@ function Registration() {
 
 
 
-            <button type="submit"  className="border-2 bg-green-500 py-1 rounded-[10px] mx-8 font-semibold my-20 px-4" onClick={createUser}>Register</button>
+            <button type="submit" className="border-2 bg-green-500 py-1 rounded-[10px] mx-8 font-semibold my-20 px-4" onClick={createUser}>Register</button>
 
 
             </form>

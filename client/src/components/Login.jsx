@@ -28,7 +28,7 @@ function Login() {
    }
 
    return (
-      <div className="border-2 rounded-[10px] border-gray-300 h-auto md:h-[40vh] flex flex-col gap-2 items-center">
+      <div className="border-2 rounded-[10px] border-gray-300  flex flex-col gap-2 items-center">
 
 
          <div className="bg-green-300 rounded-tl-[5px] rounded-tr-[5px]  w-full text-center py-1">
