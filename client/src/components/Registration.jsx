@@ -5,8 +5,14 @@ import { useNavigate } from 'react-router-dom';
 import auth from './firebase';
 
 
-function Registration() {
+export default function Registration() {
 
+   
+   
+   const navigate = useNavigate()
+   const [email, setEmail] = useState("");
+   const [password, setPassword] = useState("");
+   // const auth = getAuth()
    const statesOfIndia = [
       'Andhra Pradesh',
       'Arunachal Pradesh',
@@ -44,12 +50,6 @@ function Registration() {
       'Puducherry',
     ];
 
-
-   const navigate = useNavigate()
-   const [email, setEmail] = useState("");
-   const [password, setPassword] = useState("");
-   // const auth = getAuth()
-
    // console.log(password);
    // console.log(email);
 
@@ -66,17 +66,8 @@ function Registration() {
          console.log(err);
       }
 
-
-      const inputs = document.querySelectorAll("input[name='userData']")
-      const userData = []
-      for (const input of inputs) {
-         userData.push(input.value)
-      }
-      console.log(userData);
-
-      localStorage.setItem("data", JSON.stringify(userData))
-
    }
+     
 
 
    return (
@@ -316,4 +307,5 @@ function Registration() {
    )
 }
 
-export default Registration
+
+//  Registration
