@@ -10,21 +10,21 @@ function Slider() {
         <Carousel.Item>
           <img
             className="d-block w-[75vw] min-w-[75vw] h-[45vh]  rounded-[10px]"
-            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+            src="src\assets\slider1.png"
             alt="First slide"
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-[75vw] min-w-[75vw] h-[45vh]  rounded-[10px]"
-            src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+            className="d-block w-[60vw] min-w-[55vw] h-[45vh] ml-[8vw]  rounded-[10px]"
+            src="src\assets\slider2.png"
             alt="Second slide"
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-[75vw] min-w-[75vw] h-[45vh]  rounded-[10px]"
-            src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bmF0dXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+            src="src\assets\slider3.png"
             alt="Second slide"
           />
         </Carousel.Item>
