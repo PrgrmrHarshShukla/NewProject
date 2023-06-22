@@ -1,14 +1,16 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { useState } from "react";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom"
-import auth from "./firebase";
+import { UidContext } from "./UidContext";
 
 
 function Login() {
 
-
    const [email, setEmail] = useState("");
    const [password, setPassword] = useState("");
+   const auth = getAuth()
+
+   const { setUid } = useContext(UidContext)
 
    const loginUser = async (e) => {
       e.preventDefault;
@@ -16,14 +18,16 @@ function Login() {
          const userCredential = await signInWithEmailAndPassword(auth, email, password)
 
          const user = userCredential.user
-         console.log(user, "logged in");
+         console.log(user.uid, "logged in");
+         setUid(user.uid)
          setEmail("");
          setPassword("")
-         alert("Welcome, You are logged in!")
+         alert("Welcome to Janta Suvidha.\nYou are logged in!")
 
       }
       catch(err) {
          console.log(err);
+         alert(`Sorry, ${err.message.slice(22, 36)}`);
       }
    }
 
@@ -49,7 +53,7 @@ function Login() {
                <h6 className="text-sm"><Link className="no-underline" to="/registration">New registrations here</Link></h6>
             </div>
             <div className="flex flex-col justify-center">
-               <button className="border-2 bg-blue-500 px-2 py-1 rounded-[10px] font-semibold" onClick={loginUser}>Login</button>
+               <button className="border-2 bg-green-500 border-green-500 py-1 rounded-[10px] font-semibold px-4 hover:border-2 hover:border-black" onClick={loginUser}>Login</button>
             </div>
          </div>
 
