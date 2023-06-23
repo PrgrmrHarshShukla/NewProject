@@ -610,7 +610,7 @@ export default function Registration() {
             <div className="mt-8 px-4">
                <p className="border-2 bg-blue-600 max-w-max rounded px-2 font-semibold text-white">Document Files</p>
 
-               <div>
+               <div className="flex flex-col gap-[10px]">
                   <label htmlFor="">
                      <p className="mb-0">Your Photo *</p>
                      <input 
@@ -619,7 +619,7 @@ export default function Registration() {
                         onChange={(e) => {
                            setUserPhoto(e.target.files[0])
                         }}
-                        className="h-[4vh] w-[15vw]" 
+                        className="h-[4vh] w-[40vw]" 
                      />
                   </label>
                   <label htmlFor="">
@@ -630,7 +630,7 @@ export default function Registration() {
                         onChange={(e) => {
                            setAadhar(e.target.files[0])
                         }}
-                        className="h-[4vh] w-[15vw]" 
+                        className="h-[4vh] w-[40vw]" 
                      />
                   </label>
                   <label htmlFor="">
@@ -641,7 +641,7 @@ export default function Registration() {
                         onChange={(e) => {
                            setPanCard(e.target.files[0])
                         }}
-                        className="h-[4vh] w-[15vw]" 
+                        className="h-[4vh] w-[40vw]" 
                      />
                   </label>
                   <label htmlFor="">
@@ -652,7 +652,7 @@ export default function Registration() {
                         onChange={(e) => {
                            setPaymentProof(e.target.files[0])
                         }}
-                        className="h-[4vh] w-[15vw]" 
+                        className="h-[4vh] w-[40vw]" 
                      />
                   </label>
                </div>
@@ -665,14 +665,14 @@ export default function Registration() {
             <div className="mt-8 px-4">
                <p className="border-2 bg-blue-600 max-w-max rounded px-2 font-semibold text-white">Account Credentials</p>
 
-               <div>
+               <div className="flex flex-row gap-4">
                   <label htmlFor="">
                      <p className="mb-0">Password *</p>
-                     <input type="password" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Enter Password" />
+                     <input type="password" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="Enter Password" />
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">Confirm Password *</p>
-                     <input required type="password" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Enter Password same as above" value={password} onChange={(e) => {
+                     <input required type="password" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="Enter Password again" value={password} onChange={(e) => {
                         setPassword(e.target.value)
                      }} />
                   </label>

@@ -14,6 +14,7 @@ import Registration from './Registration';
 
 import { UidContext } from './UidContext';
 import Empty from './Empty';
+import Form from './Form';
 
 
 function App() {
@@ -32,8 +33,12 @@ function App() {
               }
               <Route exact path="/services" element = {[<Header />, <Services />]} />
               <Route exact path="/registration" element = {[<Header />, <Registration />]} />
-              <Route exact path="/contact" element = {[<Header />, <ContactPage />]} /> 
-              <Route exact path="/about" element = {[<Header />, <About />]} />
+              <Route exact path="/contact" element = {[<Header />, <ContactPage />]} />
+              <Route exact path="/form" element = {<Form />} /> 
+              {/* {uid ?
+                <Route exact path="/form" element = {<Form />} /> :
+                <Route exact path="/form" element = {[<Header />, <Empty />]} />
+              } */}
 
           </Routes>
         </UidContext.Provider>
