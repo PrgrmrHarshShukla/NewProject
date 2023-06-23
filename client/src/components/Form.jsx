@@ -13,26 +13,36 @@ function Form() {
 
    const printCall = (e) => {
       e.preventDefault()
-
-      document.getElementById("print").style.visibility = "hidden"
-      document.getElementById("nav").style.visibility = "hidden"
+      
       // document.getElementById("input9").style.border = "none"
       // document.getElementById("input10").style.border = "none"
-      document.getElementById("input11").style.border = "none"
       // document.getElementById("input12").style.border = "none"
+      document.getElementById("print").style.visibility = "hidden"
+      document.getElementById("nav").style.visibility = "hidden"
+      document.getElementById("input11").style.border = "none"
       document.getElementById("input13").style.border = "none"
       document.getElementById("input14").style.border = "none"
       document.getElementById("input15").style.border = "none"
       document.getElementById("last").remove()
-
-
+      
       window.print()
-      location.reload()
+      // location.reload()
+      navigate("/")
+      
+      // document.getElementById("print").style.visibility = "visible"
+      // document.getElementById("nav").style.visibility = "visible"
+      // document.getElementById("input11").style.border = "2px solid black"
+      // document.getElementById("input13").style.border = "2px solid black"
+      // document.getElementById("input14").style.border = "2px solid black"
+      
+      // document.getElementById("input15").style.border = "2px solid black"
+      // document.getElementById("main").appendChild(document.getElementById("last"))
+
    }
 
 
   return (
-   <div className="flex flex-col">
+   <div id="main" className="flex flex-col">
    <div className="m-4 pt-0 p-4 overflow-x-hidden overflow-y-auto border-2 border-black rounded-[10px] text-[12px] ">
 
       <img src="src\assets\form.png" className="w-28" />
@@ -144,7 +154,7 @@ function Form() {
          className="border-2 bg-green-500 border-green-500 ml-40 py-1 rounded-[10px] mx-20 font-semibold my-20 px-4 hover:border-2 hover:border-black" 
          id="print"
          onClick={printCall}
-      >Print</button>
+      >Preview</button>
       <button 
          id="nav"
          className="border-2 bg-green-500 border-green-500 py-1 rounded-[10px] mx-8 font-semibold my-20 px-4 hover:border-2 hover:border-black" 
