@@ -226,7 +226,7 @@ export default function Registration() {
             <h2 className="text-orange-500 font-semibold"> रजिस्ट्रेशन</h2>
          </div>
 
-         <div className="border-2 w-[90%] overflow-x-hidden h-auto min-h-screen rounded-[10px] mb-4">
+         <div className="border-2 w-[90%] overflow-x-hidden h-auto min-h-screen rounded-[10px] mb-4 pb-4">
             <div className="bg-green-300 rounded-tl-[5px] rounded-tr-[5px]  w-full text-left py-1 flex flex-row gap-2 pl-2 h-[8vh] items-center ">
                <i className="fas fa-file mb-2"></i>
                <h5>मेंबर रजिस्ट्रेशन</h5>
@@ -240,7 +240,7 @@ export default function Registration() {
             <div className="mt-2 px-4">
                <p className="border-2 bg-blue-600 max-w-max rounded px-2 font-semibold text-white">Personal Details</p>   
 
-               <div className="flex flex-row gap-4 mb-4">
+               <div className="flex flex-col sm:flex-row gap-4 mb-4">
                   <label htmlFor="">
                      <p className="mb-0">First Name *</p>
                      <input 
@@ -255,7 +255,7 @@ export default function Registration() {
                               ]
                            )
                         })}
-                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="First Name"  
+                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[50vw] sm:w-[20vw]" placeholder="First Name"  
                      />
                   </label>
                   <label htmlFor="">
@@ -272,7 +272,7 @@ export default function Registration() {
                               ]
                            )
                         })}
-                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="Middle Name" 
+                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[50vw] sm:w-[20vw]" placeholder="Middle Name" 
                      />
                   </label>
                   <label htmlFor="">
@@ -289,12 +289,12 @@ export default function Registration() {
                               ]
                            )
                         })}
-                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="Last Name" 
+                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[50vw] sm:w-[20vw]" placeholder="Last Name" 
                      />
                   </label>
                </div>
 
-               <div className="flex flex-row gap-4 mb-4">
+               <div className="flex flex-col sm:flex-row gap-4 mb-4">
                   <label htmlFor="">
                      <p className="mb-0">Date of Birth *</p>
                      <input 
@@ -309,7 +309,7 @@ export default function Registration() {
                               ]
                            )
                         })}
-                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Date of Birth" 
+                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[50vw] sm:w-[15vw]" placeholder="Date of Birth" 
                      />
                   </label>
                   <label htmlFor="">
@@ -325,7 +325,7 @@ export default function Registration() {
                               ]
                            )
                         })}
-                        className="border-2 pl-2 h-[4vh] rounded-[5px] w-[15vw]"
+                        className="border-2 pl-2 h-[4vh] rounded-[5px] w-[50vw] sm:w-[15vw]" 
                      >
                         <option value="Select Gender">Select Gender</option>
                         <option value="Male">Male</option>
@@ -346,7 +346,7 @@ export default function Registration() {
                               ]
                            )
                         })}
-                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="PAN No." 
+                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[50vw] sm:w-[15vw]" placeholder="PAN No." 
                      />
                   </label>
                   <label htmlFor="">
@@ -363,7 +363,7 @@ export default function Registration() {
                               ]
                            )
                         })}
-                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Aadhar Card No." 
+                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[50vw] sm:w-[15vw]" placeholder="Aadhar Card No." 
                      />
                   </label>
                </div>
@@ -382,7 +382,7 @@ export default function Registration() {
                            ]
                         )
                      })}
-                     className="pl-2 h-[4vh] border-2 rounded-[5px] w-[100%]" placeholder="Organisation Name" 
+                     className="pl-2 h-[4vh] border-2 rounded-[5px] w-[50vw] sm:w-[98%]" placeholder="Organisation Name" 
                   />
                </label>
             </div>   
@@ -407,7 +407,7 @@ export default function Registration() {
                      }} 
                   />
                </label>
-               <div className="flex flex-row gap-4">
+               <div className="flex flex-col sm:flex-row gap-4">
                   <label htmlFor="">
                      <p className="mb-0">Select State *</p>
                      <select 
@@ -420,7 +420,7 @@ export default function Registration() {
                               ]
                            )
                         })}
-                        className="border-2 pl-2 h-[4vh] rounded-[5px] w-[20vw]"
+                        className="border-2 pl-2 h-[4vh] rounded-[5px] w-[50vw] sm:w-[20vw]" 
                      >
                         <option value="Select State">Select State</option>
                         {
@@ -444,7 +444,7 @@ export default function Registration() {
                               ]
                            )
                         })}
-                        className="border-2 pl-2 h-[4vh] rounded-[5px] w-[20vw]" placeholder="Enter City" 
+                        className="border-2 pl-2 h-[4vh] rounded-[5px] w-[50vw] sm:w-[20vw]" placeholder="Enter City" 
                      />
                   </label>
                   <label htmlFor="">
@@ -461,7 +461,7 @@ export default function Registration() {
                               ]
                            )
                         })}
-                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="PIN/ZIP code Ex, 000000" 
+                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[50vw] sm:w-[20vw]" placeholder="PIN/ZIP code Ex, 000000" 
                      />
                   </label>
                </div>
@@ -474,10 +474,10 @@ export default function Registration() {
             <div className="mt-8 px-4">
                <p className="border-2 bg-blue-600 max-w-max rounded px-2 font-semibold text-white">Contact Details</p>
 
-               <div className="flex flex-row gap-4 mb-4">
+               <div className="flex flex-col sm:flex-row gap-4 mb-4">
                   <label htmlFor="">
                      <p className="mb-0">Phone Number</p>
-                     <input type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="Phone Number" />
+                     <input type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[50vw] sm:w-[20vw]" placeholder="Phone Number" />
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">Mobile Number *</p>
@@ -493,12 +493,12 @@ export default function Registration() {
                               ]
                            )
                         })}
-                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="Mobile Number" 
+                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[50vw] sm:w-[20vw]" placeholder="Mobile Number" 
                      />
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">Email *</p>
-                     <input required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="Email Ex: aaa@aaa.com" value={email} onChange={(e) => {
+                     <input required type="text" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[50vw] sm:w-[20vw]" placeholder="Email Ex: aaa@aaa.com" value={email} onChange={(e) => {
                         setEmail(e.target.value)
                      }} />
                   </label>
@@ -513,7 +513,7 @@ export default function Registration() {
             <div className="mt-8 px-4">
                <p className="border-2 bg-blue-600 max-w-max rounded px-2 font-semibold text-white">Your Bank Details</p>
 
-               <div className="flex flex-row gap-4 mb-4">
+               <div className="flex flex-col  sm:flex-row gap-4 mb-4">
                   <label htmlFor="">
                      <p className="mb-0">Bank Name *</p>
                      <input 
@@ -527,7 +527,7 @@ export default function Registration() {
                               ]
                            )
                         })}
-                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Bank Name Ex: SBI" 
+                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[50vw] sm:w-[15vw]" placeholder="Bank Name Ex: SBI" 
                      />
                   </label>
                   <label htmlFor="">
@@ -544,7 +544,7 @@ export default function Registration() {
                               ]
                            )
                         })}
-                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Account Number" 
+                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[50vw] sm:w-[15vw]" placeholder="Account Number" 
                      />
                   </label>
                   <label htmlFor="">
@@ -561,7 +561,7 @@ export default function Registration() {
                               ]
                            )
                         })}
-                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="IFSC Code" 
+                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[50vw] sm:w-[15vw]" placeholder="IFSC Code" 
                      />
                   </label>
                   <label htmlFor="">
@@ -578,7 +578,7 @@ export default function Registration() {
                               ]
                            )
                         })}
-                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[15vw]" placeholder="Branch code" 
+                        className="pl-2 h-[4vh] border-2 rounded-[5px] w-[50vw] sm:w-[15vw]" placeholder="Branch code" 
                      />
                   </label>
                </div>
@@ -591,7 +591,7 @@ export default function Registration() {
             <div className="mt-8 px-4">
                <p className="border-2 bg-blue-600 max-w-max rounded px-2 py-1 font-semibold text-white">मेम्बरशिप फी RS. 2999/- खाली दिलेल्या बँक खात्यामध्ये जमा करावी</p>
 
-               <div className="flex flex-row gap-4 mb-4">
+               {/* <div className="flex flex-row gap-4 mb-4">
                   <p className="border-2 bg-blue-800 max-w-max rounded px-2 font-semibold text-white">Bank</p>
                   <p className="border-2 bg-blue-800 max-w-max rounded px-2 font-semibold text-white">a/c</p>
                </div>
@@ -599,8 +599,8 @@ export default function Registration() {
                <div className="flex flex-row gap-4 mb-4">
                   <p className="border-2 bg-blue-800 max-w-max rounded px-2 font-semibold text-white">A/C No.</p>
                   <p className="border-2 bg-blue-800 max-w-max rounded px-2 font-semibold text-white">IFSC</p>
-                  <p className="border-2 bg-blue-800 max-w-max rounded px-2 font-semibold text-white">Branch Name</p>
-               </div>
+                  <p className="border-2 bg-blue-800 max-w-max rounded px-2 font-semibold text-white">Branch Name</p> 
+               </div>*/}
             </div>
 
 
@@ -665,14 +665,14 @@ export default function Registration() {
             <div className="mt-8 px-4">
                <p className="border-2 bg-blue-600 max-w-max rounded px-2 font-semibold text-white">Account Credentials</p>
 
-               <div className="flex flex-row gap-4">
+               <div className="flex flex-col sm:flex-row gap-4">
                   <label htmlFor="">
                      <p className="mb-0">Password *</p>
-                     <input type="password" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="Enter Password" />
+                     <input type="password" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[50vw] sm:w-[20vw]" placeholder="Enter Password" />
                   </label>
                   <label htmlFor="">
                      <p className="mb-0">Confirm Password *</p>
-                     <input required type="password" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[20vw]" placeholder="Enter Password again" value={password} onChange={(e) => {
+                     <input required type="password" className="pl-2 h-[4vh] border-2 rounded-[5px] w-[50vw] sm:w-[20vw]"placeholder="Enter Password again" value={password} onChange={(e) => {
                         setPassword(e.target.value)
                      }} />
                   </label>
@@ -682,12 +682,12 @@ export default function Registration() {
 
 
             <div
-               className="flex flex-row"
+               className="flex flex-col sm:flex-row"
             >
 
-               <button type="submit" className="border-2 bg-green-500 border-green-500 py-1 rounded-[10px] mx-8 font-semibold my-20 px-4 hover:border-2 hover:border-black" onClick={createUser}>Register</button>
+               <button type="submit" className="border-2 bg-green-500 border-green-500 py-1 rounded-[10px] mx-8 font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black" onClick={createUser}>Register</button>
 
-               <button className="border-2 bg-green-500 border-green-500 py-1 rounded-[10px] mx-8 font-semibold my-20 px-4 hover:border-2 hover:border-black" onClick={updateUser}>Update</button>
+               <button className="border-2 bg-green-500 border-green-500 py-1 rounded-[10px] mx-8 font-semibold mt-12 sm:my-20 px-4 hover:border-2 hover:border-black" onClick={updateUser}>Update</button>
             </div>
 
 

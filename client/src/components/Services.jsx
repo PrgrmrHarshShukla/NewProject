@@ -25,12 +25,12 @@ function Services() {
                />
                <div className="flex flex-row flex-wrap gap-4">
                   <img
-                     className="d-block w-[32vw] min-w-[100px] h-[35vh] hover:border-4 rounded-[10px] hover:border-red-500"
+                     className="w-[64vw] sm:w-[32vw] min-w-[100px] h-[35vh] hover:border-4 rounded-[10px] hover:border-red-500"
                      src="src\assets\slider3.png"
                      alt="First slide"
                   />
                   <img
-                     className="d-block w-[32vw] min-w-[100px] h-[35vh] hover:border-4 rounded-[10px] hover:border-red-500"
+                     className="w-[64vw] sm:w-[32vw] min-w-[100px] h-[35vh] hover:border-4 rounded-[10px] hover:border-red-500"
                      src="src\assets\slider1.png"
                      alt="Second slide"
                   />

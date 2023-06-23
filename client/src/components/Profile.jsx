@@ -142,22 +142,22 @@ function Profile() {
                </h6>
 
                <h2 className="font-bold underline text-purple-500 font-serif mt-20">Your Image</h2>
-               <img className="w-[25vw] h-[40vh]" id="photo" alt="My Image" />
+               <img className="w-[50vw] sm:w-[25vw] h-[40vh]" id="photo" alt="My Image" />
 
                <hr className="border-2 border-black" />
                
                <h2 className="font-bold underline text-purple-500 font-serif mt-20">Aadhar Image</h2>
-               <img className="w-[25vw] h-[40vh]" id="aadhar" alt="Aadhar Image" />
+               <img className="w-[50vw] sm:w-[25vw] h-[40vh]" id="aadhar" alt="Aadhar Image" />
 
                <hr className="border-2 border-black" />
                
                <h2 className="font-bold underline text-purple-500 font-serif mt-20">PAN Card Image</h2>
-               <img className="w-[25vw] h-[40vh]" id="panCard" alt="PAN Card Image" />
+               <img className="w-[50vw] sm:w-[25vw] h-[40vh]" id="panCard" alt="PAN Card Image" />
 
                <hr className="border-2 border-black" />
                
                <h2 className="font-bold underline text-purple-500 font-serif mt-20">Payment Proof</h2>
-               <img className="w-[25vw] h-[40vh]" id="paymentProof" alt="Payment Proof" />
+               <img className="w-[50vw] sm:w-[25vw] h-[40vh]" id="paymentProof" alt="Payment Proof" />
 
                <hr className="border-2 border-black" />
 

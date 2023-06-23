@@ -4,7 +4,7 @@ import { Carousel } from "react-bootstrap";
 function SmallSlider() {
   
    return (
-    <div className="h-[16vh] py-2">
+    <div className="h-[16vh] py-2 hidden sm:visible">
       <Carousel className="min-w-[72vw] rounded-[10px]" interval={2000}>
 
         <Carousel.Item>

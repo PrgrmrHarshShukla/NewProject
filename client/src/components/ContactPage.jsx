@@ -17,7 +17,7 @@ function ContactPage() {
          </div>
 
 
-         <div className="w-[65%] flex flex-row justify-center gap-2 mb-20">
+         <div className="ml-[35vw] sm:ml-0 w-[90vw] sm:w-[65%] flex flex-col sm:flex-row justify-center gap-2 mb-20">
 
 
 
@@ -25,7 +25,7 @@ function ContactPage() {
                <div className="bg-green-300 rounded-tl-[8px] rounded-tr-[8px]  w-full text-center py-1 font-semibold">
                <h5>संपर्क माहिती</h5>
                </div>
-               <ul className="flex flex-col gap-4 justify-center mt-4">
+               <ul className="flex flex-col gap-4 justify-center mt-4 text-[10px] sm:text-sm ">
                   <li className="flex flex-row items-center  gap-2">
                      <i className="fas fa-home"></i>
                      <div>
@@ -40,7 +40,7 @@ function ContactPage() {
                      <i className="fas fa-mobile-alt"></i>
                      <div>Support - +91 7722005540</div>
                   </li>
-                  <li className="flex flex-row items-center gap-2">
+                  <li className="flex flex-row items-center gap-2 overflow-hidden">
                      <i className="fas fa-envelope "></i>
                      <div>devnathdhembre@gmail.com</div>
                   </li>
@@ -49,7 +49,7 @@ function ContactPage() {
 
 
 
-            <div className="border-2 rounded-[10px] w-1/2 h-[55vh]">
+            <div className="border-2 rounded-[10px] w-1/2 h-auto sm:h-[55vh]">
                <div className="bg-green-300 rounded-tl-[5px] rounded-tr-[5px]  w-full text-center py-1 font-semibold">
                   <h5>चौकशी</h5>
                </div>

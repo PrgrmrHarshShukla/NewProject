@@ -32,7 +32,7 @@ function Login() {
    }
 
    return (
-      <div className="border-2 rounded-[10px] border-gray-300  flex flex-col gap-2 items-center">
+      <div className="border-2 rounded-[10px] border-gray-300  flex flex-col gap-2 items-center w-[65vw] sm:w-[30vw]">
 
 
          <div className="bg-green-300 rounded-tl-[5px] rounded-tr-[5px]  w-full text-center py-1">
@@ -46,14 +46,14 @@ function Login() {
             setPassword(e.target.value)
          }} />
 
-         <div className="flex flex-row justify-between w-[85%] mt-4">
+         <div className="flex flex-col sm:flex-row justify-between w-[85%] mt-4">
             <div>
                <p className="text-sm">Forgot Username or Password...</p>
                <p className="text-sm">Login Here</p>
-               <h6 className="text-sm"><Link className="no-underline" to="/registration">New registrations here</Link></h6>
             </div>
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-center gap-4">
                <button className="border-2 bg-green-500 border-green-500 py-1 rounded-[10px] font-semibold px-4 hover:border-2 hover:border-black" onClick={loginUser}>Login</button>
+               <h6 className="text-sm"><Link className="no-underline" to="/registration">New registrations here</Link></h6>
             </div>
          </div>
 

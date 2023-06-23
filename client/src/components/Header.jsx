@@ -37,7 +37,7 @@ function Header() {
                <img src="src\assets\jantasuvidha-logo-removebg.png" className="w-[20vw] h-[18vh] min-w-[20vw] px-2" />  
 
 
-               <ul className="flex flex-col justify-center items-start w-[20vw] h-[82vh] bg-gray-300 text-[1.3rem]">
+               <ul className="flex flex-col justify-center items-start w-[20vw] h-[82vh] bg-gray-300 text-[1.3rem] overflow-x-hidden">
                   <li className="h-[100%] w-[100%] flex flex-col justify-center items-start font-semibold text-black">
                      <Link className="text-black no-underline flex flex-row justify-start items-center gap-3" to="/">
                         <i className="fas fa-home hover:text-orange-500 mb-3"></i>
@@ -51,7 +51,7 @@ function Header() {
                      </Link>
                   </li>
                   <li className="h-[100%] w-[100%] flex flex-col justify-center items-start font-semibold text-black">
-                     <Link className="text-black no-underline flex flex-row justify-start items-center gap-3" to="/form">
+                     <Link className="text-black no-underline flex flex-row justify-start items-center gap-4 sm:gap-3" to="/form">
                         <i className="fas fa-file-alt hover:text-orange-500 mb-3"></i>
                         <p className="hover:text-orange-500">Form</p>
                      </Link>
