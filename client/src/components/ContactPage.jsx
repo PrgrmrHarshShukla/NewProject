@@ -9,7 +9,7 @@ function ContactPage() {
 
          <About />
 
-         <div className="flex flex-row gap-2 justify-start border-b-2 border-gray-400 mb-4 w-[50vw]">
+         <div className="flex flex-row gap-2 mt-[5vh] sm:mt-0 justify-start border-b-2 border-gray-400 mb-4 w-[50vw]">
             <h2 className="text-orange-500">
                <i className="fas fa-globe"></i>
             </h2>
@@ -21,7 +21,7 @@ function ContactPage() {
 
 
 
-            <div className="border-2 rounded-[10px] w-1/2 h-[55vh]">
+            <div className="border-2 rounded-[10px] w-3/4 sm:w-1/2 h-[55vh]">
                <div className="bg-green-300 rounded-tl-[8px] rounded-tr-[8px]  w-full text-center py-1 font-semibold">
                <h5>संपर्क माहिती</h5>
                </div>
@@ -49,7 +49,7 @@ function ContactPage() {
 
 
 
-            <div className="border-2 rounded-[10px] w-1/2 h-auto sm:h-[55vh]">
+            <div className="border-2 rounded-[10px] w-3/4 sm:w-1/2 h-auto sm:h-[55vh]">
                <div className="bg-green-300 rounded-tl-[5px] rounded-tr-[5px]  w-full text-center py-1 font-semibold">
                   <h5>चौकशी</h5>
                </div>
@@ -63,7 +63,7 @@ function ContactPage() {
                   <input type="text" placeholder="Subject" className="pl-2 border-2 rounded-[8px] h-12" />
                   <textarea placeholder="Message" className="pl-2 border-2 rounded-[8px] h-32" />
 
-                  <button className="bg-blue-500 w-12 ml-4 mt-4 rounded-[10px] font-semibold py-1">Send</button>
+                  <button className="bg-blue-500 w-36 h-8 sm:mb-0 mb-8 ml-4 mt-4 rounded-[10px] font-semibold py-1">Send</button>
                </div>
 
 

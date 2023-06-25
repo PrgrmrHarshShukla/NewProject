@@ -11,7 +11,7 @@ function Slider() {
   const { images } = useContext(UidContext)
 
    return (
-    <div className="mt-12 w-[95%] text-black flex flex-col justify-start items-center rounded-[10px]">
+    <div className="mt-12 w-[80vw] text-black flex flex-col justify-start items-center rounded-[10px]">
       <Carousel className="w-[95%] min-w-[75vw] rounded-[10px] ml-[20vw] sm:ml-0" interval={6000}>
         <Carousel.Item>
           <img

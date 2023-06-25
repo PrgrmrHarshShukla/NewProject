@@ -141,11 +141,7 @@ export default function Registration() {
       if( 
          email == "" ||
          password == "" ||
-         address == "" ||
-         aadhar == null ||
-         panCard == null ||
-         userPhoto == null ||
-         paymentProof == null
+         address == "" 
        ) {
          alert("Please fill in all the details.")
       }

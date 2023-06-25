@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { UidContext } from './UidContext';
+import { getDownloadURL, getStorage, ref } from 'firebase/storage';
 
 
 import './App.css'
@@ -7,23 +9,20 @@ import './App.css'
 import Header from './Header'
 import Home from './Home';
 import Services from './Services';
-import About from './About';
+// import About from './About';
 import Profile from './Profile';
 import ContactPage from './ContactPage';
 import Registration from './Registration';
-
-import { UidContext } from './UidContext';
 import Empty from './Empty';
 import Form from './Form';
-import { getDownloadURL, getStorage, ref } from 'firebase/storage';
 import FormIntro from './FormIntro';
+
+
 
 
 function App() {
   const [uid, setUid] = useState("")
   const [images, setImages] = useState([])
-
-  
   const storage = getStorage()
 
   useEffect(() => {
@@ -57,8 +56,11 @@ function App() {
     getImages()  
   }, [images, storage])
 
+
+
+
   return (
-    <div className="flex flex-row w-screen justify-between items-start">
+    <div className=" flex flex-row w-screen justify-between items-start">
       <Router>
         <UidContext.Provider value={{ uid, setUid, images }}>
           <Routes>

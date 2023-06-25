@@ -7,3 +7,8 @@
 span.carousel-control-prev-icon {
    color: black;
 }
+
+
+* {
+   box-sizing: border-box;
+}
