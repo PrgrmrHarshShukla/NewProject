@@ -1,15 +1,17 @@
 import {  useNavigate } from 'react-router-dom'
 
+import { UidContext } from './UidContext'
+import { useContext } from 'react'
+
 function Form() {
    const navigate = useNavigate()
+   const { images } = useContext(UidContext)
 
    const goHome = (e) => {
       e.preventDefault()
       navigate("/")
    }
-
-
-   
+  
 
    const printCall = (e) => {
       e.preventDefault()
@@ -32,7 +34,7 @@ function Form() {
    <div id="main" className="flex flex-col">
    <div className="m-4 pt-0 p-4 overflow-x-hidden overflow-y-auto border-2 border-black rounded-[10px] text-[12px] ">
 
-      <img src="src\assets\form.png" className="w-28" />
+      <img src={images[0]} className="w-28 h-28" />
 
 
       <div className="flex flex-col w-[100vw] h-[12vh] items-center justify-center mb-2 ml-0 sm:-ml-12 mt-2 sm:-mt-8">

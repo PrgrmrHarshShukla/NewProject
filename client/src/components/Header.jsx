@@ -8,7 +8,7 @@ import { getAuth, signOut } from "firebase/auth";
 
 function Header() {
 
-   const { uid, setUid } = useContext(UidContext)
+   const { uid, setUid, images } = useContext(UidContext)
    const auth = getAuth()
 
    const handleClick = async (e) => {
@@ -34,7 +34,7 @@ function Header() {
    return (      
          <div className="flex flex-col justify-between items-center w-[20vw] min-h-screen fixed border-4 border-gray-300 rounded-tr-[60px]">
 
-               <img src="src\assets\jantasuvidha-logo-removebg.png" className="w-[20vw] h-[18vh] min-w-[20vw] px-2" />  
+               <img src={images[1]} className="w-[20vw] h-[18vh] min-w-[20vw] px-2" />  
 
 
                <ul className="flex flex-col justify-center items-start w-[20vw] h-[82vh] bg-gray-300 text-[1.3rem] overflow-x-hidden">

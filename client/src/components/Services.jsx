@@ -1,7 +1,13 @@
 import '@fortawesome/fontawesome-free/css/all.css';
 
+import { UidContext } from './UidContext';
+import { useContext } from 'react';
+
 
 function Services() {
+
+   const { images } = useContext(UidContext)
+
    return (
       <div className="w-[80vw] ml-[20vw] justify-center h-screen flex flex-col  items-center">
          <div className="flex flex-row gap-2 justify-start border-b-2 border-gray-400 mb-12 w-[62vw] mt-[5vh]">
@@ -20,18 +26,18 @@ function Services() {
               
                <img
                   className="d-block w-[55vw] min-w-[100px] h-[35vh]"
-                  src="src\assets\slider2.png"
+                  src={images[3]}
                   alt="First slide"
                />
                <div className="flex flex-row flex-wrap gap-4">
                   <img
                      className="w-[64vw] sm:w-[32vw] min-w-[100px] h-[35vh] hover:border-4 rounded-[10px] hover:border-red-500"
-                     src="src\assets\slider3.png"
+                     src={images[2]}
                      alt="First slide"
                   />
                   <img
                      className="w-[64vw] sm:w-[32vw] min-w-[100px] h-[35vh] hover:border-4 rounded-[10px] hover:border-red-500"
-                     src="src\assets\slider1.png"
+                     src={images[4]}
                      alt="Second slide"
                   />
                </div>

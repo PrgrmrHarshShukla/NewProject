@@ -1,6 +1,14 @@
 import '@fortawesome/fontawesome-free/css/all.css';
 
+
+import { UidContext } from './UidContext';
+import { useContext } from 'react';
+
+
 function Contact() {
+
+   const { images } = useContext(UidContext)
+
    return (
       <div>
          <ul className="flex flex-col gap-2 justify-center mt-4">
@@ -18,7 +26,7 @@ function Contact() {
             </li>
          </ul>
          <div className="border-2 rounded-[10px] flex flex-row justify-center mb-2  w-[60vw] sm:w-[30vw]">
-            <img className="border-b-2 mb-4 " src="src/assets/text.png" alt="" />
+            <img className="border-b-2 mb-4 " src={images[5]} alt="" />
          </div>
       </div>
    )
