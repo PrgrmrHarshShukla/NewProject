@@ -7,7 +7,7 @@ function Home() {
       <div className="w-[80vw] ml-[20vw] gap-32 flex flex-col justify-start items-center ">
         <Slider />
 
-        <div className="w-[60vw]">
+        <div className="w-[60vw] sm:w-[35vw]">
           <Login />
           <Contact />
         </div>

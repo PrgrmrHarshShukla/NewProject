@@ -72,11 +72,7 @@ function App() {
                 :
                 <Route exact path="/services" element = {[<Header />, <Empty />]} />
               }
-              {uid ?
-                <Route exact path="/contact" element = {[<Header />, <ContactPage />]} /> 
-                :
-                <Route exact path="/contact" element = {[<Header />, <Empty />]} />
-              }
+              <Route exact path="/contact" element = {[<Header />, <ContactPage />]} />
               
               <Route exact path="/registration" element = {[<Header />, <Registration />]} />
               
