@@ -93,7 +93,7 @@ function Profile() {
                   Gender: <small className="text-xl">{data.gender}</small>
                </h6>
 
-               <h6 className="flex flex-row gap-[10px] items-center">
+               {/* <h6 className="flex flex-row gap-[10px] items-center">
                   PAN Card Number: <small className="text-xl">{data.pan}</small>
                </h6>
 
@@ -103,7 +103,7 @@ function Profile() {
                
                <h6 className="flex flex-row gap-[10px] items-center">
                   Organisation Name: <small className="text-xl">{data.org}</small>
-               </h6>
+               </h6> */}
 
                <h6 className="flex flex-row gap-[10px] items-center">
                   Address: <small className="text-xl">{data.address}</small>
@@ -125,7 +125,7 @@ function Profile() {
                   Mobile Number: <small className="text-xl">{data.mob}</small>
                </h6>
 
-               <h6 className="flex flex-row gap-[10px] items-center">
+               {/* <h6 className="flex flex-row gap-[10px] items-center">
                   Bank Name: <small className="text-xl">{data.bank}</small>
                </h6>
 
@@ -139,7 +139,7 @@ function Profile() {
 
                <h6 className="flex flex-row gap-[10px] items-center">
                   Branch Code: <small className="text-xl">{data.branch}</small>
-               </h6>
+               </h6> */}
 
                <h2 className="font-bold underline text-purple-500 font-serif mt-20">Your Image</h2>
                <img className="w-[50vw] sm:w-[25vw] h-[40vh]" id="photo" alt="My Image" />
@@ -154,10 +154,10 @@ function Profile() {
                <h2 className="font-bold underline text-purple-500 font-serif mt-20">PAN Card Image</h2>
                <img className="w-[50vw] sm:w-[25vw] h-[40vh]" id="panCard" alt="PAN Card Image" />
 
-               <hr className="border-2 border-black" />
+               {/* <hr className="border-2 border-black" />
                
                <h2 className="font-bold underline text-purple-500 font-serif mt-20">Payment Proof</h2>
-               <img className="w-[50vw] sm:w-[25vw] h-[40vh]" id="paymentProof" alt="Payment Proof" />
+               <img className="w-[50vw] sm:w-[25vw] h-[40vh]" id="paymentProof" alt="Payment Proof" /> */}
 
                <hr className="border-2 border-black" />
 

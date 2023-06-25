@@ -332,7 +332,7 @@ export default function Registration() {
                         <option value="Female">Female</option>
                      </select>
                   </label>
-                  <label htmlFor="">
+                  <label htmlFor="" className="hidden">
                      <p className="mb-0">PAN No. *</p>
                      <input 
                         name="userData" 
@@ -342,14 +342,14 @@ export default function Registration() {
                            return (
                               [
                                  ...prev, 
-                                 userInputData[4] = e.target.value
+                                 userInputData[4] = " "
                               ]
                            )
                         })}
                         className="pl-2 h-[4vh] border-2 rounded-[5px] w-[50vw] sm:w-[15vw]" placeholder="PAN No." 
                      />
                   </label>
-                  <label htmlFor="">
+                  <label htmlFor=""  className="hidden">
                      <p className="mb-0">Aadhar Card No. *</p>
                      <input 
                         name="userData" 
@@ -359,7 +359,7 @@ export default function Registration() {
                            return (
                               [
                                  ...prev, 
-                                 userInputData[5] = e.target.value
+                                 userInputData[5] = " "
                               ]
                            )
                         })}
@@ -368,7 +368,7 @@ export default function Registration() {
                   </label>
                </div>
 
-               <label htmlFor="" className="w-[100%]">
+               <label htmlFor="" className="w-[100%] hidden">
                   <p className="mb-0">Organisation Name *</p>
                   <input 
                      name="userData" 
@@ -378,7 +378,7 @@ export default function Registration() {
                         return (
                            [
                               ...prev, 
-                              userInputData[6] = e.target.value
+                              userInputData[6] = " "
                            ]
                         )
                      })}
@@ -510,7 +510,7 @@ export default function Registration() {
 
 
 
-            <div className="mt-8 px-4">
+            <div className="mt-8 px-4 hidden">
                <p className="border-2 bg-blue-600 max-w-max rounded px-2 font-semibold text-white">Your Bank Details</p>
 
                <div className="flex flex-col  sm:flex-row gap-4 mb-4">
@@ -523,7 +523,7 @@ export default function Registration() {
                            return (
                               [
                                  ...prev, 
-                                 userInputData[10] = e.target.value
+                                 userInputData[10] = " "
                               ]
                            )
                         })}
@@ -540,7 +540,7 @@ export default function Registration() {
                            return (
                               [
                                  ...prev, 
-                                 userInputData[11] = e.target.value
+                                 userInputData[11] = " "
                               ]
                            )
                         })}
@@ -557,7 +557,7 @@ export default function Registration() {
                            return (
                               [
                                  ...prev, 
-                                 userInputData[12] = e.target.value
+                                 userInputData[12] = " "
                               ]
                            )
                         })}
@@ -574,7 +574,7 @@ export default function Registration() {
                            return (
                               [
                                  ...prev, 
-                                 userInputData[13] = e.target.value
+                                 userInputData[13] = " "
                               ]
                            )
                         })}
@@ -588,10 +588,10 @@ export default function Registration() {
 
 
 
-            <div className="mt-8 px-4">
+            <div className="mt-8 px-4 hidden">
                <p className="border-2 bg-blue-600 max-w-max rounded px-2 py-1 font-semibold text-white">मेम्बरशिप फी RS. 2999/- खाली दिलेल्या बँक खात्यामध्ये जमा करावी</p>
 
-               {/* <div className="flex flex-row gap-4 mb-4">
+               <div className="flex flex-row gap-4 mb-4">
                   <p className="border-2 bg-blue-800 max-w-max rounded px-2 font-semibold text-white">Bank</p>
                   <p className="border-2 bg-blue-800 max-w-max rounded px-2 font-semibold text-white">a/c</p>
                </div>
@@ -600,7 +600,7 @@ export default function Registration() {
                   <p className="border-2 bg-blue-800 max-w-max rounded px-2 font-semibold text-white">A/C No.</p>
                   <p className="border-2 bg-blue-800 max-w-max rounded px-2 font-semibold text-white">IFSC</p>
                   <p className="border-2 bg-blue-800 max-w-max rounded px-2 font-semibold text-white">Branch Name</p> 
-               </div>*/}
+               </div>
             </div>
 
 
@@ -644,13 +644,13 @@ export default function Registration() {
                         className="h-[4vh] w-[40vw]" 
                      />
                   </label>
-                  <label htmlFor="">
+                  <label htmlFor="" className="hidden">
                      <p className="mb-0">Attach Payment Proof *</p>
                      <input 
                         required 
                         type="file" 
                         onChange={(e) => {
-                           setPaymentProof(e.target.files[0])
+                           setPaymentProof(" . ")
                         }}
                         className="h-[4vh] w-[40vw]" 
                      />

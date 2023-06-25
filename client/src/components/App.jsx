@@ -16,6 +16,7 @@ import { UidContext } from './UidContext';
 import Empty from './Empty';
 import Form from './Form';
 import { getDownloadURL, getStorage, ref } from 'firebase/storage';
+import FormIntro from './FormIntro';
 
 
 function App() {
@@ -66,14 +67,24 @@ function App() {
                 <Route exact path="/profile" element = {[<Header />, <Profile />]} /> :
                 <Route exact path="/profile" element = {[<Header />, <Empty />]} />
               }
-              <Route exact path="/services" element = {[<Header />, <Services />]} />
+              {uid ?
+                <Route exact path="/services" element = {[<Header />, <Services />]} /> 
+                :
+                <Route exact path="/services" element = {[<Header />, <Empty />]} />
+              }
+              {uid ?
+                <Route exact path="/contact" element = {[<Header />, <ContactPage />]} /> 
+                :
+                <Route exact path="/contact" element = {[<Header />, <Empty />]} />
+              }
+              
               <Route exact path="/registration" element = {[<Header />, <Registration />]} />
-              <Route exact path="/contact" element = {[<Header />, <ContactPage />]} />
+              
               <Route exact path="/form" element = {<Form />} /> 
-              {/* {uid ?
-                <Route exact path="/form" element = {<Form />} /> :
-                <Route exact path="/form" element = {[<Header />, <Empty />]} />
-              } */}
+              {uid ?
+                <Route exact path="/formIntro" element = {[<Header />, <FormIntro />]} /> :
+                <Route exact path="/formIntro" element = {[<Header />, <Empty />]} />
+              }
 
           </Routes>
         </UidContext.Provider>
