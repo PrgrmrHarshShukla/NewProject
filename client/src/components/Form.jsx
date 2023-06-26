@@ -1,11 +1,15 @@
 import {  useNavigate } from 'react-router-dom'
 
 import { UidContext } from './UidContext'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 
 function Form() {
    const navigate = useNavigate()
    const { images } = useContext(UidContext)
+
+   const [name, setName] = useState("")
+   const [fatherName, setFatherName] = useState("")
+   const [surname, setSurname] = useState("")
 
    const goHome = (e) => {
       e.preventDefault()
@@ -53,8 +57,12 @@ function Form() {
          <div className="flex flex-row gap-1">
             <span>Old Name:</span> 
             <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input1" />
-            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input2" />
-            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input3" />
+            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input2"  onChange={(e) => {
+               setFatherName(e.target.value)
+            }} />
+            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input3"  onChange={(e) => {
+               setSurname(e.target.value)
+            }} />
          </div>
          <div className="flex flex-row w-[80vw]">
             <span>To</span>
@@ -64,9 +72,11 @@ function Form() {
          </div>
          <div className="flex flex-row gap-1">
             <span>New Name:</span> 
-            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input4" />
-            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input5" />
-            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input6" />            
+            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input4" onChange={(e) => {
+               setName(e.target.value)
+            }} />
+            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input5" value={fatherName} />
+            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input6" value={surname} />            
          </div>
       </div>
 
@@ -75,7 +85,7 @@ function Form() {
       </div>
 
       <div className="flex flex-row w-[80vw] justify-between">
-         <div className="mt-12 flex flex-col">
+         <div className="mt-12 flex flex-col max-w-[30vw]">
             <span>Signature of the Guardian</span>
             <span>{`(In case of Minor)`}</span>
          </div>
@@ -116,7 +126,7 @@ function Form() {
          </div>
          <div className="flex flex-row w-[80vw] gap-3">
             <span>New Name:</span>
-            <input type="text" className="text-left pl-2 text-[10px] border-2 border-black w-[50vw]" id="input11" />
+            <input type="text" className="text-left pl-2 text-[10px] border-2 border-black w-[50vw]" id="input11" value={name} />
          </div>
          <div className="flex flex-row w-[80vw] gap-3">
             <span>Address:</span>
