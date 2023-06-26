@@ -20,13 +20,13 @@ function Slider() {
             alt="First slide"
           />
         </Carousel.Item>
-        <Carousel.Item>
+        {/* <Carousel.Item>
           <img
             className="w-[100%] sm:w-[75vw] min-w-[55vw] h-[45vh] ml-[0vw]  rounded-[10px]"
             src={images[3]}
             alt="Second slide"
           />
-        </Carousel.Item>
+        </Carousel.Item> */}
         <Carousel.Item>
           <img
             className="w-[100%] sm:w-[75vw] min-w-[75vw] h-[45vh]  rounded-[10px]"
