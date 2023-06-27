@@ -37,7 +37,7 @@ function Header() {
                <img src={images[1]} className="z-20 w-[20vw] min-h-[18vh] min-w-[20vw] px-2" />  
 
 
-               <ul className="z-0 flex flex-col justify-center items-start w-[20vw] h-[82vh] min-h-[82vh] bg-gray-300 text-[1.3rem] overflow-x-hidden border rounded-[10px]">
+               <ul className="z-0 flex flex-col justify-center items-start w-[20vw] h-[82vh] min-h-[82vh] bg-green-300 text-[1.3rem] overflow-x-hidden border rounded-[10px]">
 
                   <li title="Home" className="h-[100%] w-[100%] flex flex-col justify-center items-start font-semibold text-black">
                      <Link className="text-black no-underline flex flex-row justify-start items-center gap-20 sm:gap-3 -ml-4 sm:ml-12" to="/">

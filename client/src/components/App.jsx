@@ -64,7 +64,7 @@ function App() {
       <Router>
         <UidContext.Provider value={{ uid, setUid, images }}>
           <Routes>
-              <Route exact path="/" element = {[<Header />, <Home />]} />
+              <Route exact path="/" element = {<Home />} />
               {uid ?
                 <Route exact path="/profile" element = {[<Header />, <Profile />]} /> :
                 <Route exact path="/profile" element = {[<Header />, <Empty />]} />
