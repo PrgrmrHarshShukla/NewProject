@@ -5,7 +5,7 @@ import About from "./About"
 
 function ContactPage() {
    return (
-      <div className="min-h-[100vh] h-auto w-[80vw] flex flex-col items-center justify-center ml-[20vw]">
+      <div className="min-h-[100vh] h-auto w-[100vw] flex flex-col items-center justify-center sm:pl-[20vw] pl-0 ">
 
          <About />
 
@@ -17,11 +17,11 @@ function ContactPage() {
          </div>
 
 
-         <div className="ml-[35vw] sm:ml-0 w-[90vw] sm:w-[65%] flex flex-col sm:flex-row justify-center gap-2 mb-20">
+         <div className="pl-[25vw] sm:pl-[0vw] sm:ml-0 w-[100vw] sm:w-[65%] flex flex-col sm:flex-row justify-center gap-2 mb-20">
 
 
 
-            <div className="border-2 rounded-[10px] w-3/4 sm:w-1/2 h-[55vh]">
+            <div className="border-2 rounded-[10px] w-4/5 sm:w-1/2 h-[55vh]">
                <div className="bg-green-300 rounded-tl-[8px] rounded-tr-[8px]  w-full text-center py-1 font-semibold">
                <h5>संपर्क माहिती</h5>
                </div>
@@ -42,15 +42,15 @@ function ContactPage() {
                   </li>
                   <li className="flex flex-row items-center gap-2 overflow-hidden">
                      <i className="fas fa-envelope "></i>
-                     <div>devnathdhembre@gmail.com</div>
+                     <div>support@jantasuvidha.com</div>
                   </li>
                </ul>
             </div>
 
 
 
-            <div className="border-2 rounded-[10px] w-3/4 sm:w-1/2 h-auto sm:h-[55vh]">
-               <div className="bg-green-300 rounded-tl-[5px] rounded-tr-[5px]  w-full text-center py-1 font-semibold">
+            <div className="border-2 rounded-[10px] w-4/5 sm:w-1/2 h-auto sm:h-[55vh]">
+               <div className="bg-green-300 rounded-tl-[5px] rounded-tr-[5px] w-full text-center py-1 font-semibold">
                   <h5>चौकशी</h5>
                </div>
 

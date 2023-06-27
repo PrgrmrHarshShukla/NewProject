@@ -22,7 +22,7 @@ function Contact() {
             </li>
             <li className="flex flex-row items-center gap-2 ">
                <i className="fas fa-envelope "></i>
-               <div className="text-[15px]"> devnathdhembre@gmail.com</div>
+               <div className="text-[15px]"> support@jantasuvidha.com</div>
             </li>
          </ul>
          <div className="border-2 rounded-[10px] flex flex-row justify-center mb-2  w-[70vw] sm:w-[20vw]">

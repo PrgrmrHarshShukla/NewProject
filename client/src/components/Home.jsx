@@ -110,7 +110,7 @@ function Home() {
               alt="First slide"
             />
           </Carousel.Item>
-          <Carousel.Item>
+          <Carousel.Item className="">
             <img
               className="w-[95vw] min-w-[75vw] h-[45vh]  rounded-[10px]"
               src={images[4]}
