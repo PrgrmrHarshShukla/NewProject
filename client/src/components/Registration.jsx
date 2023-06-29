@@ -194,8 +194,8 @@ export default function Registration() {
             const storageRef3 = ref(storage, `${user.uid}: panCard`)
             const uploadTask3 = await uploadBytes(storageRef3, panCard)
    
-            const storageRef4 = ref(storage, `${user.uid}: paymentProof`)
-            const uploadTask4 = await uploadBytes(storageRef4, paymentProof)
+            // const storageRef4 = ref(storage, `${user.uid}: paymentProof`)
+            // const uploadTask4 = await uploadBytes(storageRef4, paymentProof)
    
             console.log("Images uploaded");
    

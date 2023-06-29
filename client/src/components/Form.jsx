@@ -8,8 +8,8 @@ function Form() {
    const { images } = useContext(UidContext)
 
    const [name, setName] = useState("")
-   const [fatherName, setFatherName] = useState("")
-   const [surname, setSurname] = useState("")
+   // const [fatherName, setFatherName] = useState("")
+   // const [surname, setSurname] = useState("")
 
    const goHome = (e) => {
       e.preventDefault()
@@ -57,12 +57,8 @@ function Form() {
          <div className="flex flex-row gap-1">
             <span>Old Name:</span> 
             <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input1" />
-            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input2"  onChange={(e) => {
-               setFatherName(e.target.value)
-            }} />
-            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input3"  onChange={(e) => {
-               setSurname(e.target.value)
-            }} />
+            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input2" />
+            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input3" />
          </div>
          <div className="flex flex-row w-[80vw]">
             <span>To</span>
@@ -75,8 +71,8 @@ function Form() {
             <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input4" onChange={(e) => {
                setName(e.target.value)
             }} />
-            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input5" value={fatherName} />
-            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input6" value={surname} />            
+            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input5"  />
+            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input6"  />            
          </div>
       </div>
 
@@ -84,11 +80,7 @@ function Form() {
          <p>Note :- Government accepts no responsibility as to the authenticity of the contents of the notice. Since they are based entirely on the application of the concerned persons without verification of documents. </p>
       </div>
 
-      <div className="flex flex-row w-[80vw] justify-between">
-         <div className="mt-12 flex flex-col max-w-[30vw]">
-            <span>Signature of the Guardian</span>
-            <span>{`(In case of Minor)`}</span>
-         </div>
+      <div className="flex flex-row w-[80vw] justify-between">         
          <div  className="mt-12 flex flex-col max-w-[40vw]">
             <span>
                {`Signature in Old name/ Thumb Impression with Name and Date`}
@@ -96,6 +88,10 @@ function Form() {
             <span>
                {`(Write down the name of the person in the above space who has signed above)`}
             </span>
+         </div>
+         <div className="mt-12 flex flex-col max-w-[30vw]">
+            <span>Signature of the Guardian</span>
+            <span>{`(In case of Minor)`}</span>
          </div>
       </div>
 
@@ -122,21 +118,21 @@ function Form() {
       <div className="flex flex-col gap-2">
          <div className="flex flex-row w-[80vw] gap-3">
             <span>FOR CORRESPONDING ADDRESS:</span>
-            <textarea type="text" className="text-left pl-2 text-[10px] border-2 border-black w-[50vw]" id="input10" rows="1" />
+            {/* <textarea type="text" className="text-left pl-2 text-[10px] border-2 border-black w-[50vw]" id="input10" rows="1" /> */}
          </div>
          <div className="flex flex-row w-[80vw] gap-3">
             <span>New Name:</span>
             <input type="text" className="text-left pl-2 text-[10px] border-2 border-black w-[50vw]" id="input11" value={name} />
          </div>
-         <div className="flex flex-row w-[80vw] gap-3">
+         <div className="flex flex-row w-[80vw] gap-8">
             <span>Address:</span>
             <textarea type="text" className="text-left pl-2 text-[10px] border-2 border-black w-[50vw]" id="input12" rows="1" />
          </div>
-         <div className="flex flex-row w-[80vw] gap-3">
+         <div className="flex flex-row w-[80vw] gap-6">
             <span>Pin Code:</span>
-            <input type="text" className="text-left pl-2 text-[10px] border-2 border-black w-[50vw]" id="input13" />
+            <input type="text" className="text-left pl-2 text-[10px] border-2 border-black w-[50.2vw]" id="input13" />
          </div>
-         <div className="flex flex-row w-[80vw] gap-3">
+         <div className="flex flex-row w-[80vw] gap-9">
             <span>Tel. No.</span>
             <input type="text" className="text-left pl-2 text-[10px] border-2 border-black w-[50vw]" id="input14" />
          </div>
@@ -148,6 +144,9 @@ function Form() {
 
 
    </div>
+
+
+
    <div id="last" className="w-[90vw] flex flex-row justify-center gap-[5vw] mb-8">
       <button 
          className="border-2 bg-green-500 border-green-500 py-1 rounded-[10px] sm:ml-0 ml-[35vw]  font-semibold  px-4  hover:border-2  hover:border-black" 

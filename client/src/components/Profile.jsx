@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 
 import { db, storage } from "./firebase" 
 import {  doc, getDoc } from "firebase/firestore"
@@ -11,53 +11,72 @@ import { useNavigate } from "react-router-dom"
 function Profile() {
    const [data, setData] = useState([])
    const [DOB, setDOB] = useState("")
-   const { uid } = useContext(UidContext)
+   const { uid, images, setImages } = useContext(UidContext)
    const navigate = useNavigate()
 
+   useEffect(() => {
 
-   const getUserData = async () => {
-      const docRef = doc(db, "userData", uid)
-      const docSnap = await getDoc(docRef)
-      if( docSnap.exists() ) {
-         // console.log(docSnap.data());
-         setData(docSnap.data())
-         let dob = docSnap.data().dob.split("-")
-         let temp = dob[0]
-         dob[0] = dob[2]
-         dob[2] = temp
-         setDOB(dob.join("-"))
+      const getUserData = async () => {
+         const docRef = doc(db, "userData", uid)
+         const docSnap = await getDoc(docRef)
+         if( docSnap.exists() ) {
+            // console.log(docSnap.data());
+            setData(docSnap.data())
+            let dob = docSnap.data().dob.split("-")
+            let temp = dob[0]
+            dob[0] = dob[2]
+            dob[2] = temp
+            setDOB(dob.join("-"))
+         }
+         else {
+            console.error("No such document");
+         }
       }
-      else {
-         console.error("No such document");
+      getUserData()
+   
+      const getUserImages = async () => {
+         if( uid ) {
+            try {
+               const urlUser = await getDownloadURL(ref(storage, `gs://janta-suvidha.appspot.com/${uid}: userPhoto`)) 
+               const img1 = document.getElementById("photo");
+               img1.setAttribute('src', urlUser)
+   
+               const url2 = await getDownloadURL(ref(storage, `gs://janta-suvidha.appspot.com/${uid}: aadhar`)) 
+               const img2 = document.getElementById("aadhar");
+               img2.setAttribute('src', url2)
+               
+               const url3 = await getDownloadURL(ref(storage, `gs://janta-suvidha.appspot.com/${uid}: panCard`)) 
+               const img3 = document.getElementById("panCard");
+               img3.setAttribute('src', url3)
+   
+               // const url4 = await getDownloadURL(ref(storage, `gs://janta-suvidha.appspot.com/${uid}: paymentProof`)) 
+               // const img4 = document.getElementById("paymentProof");
+               // img4.setAttribute('src', url4)
+   
+               setImages((prev) => {
+                  return (
+                     [
+                        ...prev,
+                        urlUser
+                     ]
+                  )
+               });
+               console.log(images);
+   
+            }
+            catch(err) {
+               // location.reload()
+               console.log(err);
+            }
+         }
+         else {
+            console.log("No uid");
+         }
       }
-   }
-   getUserData()
+      getUserImages()
+      
+   }, [uid])
 
-   const getUserImages = async () => {
-      try {
-         const url1 = await getDownloadURL(ref(storage, `gs://janta-suvidha.appspot.com/${uid}: userPhoto`)) 
-         const img1 = document.getElementById("photo");
-         img1.setAttribute('src', url1)
-
-         const url2 = await getDownloadURL(ref(storage, `gs://janta-suvidha.appspot.com/${uid}: aadhar`)) 
-         const img2 = document.getElementById("aadhar");
-         img2.setAttribute('src', url2)
-         
-         const url3 = await getDownloadURL(ref(storage, `gs://janta-suvidha.appspot.com/${uid}: panCard`)) 
-         const img3 = document.getElementById("panCard");
-         img3.setAttribute('src', url3)
-
-         const url4 = await getDownloadURL(ref(storage, `gs://janta-suvidha.appspot.com/${uid}: paymentProof`)) 
-         const img4 = document.getElementById("paymentProof");
-         img4.setAttribute('src', url4)
-
-      }
-      catch(err) {
-         // location.reload()
-         console.log(err);
-      }
-   }
-   getUserImages()
 
    const handleUpdate = async (e) => {
       e.preventDefault()
