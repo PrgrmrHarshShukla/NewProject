@@ -8,7 +8,7 @@ function Form4() {
   const [relation1, setRelation1] = useState('');
   const [relation2, setRelation2] = useState('');
   const [relation3, setRelation3] = useState('');
-  const [relation4, setRelation4] = useState('');
+//   const [relation4, setRelation4] = useState('');
   const [location, setLocation] = useState('');
   const [district, setDistrict] = useState('');
 

@@ -20,6 +20,9 @@ import Form2 from './Form2';
 import Form3 from './Form3';
 import Form4 from './Form4';
 import Form5 from './Form5';
+import Form6 from './Form6';
+import Form7 from './Form7';
+import Form8 from './Form8';
 
 
 
@@ -92,6 +95,9 @@ function App() {
               <Route exact path="/form3" element = {<Form3 />} /> 
               <Route exact path="/form4" element = {<Form4 />} /> 
               <Route exact path="/form5" element = {<Form5 />} /> 
+              <Route exact path="/form6" element = {<Form6 />} /> 
+              <Route exact path="/form7" element = {<Form7 />} /> 
+              <Route exact path="/form8" element = {<Form8 />} /> 
               {uid ?
                 <Route exact path="/formIntro" element = {[<Header />, <FormIntro />]} /> :
                 <Route exact path="/formIntro" element = {[<Header />, <Empty />]} />

@@ -13,7 +13,7 @@ function Form5() {
    const [childName5, setChildName5] = useState('');
    const [serviceCenterName, setServiceCenterName] = useState('');
    const [serviceCenterSignature, setServiceCenterSignature] = useState('');
-   const [name, setName] = useState('');
+  //  const [name, setName] = useState('');
    const [age, setAge] = useState('');
    const [occupation, setOccupation] = useState('');
    const [city, setCity] = useState('');
@@ -130,38 +130,38 @@ function Form5() {
       </div>
 
       <div className="border-2 border-black rounded-[10px] p-4 mb-4">
-      <p>
-        प्रपत्र – अ <br />
-        स्वयघोषणपत्र
-      </p>
-      <div className="border w-20 h-20 ml-[50vw] -mt-4"></div>
-      <p>
-        श्री/श्रीमती 
-        <input type="text" className="text-center text-blue-500" />
-        श्री 
-        <input type="text" className="text-center text-blue-500" />
-        याचा/यांची मुलगा/मुलगी /पत्नी वय 
-        <input type="text" className="text-center text-blue-500" />
-        वर्ष व्यवसाय 
-        <input type="text" className="text-center text-blue-500" />
-        रा 
-        <input type="text" className="text-center text-blue-500" />
-        ता. 
-        <input type="text" className="text-center text-blue-500" />
-        जि.जालना याद्वारे घोषित करतो की /करते की ,वरील सर्व माहिती माझ्या व्यक्तिगत माहिती व समजुतीनुसार खरी आहे.सदर माहिती खोटी आढळून आल्यास,भारतीय दंड सहिता अन्वये/किवा संबधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मिशिक्षेस पात्र राहीन याची मला पूर्णजाणीव आहे.
-      </p>
-      <p>
-        ठिकाण :- 
-        <input type="text" className="text-center text-blue-500" />
-        अर्जदाराची सही : 
-        <input type="text" className="text-center text-blue-500" />
-        <br />
-        दिनक :- 
-        <input type="text" className="text-center text-blue-500" />
-        अर्जदाराचे नाव : 
-        <input type="text" className="text-center text-blue-500" />
+        <p>
+          प्रपत्र – अ <br />
+          स्वयघोषणपत्र
         </p>
-        </div>
+        <div className="border w-20 h-20 ml-[50vw] -mt-4"></div>
+        <p>
+          श्री/श्रीमती 
+          <input type="text" className="text-center text-blue-500" />
+          श्री 
+          <input type="text" className="text-center text-blue-500" />
+          याचा/यांची मुलगा/मुलगी /पत्नी वय 
+          <input type="text" className="text-center text-blue-500" />
+          वर्ष व्यवसाय 
+          <input type="text" className="text-center text-blue-500" />
+          रा 
+          <input type="text" className="text-center text-blue-500" />
+          ता. 
+          <input type="text" className="text-center text-blue-500" />
+          जि.जालना याद्वारे घोषित करतो की /करते की ,वरील सर्व माहिती माझ्या व्यक्तिगत माहिती व समजुतीनुसार खरी आहे.सदर माहिती खोटी आढळून आल्यास,भारतीय दंड सहिता अन्वये/किवा संबधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मिशिक्षेस पात्र राहीन याची मला पूर्णजाणीव आहे.
+        </p>
+        <p>
+          ठिकाण :- 
+          <input type="text" className="text-center text-blue-500" />
+          अर्जदाराची सही : 
+          <input type="text" className="text-center text-blue-500" />
+          <br />
+          दिनक :- 
+          <input type="text" className="text-center text-blue-500" />
+          अर्जदाराचे नाव : 
+          <input type="text" className="text-center text-blue-500" />
+        </p>
+      </div>
 
       <div>
       <p>
@@ -169,23 +169,90 @@ function Form5() {
       </p>
       </div>
 
-      
+
       <div>
-      <h2>अर्जसोबत जोडावयाच्या शपथपत्राचा नमुना</h2>
+      <h2 className="font-semibold text-[15px] text-center">अर्जसोबत जोडावयाच्या शपथपत्राचा नमुना</h2>
+      <h2 className="font-semibold text-[15px] text-center">परिशिष्ट “ब”</h2>
       <p>
-        परिशिष्ट “ब” महाराष्ट्र राज्य शासनाच्या विमुक्त जाती / इतर मागासवर्ग / विशेष
+        महाराष्ट्र राज्य शासनाच्या विमुक्त जाती / इतर मागासवर्ग / विशेष
         मागासप्रवर्गातील अर्जदाराने आरक्षणाचा फायदा मिळण्याकरिता उन्नत व प्रगत व्यक्ती /
         गट (क्रिमीलेयर) यामध्ये मोडत नसल्याबाबत सादर करावयाचे शपथपत्र
       </p>
       <p>
-        मी. श्री. श्रीमती / कुमार/कुमारी. प्रतिक पंढरीनाथ वादे श्री पंढरीनाथ वादे यांचा मुलगा/
-        यांची मुलगी वय 18 वर्षे, व्यवसाय शिक्षण गाव / शहर दहीपुरी तहसील अंबड जिल्हा. जालना
-        राज्य. महाराष्ट्र येथील रहिवासी असुन याव्दारे दृढपुर्वक कथन करतो कि, मी माळी या
-        जातीचा/जमातीचा असुन.यांचा ही जात/ जमात केंद्र शासन, मिनिस्ट्री ऑफ पसोनेल, पब्लिक
-        प्रिकन्सेस अॅण्ड पेशन्स डीपार्टमेंट ऑफ पर्सोनेल अॅण्ड ट्रेनिंग कडील कार्यालयीन ज्ञानप
-        क्रमांक - ३६०१२/२२९४०२/२०२० (क्रिमीलेयर शाखा) येथील उमेदवार कार्यालयातील आपली अर्ज नोंदणी
-        करण्यात आलेली आहे.
+        मी. श्री. श्रीमती / कुमार/कुमारी. 
+        <input className="text-center text-blue-500" />
+        श्री  
+        <input className="text-center text-blue-500" />
+         यांचा मुलगा/यांची मुलगी वय  
+        <input className="text-center text-blue-500" />
+         वर्षे, व्यवसाय 
+        <input className="text-center text-blue-500" />
+         गाव / शहर 
+        <input className="text-center text-blue-500" />
+        तहसील  
+        <input className="text-center text-blue-500" />
+        जिल्हा.
+        <input className="text-center text-blue-500" />
+        राज्य. महाराष्ट्र येथील रहिवासी असुन याव्दारे दृढपुर्वक कथन करतो कि, मी  
+        <input className="text-center text-blue-500" />
+         या जातीचा/जमातीचा असुन.यांचा ही जात/ जमात केंद्र शासन, मिनिस्ट्री ऑफ पसोनेल, पब्लिक प्रिकन्सेस अॅण्ड पेशन्स डीपार्टमेंट ऑफ पर्सोनेल अॅण्ड ट्रेनिंग कडील कार्यालयीन ज्ञानप क्रमांक - ३६०१२/२२/९३ - इएसटीटी (एस.सी. टी.) दिनांक ८ सप्टेंबर, १९९३ अन्वये सुधारित केल्याप्रमाणे तसेच केंद्र शासनाने आणि राज्य शासनाने या संदर्भात वेळोवेळी निर्गमित केलेल्या सुचणे (Notification) नुसार / शासन निर्णयानुसार शासन सेवेतील आरक्षणाच्या फयद्याकरीता इतर मागासवर्ग प्रवर्गात गणल्या जाते. सदर जात/जमात राज्य शासनाने विहित केलेल्या मागासवर्गीयांच्या यादीमधील  
+        <input className="text-center text-blue-500" />
+          या प्रवार्गत मोडतो.
+        मी दृढपुर्वक असेही कथन करतो / करते की, केंद्र शासनाच्या क्रमांक - ३६०१२/२२/९३ इएसटीटी (एस.सी. टी.) दिनांक ८ सप्टेंबर,१९९३ च्या कार्यालयीन स्थापनासोबतच्या परिशिष्टातील स्तंभ क्र -३ मध्ये नमुद केलेल्या व कार्यालीन मापन क्रमांक - ३६०३३/५/२००४ - इएसटीटी (आर.ई.एस.) दिनांक १४ ऑक्टोबर, २००४ कार्यालयीन मापन क्रमांक - ३६०३३/३/२००४ - (आर.इ.एस.) दिनांक १४ ऑक्टोबर, २००८ अन्वये सुधारित केल्याप्रमाणे तसेच केंद्र शासनाने आणि राज्य शासनाने या संदर्भात वेळोवेळी निर्गमित केलेल्या सुचणे (Notification) नुसार / शासन निर्णयानुसार आरक्षणाच्य फायद्याकरिता मी विमुक्त जाती/भटक्या जमाती/इतर मागासवर्ग / विशेष मागासप्रवर्गातील उत्पन्न व प्रगत व्यक्ती / गट        ( क्रिमीलेयर) यामध्ये मी मोडत नाही.
+        मी दृढपुर्वक असेही कथन करतो / करते कि, माझ्या आई किंवा वडील या दोघांचाही दर्जा / उत्पन्न हे ३१ मार्च २०२२ रोजी संपणाऱ्या आर्थिक अखेरीस वेळोवेळी विहित केलेल्या अटी व शर्तीनुसार इतर मागासवर्ग प्रवर्गातील उन्नत व प्रगत व्यक्ती / गट (क्रिमीलेयर ) यांची करिता असलेल्या मर्यादेमध्ये मोडतो.
       </p>
+      <p>
+        स्थळ :- 
+        <input type="text" className="text-center text-blue-500" />
+        अर्जदाराची स्वाक्षरी : 
+        <input type="text" className="text-center text-blue-500" />
+        <br />
+        दिनक :- 
+        <input type="text" className="text-center text-blue-500" />
+        अर्जदाराचे नाव : 
+        <input type="text" className="text-center text-blue-500" />
+      </p>
+
+      <p>
+        ( उमेदवाराने स्वतः स्वाक्षरी न केलेले शपथपत्र / खुलासा रद्द्वाबत ठरविण्यात येईल.)<br />
+        ( सुचना :- सदर आरक्षणाचा फायदा हा तात्पुरता स्वरूपाचा असुन तो उमेदवाराने जात प्रमाणपत्र / उत्पन्न व प्रगत गट / व्यक्ती यामध्ये मोडत नसल्यासंदर्भात सादर केलेल्या कागदपत्रांच्या / पुराव्याच्या पडताळणी संदर्भात विहित केलेल्या कार्यपद्धतीच्या अधीन राहील. जर उमेदवाराने इतर मागासवर्ग प्रवर्गात मोडत असल्याबाबत किंवा उन्नत व प्रगत गट / व्यक्ती यामध्ये मोडत नसल्यासंधर्भात संबंधित अर्जासोबत जोडलेली कागदपत्रे आणि पुरावे पडताळणी खोटे अथवा बनावट आढळल्यास कोणतीही पूर्व सुचना किंवा कोणतीही कारणीमास न देता त्या उमेदवारास देण्यात आलेले आरक्षण विषयक फायदा कायम स्वरूपी रद्द ठरविण्यात येईल. तसेच सदर प्रकरणी संबंधित उमेदवारास जबाबदार धरण्यातयेऊन खोटे अथवा बनावट कागदपत्रे / पुरावे दाखल केल्याबद्दल त्याच्या विरुद्ध भारतीय दंड विधान कायदयानुसार विहित केलेली कार्यवाही करण्यात येईल.)
+
+      </p>
+
+      <div className="border-2 border-black rounded-[10px] p-4 mb-4">
+        <p>
+          प्रपत्र – अ <br />
+          स्वयघोषणपत्र
+        </p>
+        <div className="border w-20 h-20 ml-[50vw] -mt-4"></div>
+        <p>
+          श्री/श्रीमती 
+          <input type="text" className="text-center text-blue-500" />
+          श्री 
+          <input type="text" className="text-center text-blue-500" />
+          याचा/यांची मुलगा/मुलगी /पत्नी वय 
+          <input type="text" className="text-center text-blue-500" />
+          वर्ष व्यवसाय 
+          <input type="text" className="text-center text-blue-500" />
+          रा 
+          <input type="text" className="text-center text-blue-500" />
+          ता. 
+          <input type="text" className="text-center text-blue-500" />
+          जि.जालना याद्वारे घोषित करतो की /करते की ,वरील सर्व माहिती माझ्या व्यक्तिगत माहिती व समजुतीनुसार खरी आहे.सदर माहिती खोटी आढळून आल्यास,भारतीय दंड सहिता अन्वये/किवा संबधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मिशिक्षेस पात्र राहीन याची मला पूर्णजाणीव आहे.
+        </p>
+        <p>
+          ठिकाण :- 
+          <input type="text" className="text-center text-blue-500" />
+          अर्जदाराची सही : 
+          <input type="text" className="text-center text-blue-500" />
+          <br />
+          दिनक :- 
+          <input type="text" className="text-center text-blue-500" />
+          अर्जदाराचे नाव : 
+          <input type="text" className="text-center text-blue-500" />
+        </p>
+      </div>
+
     </div>
 
 
