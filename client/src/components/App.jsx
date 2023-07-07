@@ -23,6 +23,8 @@ import Form5 from './Form5';
 import Form6 from './Form6';
 import Form7 from './Form7';
 import Form8 from './Form8';
+import Form9 from './Form9';
+import Form10 from './Form10';
 
 
 
@@ -78,17 +80,17 @@ function App() {
           <Routes>
               <Route exact path="/" element = {<Home />} />
               {uid ?
-                <Route exact path="/profile" element = {[<Header />, <Profile />]} /> 
+                <Route exact path="/profile" element = {[<Header key="1" />, <Profile key="2" />]} /> 
                 :
-                <Route exact path="/profile" element = {[<Header />, <Empty />]} />
+                <Route exact path="/profile" element = {[<Header key="1" />, <Empty key="1" />]} />
               }
               {uid ?
-                <Route exact path="/services" element = {[<Header />, <Services />]} /> 
+                <Route exact path="/services" element = {[<Header key="1" />, <Services key="1" />]} /> 
                 :
-                <Route exact path="/services" element = {[<Header />, <Empty />]} />
+                <Route exact path="/services" element = {[<Header key="1" />, <Empty key="1" />]} />
               }
-              <Route exact path="/contact" element = {[<Header />, <ContactPage />]} />              
-              <Route exact path="/registration" element = {[<Header />, <Registration />]} />
+              <Route exact path="/contact" element = {[<Header key="1" />, <ContactPage key="1" />]} />              
+              <Route exact path="/registration" element = {[<Header key="1" />, <Registration key="1" />]} />
               
               <Route exact path="/form" element = {<Form />} /> 
               <Route exact path="/form2" element = {<Form2 />} /> 
@@ -98,9 +100,12 @@ function App() {
               <Route exact path="/form6" element = {<Form6 />} /> 
               <Route exact path="/form7" element = {<Form7 />} /> 
               <Route exact path="/form8" element = {<Form8 />} /> 
+              <Route exact path="/form9" element = {<Form9 />} /> 
+              <Route exact path="/form10" element = {<Form10 />} /> 
+
               {uid ?
-                <Route exact path="/formIntro" element = {[<Header />, <FormIntro />]} /> :
-                <Route exact path="/formIntro" element = {[<Header />, <Empty />]} />
+                <Route exact path="/formIntro" element = {[<Header key="1" />, <FormIntro key="1" />]} /> :
+                <Route exact path="/formIntro" element = {[<Header key="1" />, <Empty key="1" />]} />
               }
 
           </Routes>

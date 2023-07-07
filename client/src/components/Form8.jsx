@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import {  useNavigate } from 'react-router-dom'
 
 
 function Form8() {
    const navigate = useNavigate()
+   const [a1, setA1] = useState("")
    
 
    const goHome = (e) => {
@@ -34,7 +36,7 @@ function Form8() {
              
                                                        
  
-            मी श्री./श्रीमती/कु/कुमारी  <input type="text" className="text-center text-blue-500"  />  रा. <input type="text" className="text-center text-blue-500"  /> ता.अंबड जिल्हा जालना  येथील रहिवाशी वरील विषयी अर्ज सादर करतो कि, मी आपल्या कार्यालयात आर्थिक दुष्ट्या कमकुवत घटकाचे प्रमाणपत्र मिळवण्यासाठी अर्ज सादर केला आहे. तरी माझ्या पुढील चारही अटी व शर्ती मध्ये पात्र आहे. <br />
+            मी श्री./श्रीमती/कु/कुमारी  <input type="text" className="text-center text-blue-500" value={a1} onChange={(e) => setA1(e.target.value)}  />  रा. <input type="text" className="text-center text-blue-500"  /> ता.अंबड जिल्हा जालना  येथील रहिवाशी वरील विषयी अर्ज सादर करतो कि, मी आपल्या कार्यालयात आर्थिक दुष्ट्या कमकुवत घटकाचे प्रमाणपत्र मिळवण्यासाठी अर्ज सादर केला आहे. तरी माझ्या पुढील चारही अटी व शर्ती मध्ये पात्र आहे. <br />
             1. 5 acres of agricultural land and above.<br />
             2. Residential flat of 1000 sq. Ft. And above.<br />
             3. Residential plot of 100 sq. Yards and above in notified municipalities.	<br />
@@ -50,7 +52,7 @@ function Form8() {
             <h5 className=" text-center text-[15px]">शासन निर्णय क्रमांक :प्रसुद्धा १६१४/ ३४५प्र.क्र ७१/१८/-37 </h5>
             <h5 className="mb-4 text-center text-[15px] font-semibold">स्वयंघोषणापत्र</h5>
 
-            मी <input type="text" className="text-center text-blue-500" />  श्री <input type="text" className="text-center text-blue-500" />  यांचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text" className="text-center text-blue-500" />  वर्ष, व्यवसाय <input type="text" className="text-center text-blue-500" /> रा <input type="text" className="text-center text-blue-500" /> ता. <input type="text" className="text-center text-blue-500" /> जि.जालना याद्वारे घोषित करतो/करते की, वरील सर्व माहिती माझ्या व्यक्तीगत माहिती व समजुतिनुसार खरी आहे.सदर माहिती खोटी आढळून आल्यास, भारतीय  दंड सहिता  अन्वेये आणि/ किंवा संबंधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मी शिक्षेस पात्र राहीन याची मला पूर्ण जाणीव आहे
+            मी <input type="text" className="text-center text-blue-500" value={a1}  />  श्री <input type="text" className="text-center text-blue-500" />  यांचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text" className="text-center text-blue-500" />  वर्ष, व्यवसाय <input type="text" className="text-center text-blue-500" /> रा <input type="text" className="text-center text-blue-500" /> ता. <input type="text" className="text-center text-blue-500" /> जि.जालना याद्वारे घोषित करतो/करते की, वरील सर्व माहिती माझ्या व्यक्तीगत माहिती व समजुतिनुसार खरी आहे.सदर माहिती खोटी आढळून आल्यास, भारतीय  दंड सहिता  अन्वेये आणि/ किंवा संबंधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मी शिक्षेस पात्र राहीन याची मला पूर्ण जाणीव आहे
 
 
             <p className="ml-[10vw]">

@@ -43,7 +43,7 @@ function Home() {
 
       <div className="flex flex-col justify-between items-center w-[100vw] gap-4 h-[30vh]">
 
-        <div className="z-20 w-[100vw] h-[10vh] max-h-[10vh] flex flex-row justify-between pl-[5vw] -pr-[2vw] sm:px-0">
+        <div className="z-20 w-[100vw] h-[10vh] max-h-[10vh] flex flex-row justify-between pl-[7vw] -pr-[2vw] sm:px-0 md:ml-8">
           <img src={images[1]} className="w-[20vw] h-[15vh]" />  
           <img src={images[6]} className="w-[60vw] sm:w-[40vw] h-[15vh]" />  
         </div>
@@ -101,7 +101,7 @@ function Home() {
 
       </div>
 
-      <div className="w-[100vw] mt-[12vh]  flex flex-col md:flex-row gap-[5vh] sm:gap-[2vw] items-center justify-center">
+      <div className="w-[100vw] mt-[12vh]  flex flex-col md:flex-row gap-[5vh] sm:gap-[2vw] items-center justify-center md:items-start">
         <Carousel className="w-[95vw] sm:w-[75vw] rounded-[10px]" interval={6000}>
           <Carousel.Item>
             <img
