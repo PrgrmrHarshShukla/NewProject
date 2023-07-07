@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import {  useNavigate } from 'react-router-dom'
+import { UidContext } from './UidContext';
 
 
 function Form3() {
@@ -14,6 +15,10 @@ function Form3() {
    const [beneficiaryNameMarathi, setBeneficiaryNameMarathi] = useState('');
    const [birthdate, setBirthdate] = useState('');
    const [mobile, setMobile] = useState('');
+   const { images } = useContext(UidContext)
+
+
+
 
    const goHome = (e) => {
       e.preventDefault()
@@ -30,13 +35,16 @@ function Form3() {
 
   return (
     <div className="w-[80vw] mx-[10vw] h-auto">
+      
 
       <div  className="m-4 pt-0 p-4 overflow-x-hidden overflow-y-auto border-2 border-black rounded-[10px] text-[12px] ">
 
          <div className=" p-4">
             <h2 className="font-semibold text-center text-[18px] underline -mt-4 -mb-2">स्वघोषणापत्र</h2>
             <hr className="-ml-[20vw] w-[100vw] border-2 border-black text-black" />
-            <div className="border w-20 h-20 ml-[50vw] -mt-4"></div>
+            <div className="border w-20 h-20 ml-[50vw] -mt-4">
+               <img src={images[7]} className="w-20 h-20" />
+            </div>
             <p className="max-w-[60vw]">
             मी
             <input type="text" className="text-blue-500 text-center" value={name} onChange={(e) => setName(e.target.value)} />
@@ -72,7 +80,9 @@ function Form3() {
          <div className=" p-4 pt-0">
             <h2 className="font-semibold text-center text-[18px] underline -mt-8 -mb-2">रहिवाशी स्वघोषनापत्र</h2>
             <hr className="-ml-[20vw] w-[100vw] border-2 border-black text-black" />
-            <div className="border w-20 h-20 mb-4 -mt-4"></div>
+            <div className="border w-20 h-20 mb-4 -mt-4">
+               <img src={images[7]} className="w-20 h-20" />
+            </div>
             <p className="max-w-[60vw]">
             मी
             <input type="text" className="text-blue-500 text-center" value={name} onChange={(e) => setName(e.target.value)} />

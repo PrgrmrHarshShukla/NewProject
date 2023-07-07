@@ -1,9 +1,12 @@
 // import { useState } from 'react';
 import {  useNavigate } from 'react-router-dom'
+import { UidContext } from './UidContext'
+import { useContext } from 'react'
 
 
 function Form7() {
    const navigate = useNavigate()
+   const {images} = useContext(UidContext)
   
 
    const goHome = (e) => {
@@ -31,7 +34,10 @@ function Form7() {
          मी दृढपूर्वक असेही कथन करतो/करते कि, केंद्र शासनाच्या क्र.- ३६०१२/२२/९३- इ एस टीटी (एस.सी .टी.)           दि. ०८ सप्टेंबर,१९९३ च्या कार्यालयीन ज्ञापनासोबत या परिशिष्टातील स्तंभक्र -३ मध्ये नमूद केलेल्या व कार्यालयीन- ज्ञापनक्र-३६०३३/३/२००४-इएसटीटी(आर.इ.एस)दि.१४ऑक्टो.२००४,कार्यालयीन-ज्ञापनक्र.३६०३३/३/२००४ इएसटीटी (आर.इ.एस) दि.१४ऑक्टो. २००८, अन्वये सुधारित केल्या प्रमाणे तसेच केंद्र शासनाने आणि राज्य शासनाने या संदर्भात वेळोवेळी निर्गमित केलेल्या सूचने (Notification) नुसार / शासन निर्णयानुसार आरक्षणाच्या लाभाकरिता मी विमुक्त जाती/भटक्या जमाती/इतर मागासवर्ग /विशेष मागास प्रवर्गातील उन्नत व प्रगत व्यक्ती /गट (क्रीमिलेयर) या मध्ये मी मोडत नाही . <br />
 
          <div className="border-2 border-black p-4 rounded-[10px] mt-4 mb-4">
-            <div className="border w-28 h-28  "></div>
+            <div className="border w-28 h-28  ">
+               <img className="w-28 h-28" src={images[7]} />
+
+            </div>
 
             <h5 className=" text-center text-[15px]">प्रपत्र–अ</h5>
             <h5 className="mb-4 text-center text-[15px] font-semibold">स्वयंघोषणापत्र</h5>

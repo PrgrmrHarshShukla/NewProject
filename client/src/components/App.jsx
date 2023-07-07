@@ -37,7 +37,8 @@ function App() {
   useEffect(() => {
     const getImages = async () => {
 
-      const url1 = await getDownloadURL(ref(storage, "gs://janta-suvidha.appspot.com/form.png"))
+      // try {
+        const url1 = await getDownloadURL(ref(storage, "gs://janta-suvidha.appspot.com/form.png"))
   
   
       const url2 = await getDownloadURL(ref(storage, "gs://janta-suvidha.appspot.com/jantasuvidha-logo-removebg.png"))
@@ -57,17 +58,23 @@ function App() {
   
       const url8 = await getDownloadURL(ref(storage, "gs://janta-suvidha.appspot.com/topRightIcon.png"))
 
+      
+
       // const urlUser = await getDownloadURL(ref(storage, `gs://janta-suvidha.appspot.com/${uid}: userPhoto`)) 
          
 
     
   
       setImages([url1, url2, url3, url4, url5, url6, url8])
+      // }
+      // catch(err) {
+      //   alert("An error occured while fetching your image.")
+      // }
   
       // console.log(images);
     }
-  
-    getImages()  
+    getImages()
+    // uid ? getImages() : alert("Please login to continue.")  
   }, [uid])
 
 

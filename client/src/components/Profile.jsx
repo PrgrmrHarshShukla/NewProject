@@ -53,14 +53,12 @@ function Profile() {
                // const img4 = document.getElementById("paymentProof");
                // img4.setAttribute('src', url4)
    
-               setImages((prev) => {
-                  return (
+               setImages(prev => 
                      [
                         ...prev,
                         urlUser
                      ]
-                  )
-               });
+                  );
                console.log(images);
    
             }

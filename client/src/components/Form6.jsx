@@ -1,9 +1,12 @@
 // import { useState } from 'react';
 import {  useNavigate } from 'react-router-dom'
+import { UidContext } from './UidContext'
+import { useContext } from 'react'
 
 
 function Form6() {
    const navigate = useNavigate()
+   const {images} = useContext(UidContext)
    
 
    const goHome = (e) => {
@@ -66,7 +69,10 @@ function Form6() {
          </div>
 
          <div className="border-2 border-black p-4 rounded-[10px] mt-4">
-            <div className="border w-28 h-28  "></div>
+            <div className="border w-28 h-28  ">
+               <img className="w-28 h-28" src={images[7]} />
+
+            </div>
 
             <h5 className=" text-center text-[15px]">शासन निर्णय क्रमांक :प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ प्रपत्र–अ</h5>
             <h5 className="mb-4 text-center text-[15px] font-semibold">स्वयंघोषणापत्र</h5>
@@ -169,7 +175,10 @@ function Form6() {
          </div>
 
          <div className="border-2 border-black p-4 rounded-[10px] mt-4">
-            <div className="border w-28 h-28  "></div>
+            <div className="border w-28 h-28  ">
+               <img className="w-28 h-28" src={images[7]} />
+
+            </div>
 
             <h5 className=" text-center text-[15px]">शासन निर्णय क्रमांक :प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ प्रपत्र–अ</h5>
             <h5 className="mb-4 text-center text-[15px] font-semibold">स्वयंघोषणापत्र</h5>

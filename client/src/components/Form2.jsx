@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import {  useNavigate } from 'react-router-dom'
+import { UidContext } from './UidContext';
 
 
 function Form2() {
@@ -13,6 +14,8 @@ function Form2() {
    const [declaration, setDeclaration] = useState('');
    const [signature, setSignature] = useState('');
    const [mobile, setMobile] = useState('');
+
+   const { images } = useContext(UidContext)
 
 
    const goHome = (e) => {
@@ -85,7 +88,7 @@ function Form2() {
 
       <div className="border-2 border-black rounded-[10px] p-4 text-center">
          <div className="border w-40 h-40">
-
+            <img src={images[7]} className="w-40 h-40" />
          </div>
          <h2 className="text-[15px] font-semibold ml-[0vw] text-center">शासन निर्णय क्रमांक: प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ</h2>
          <h3 className="text-[15px] font-semibold ml-[0vw] text-center">प्रपत्र – अ</h3>

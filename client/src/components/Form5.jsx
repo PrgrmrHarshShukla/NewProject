@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import {  useNavigate } from 'react-router-dom'
+import { UidContext } from './UidContext';
 
 
 function Form5() {
@@ -19,6 +20,7 @@ function Form5() {
    const [city, setCity] = useState('');
    const [date, setDate] = useState('');
    const [applicantName, setApplicantName] = useState('');
+   const {images} = useContext(UidContext)
 
    const goHome = (e) => {
       e.preventDefault()
@@ -88,7 +90,9 @@ function Form5() {
         <h1 className="text-[15px] ">शासन निर्णय क्रमांक :प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ</h1>
         <h2 className="text-[15px] font-semibold">प्रपत्र – अ</h2>
         <h3 className="text-[15px] font-semibold">स्वयंघोषणापत्र</h3>
-        <div className="w-28 h-28 border ml-[40vw] -mt-16 mb-2"></div>
+        <div className="w-28 h-28 border ml-[40vw] -mt-16 mb-2">
+          <img className="w-28 h-28" src={images[7]} />
+        </div>
 
         <p>
           मी <input type="text" className="text-center text-blue-500" value={caste}  /> यांचा/यांची मुलगी/मुलगा पत्नी वय{' '}
@@ -134,7 +138,10 @@ function Form5() {
           प्रपत्र – अ <br />
           स्वयघोषणपत्र
         </p>
-        <div className="border w-20 h-20 ml-[50vw] -mt-4"></div>
+        <div className="border w-20 h-20 ml-[50vw] -mt-4">
+        <img className="w-20 h-20" src={images[7]} />
+
+        </div>
         <p>
           श्री/श्रीमती 
           <input type="text" className="text-center text-blue-500" />
@@ -224,7 +231,10 @@ function Form5() {
           प्रपत्र – अ <br />
           स्वयघोषणपत्र
         </p>
-        <div className="border w-20 h-20 ml-[50vw] -mt-4"></div>
+        <div className="border w-20 h-20 ml-[50vw] -mt-4">
+        <img className="w-20 h-20" src={images[7]} />
+
+        </div>
         <p>
           श्री/श्रीमती 
           <input type="text" className="text-center text-blue-500" />

@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import {  useNavigate } from 'react-router-dom'
+import { UidContext } from './UidContext';
+
 
 function Form4() {
   const navigate = useNavigate()
@@ -11,6 +13,7 @@ function Form4() {
 //   const [relation4, setRelation4] = useState('');
   const [location, setLocation] = useState('');
   const [district, setDistrict] = useState('');
+  const {images} = useContext(UidContext)
 
   const goHome = (e) => {
    e.preventDefault()
@@ -120,7 +123,9 @@ function Form4() {
             <h1 className="text-[15px] font-semibold ml-[20vw]">शासन निर्णय क्रमांक: प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ</h1>
             <h3 className="text-[15px] font-semibold ml-[26vw]">प्रपत्र – अ</h3>
             <h3 className="text-[15px] font-semibold ml-[25vw] mt-[3vh]">स्वयंघोषणापत्र</h3>
-            <div className="border w-28 h-28 ml-[70vw] mb-2 -mt-[9vh]"></div>
+            <div className="border w-28 h-28 ml-[70vw] mb-2 -mt-[9vh]">
+               <img src={images[7]} className="w-40 h-40" />
+            </div>
             <p className="ml-[10vw] max-w-[60vw]">
             मी 
             <input type="text" className="text-center text-blue-500" value={name} onChange={(e) => setName(e.target.value)} /> 
