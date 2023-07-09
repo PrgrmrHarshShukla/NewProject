@@ -12,3 +12,7 @@ span.carousel-control-prev-icon {
 * {
    box-sizing: border-box;
 }
+
+input:hover {
+   border: 1px solid rgb(224, 214, 214);
+}
