@@ -2,7 +2,10 @@
 export default {
   content: ["./index.html","./src/**/*.{jsx,js,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor: ['responsive', 'hover', 'focus', 'print'],
+      backgroundImage: ['responsive', 'hover', 'focus', 'print'],
+    },
   },
   plugins: [],
 }

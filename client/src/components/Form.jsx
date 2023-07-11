@@ -8,6 +8,8 @@ function Form() {
    const { images } = useContext(UidContext)
 
    const [name, setName] = useState("")
+   const [name1, setName1] = useState("")
+   const [name2, setName2] = useState("")
    // const [fatherName, setFatherName] = useState("")
    // const [surname, setSurname] = useState("")
 
@@ -71,8 +73,12 @@ function Form() {
             <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input4" onChange={(e) => {
                setName(e.target.value)
             }} />
-            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input5"  />
-            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input6"  />            
+            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input5" onChange={(e) => {
+               setName1(e.target.value)
+            }}  />
+            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input6" onChange={(e) => {
+               setName2(e.target.value)
+            }}  />            
          </div>
       </div>
 
@@ -80,7 +86,12 @@ function Form() {
          <p>Note :- Government accepts no responsibility as to the authenticity of the contents of the notice. Since they are based entirely on the application of the concerned persons without verification of documents. </p>
       </div>
 
-      <div className="flex flex-row w-[80vw] justify-between">         
+      <div className="flex flex-row w-[50vw] justify-between">         
+         
+         <div className="mt-12 flex flex-col max-w-[30vw]">
+            <span>Signature of the Guardian</span>
+            <span>{`(In case of Minor)`}</span>
+         </div>
          <div  className="mt-12 flex flex-col max-w-[40vw]">
             <span>
                {`Signature in Old name/ Thumb Impression with Name and Date`}
@@ -88,10 +99,6 @@ function Form() {
             <span>
                {`(Write down the name of the person in the above space who has signed above)`}
             </span>
-         </div>
-         <div className="mt-12 flex flex-col max-w-[30vw]">
-            <span>Signature of the Guardian</span>
-            <span>{`(In case of Minor)`}</span>
          </div>
       </div>
 
@@ -110,7 +117,7 @@ function Form() {
          <textarea id="input9" className="text-left pl-2 border-2 border-black w-[50vw]" cols="20" rows="1" />
       </div>
 
-      <div className="mt-12">
+      <div className="mt-24 ml-[50vw]">
          <p>Signature in New Name/Thumb Impression with Name and Date</p>
       </div>
 
@@ -122,7 +129,7 @@ function Form() {
          </div>
          <div className="flex flex-row w-[80vw] gap-3">
             <span>New Name:</span>
-            <input type="text" className="text-left pl-2 text-[10px] border-2 border-black w-[50vw]" id="input11" value={name} />
+            <input type="text" className="text-left pl-2 text-[10px] border-2 border-black w-[50vw]" id="input11" value={`${name} ${name1} ${name2}`} />
          </div>
          <div className="flex flex-row w-[80vw] gap-8">
             <span>Address:</span>

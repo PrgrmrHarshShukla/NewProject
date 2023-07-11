@@ -5,6 +5,7 @@ import { getDownloadURL, getStorage, ref } from 'firebase/storage';
 
 
 import './App.css'
+import './print.css'
 
 import Header from './Header'
 import Home from './Home';

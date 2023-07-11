@@ -1,0 +1,10 @@
+/* print.css */
+
+@media print {
+   .print-background-image {
+     background-image: url({`${imageUrl}`}) !important;
+     -webkit-print-color-adjust: exact;
+     print-color-adjust: exact;
+   }
+ }
+ 

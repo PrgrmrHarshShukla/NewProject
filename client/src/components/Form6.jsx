@@ -1,12 +1,13 @@
 // import { useState } from 'react';
 import {  useNavigate } from 'react-router-dom'
-import { UidContext } from './UidContext'
-import { useContext } from 'react'
+// import { UidContext } from './UidContext'
+// import { useContext } from 'react'
 
 
 function Form6() {
    const navigate = useNavigate()
-   const {images} = useContext(UidContext)
+   // const {images} = useContext(UidContext)
+   
    
 
    const goHome = (e) => {
@@ -69,8 +70,8 @@ function Form6() {
          </div>
 
          <div className="border-2 border-black p-4 rounded-[10px] mt-4">
-            <div className="border w-28 h-28  ">
-               <img className="w-28 h-28" src={images[7]} />
+            <div className="border w-28 h-28  ml-[50vw]">
+               {/* <img className="w-28 h-28" src={images[7]} /> */}
 
             </div>
 
@@ -175,8 +176,8 @@ function Form6() {
          </div>
 
          <div className="border-2 border-black p-4 rounded-[10px] mt-4">
-            <div className="border w-28 h-28  ">
-               <img className="w-28 h-28" src={images[7]} />
+            <div className="border w-28 h-28  ml-[50vw]">
+               {/* <img className="w-28 h-28" src={images[7]} /> */}
 
             </div>
 

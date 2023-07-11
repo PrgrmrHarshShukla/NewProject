@@ -48,64 +48,64 @@ function FormIntro() {
       <h1 className="text-orange-500 font-bold underline">
          Forms
       </h1>
-      <div className="flex flex-row flex-wrap max-w-[35vw] gap-[2vw]">
+      <div className="flex flex-row flex-wrap max-w-[60vw] gap-[2vw]">
          <button 
-            className="border-2 bg-green-500 border-green-500 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
+            className="border-2 w-40 h-40 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
             onClick={handle1}
          >
             Name Change Form
          </button>
          <button 
-            className="border-2 bg-green-500 border-green-500 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
+            className="border-2 w-40 h-40 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
             onClick={handle2}
          >
             Form 2
          </button>
          <button 
-            className="border-2 bg-green-500 border-green-500 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
+            className="border-2 w-40 h-40 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
             onClick={handle3}
          >
             Form 3
          </button>
         
          <button 
-            className="border-2 bg-green-500 border-green-500 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
+            className="border-2 w-40 h-40 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
             onClick={handle4}
          >
             Form 4
          </button>
          <button 
-            className="border-2 bg-green-500 border-green-500 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
+            className="border-2 w-40 h-40 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
             onClick={handle5}
          >
             Form 5
          </button>
          <button 
-            className="border-2 bg-green-500 border-green-500 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
+            className="border-2 w-40 h-40 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
             onClick={handle6}
          >
             Form 6
          </button>
          <button 
-            className="border-2 bg-green-500 border-green-500 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
+            className="border-2 w-40 h-40 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
             onClick={handle7}
          >
             Form 7
          </button>
          <button 
-            className="border-2 bg-green-500 border-green-500 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
+            className="border-2 w-40 h-40 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
             onClick={handle8}
          >
             Form 8
          </button>
          {/* <button 
-            className="border-2 bg-green-500 border-green-500 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
+            className="border-2 w-40 h-40 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
             onClick={handle9}
          >
             Form 9
          </button> */}
          <button 
-            className="border-2 bg-green-500 border-green-500 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
+            className="border-2 w-40 h-40 py-1 rounded-[10px] font-semibold mt-12  sm:my-20 px-4 hover:border-2 hover:border-black"
             onClick={handle10}
          >
             Form 9

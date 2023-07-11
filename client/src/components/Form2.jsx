@@ -1,6 +1,6 @@
-import { useContext, useState } from 'react';
+import {  useState } from 'react';
 import {  useNavigate } from 'react-router-dom'
-import { UidContext } from './UidContext';
+// import { UidContext } from './UidContext';
 
 
 function Form2() {
@@ -14,8 +14,9 @@ function Form2() {
    const [declaration, setDeclaration] = useState('');
    const [signature, setSignature] = useState('');
    const [mobile, setMobile] = useState('');
+   const [imageUrl, setImageUrl] = useState("")
 
-   const { images } = useContext(UidContext)
+   // const { images } = useContext(UidContext)
 
 
    const goHome = (e) => {
@@ -30,7 +31,24 @@ function Form2() {
       window.print()
       navigate("/")      
    }
-   
+
+   const handleCameraClick = () => {
+      document.getElementById('fileInput').click();
+    };
+
+   const handleImage = (e) => {
+      const file = e.target.files[0]
+      if(file) {
+         const reader = new FileReader();
+      
+         reader.readAsDataURL(file);
+         
+         reader.onload = (event) => {
+            setImageUrl(event.target.result);
+         }
+      }
+   }
+    
    
   return (
    <div className="w-[80vw] mx-[10vw] h-auto">
@@ -87,8 +105,17 @@ function Form2() {
 
 
       <div className="border-2 border-black rounded-[10px] p-4 text-center">
-         <div className="border w-40 h-40">
-            <img src={images[7]} className="w-40 h-40" />
+         <div 
+            className="border w-40 h-40 ml-[50vw]"
+            style={{
+               backgroundImage: `url(${imageUrl})`,
+               backgroundSize: 'cover',
+               backgroundPosition: 'center',
+            }}
+            onClick={handleCameraClick}
+         >
+            <input type="file" onChange={handleImage} id="fileInput" style={{ display: 'none' }} />
+            {/* <img src={images[7]} className="w-40 h-40" /> */}
          </div>
          <h2 className="text-[15px] font-semibold ml-[0vw] text-center">शासन निर्णय क्रमांक: प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ</h2>
          <h3 className="text-[15px] font-semibold ml-[0vw] text-center">प्रपत्र – अ</h3>

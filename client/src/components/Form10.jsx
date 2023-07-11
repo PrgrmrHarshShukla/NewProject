@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
-import { UidContext } from './UidContext'
-import { useContext } from 'react'
+// import { UidContext } from './UidContext'
+// import { useContext } from 'react'
+import './print.css'
 
 
 function Form10() {
    const navigate = useNavigate()
-   const {images} = useContext(UidContext)
+  //  const {images} = useContext(UidContext)
    const [name, setName] = useState('');
    const [grandfatherName, setGrandfatherName] = useState('');
    const [fatherName, setFatherName] = useState('');
@@ -16,9 +17,8 @@ function Form10() {
    const [applicantSiblingName, setApplicantSiblingName] = useState('');
    const [applicantUncleName, setApplicantUncleName] = useState('');
    const [applicantSisterName, setApplicantSisterName] = useState('');
+   const [imageUrl, setImageUrl] = useState("")
 
-
-   
 
    const goHome = (e) => {
       e.preventDefault()
@@ -31,6 +31,23 @@ function Form10() {
       document.getElementById("last").remove()      
       window.print()
       navigate("/")      
+   }
+
+   const handleCameraClick = () => {
+      document.getElementById('fileInput').click();
+    };
+
+   const handleImage = (e) => {
+      const file = e.target.files[0]
+      if(file) {
+         const reader = new FileReader();
+      
+         reader.readAsDataURL(file);
+         
+         reader.onload = (event) => {
+            setImageUrl(event.target.result);
+         }
+      }
    }
 
   return (
@@ -60,9 +77,20 @@ function Form10() {
           </p>
         </div>
         <div className="border-2 border-black rounded-[10px] p-4">
-          <div className="border w-28 h-28  ">
-             <img className="w-28 h-28" src={images[7]} />
-          </div>
+        <div 
+            className="border w-40 h-40 ml-[50vw] print:bg-cover print:bg-center print-background-image"
+            style={{
+               backgroundImage: `url(${imageUrl})`,
+               backgroundSize: 'cover',
+               backgroundPosition: 'center',
+            }}
+            id="camera"
+            onClick={handleCameraClick}
+         >
+            <input type="file" onChange={handleImage} id="fileInput" style={{ display: 'none' }} />
+         </div>
+
+
           <h2 className="text-center font-semibold text-[15px]">शासन निर्णय क्रमांक :प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-18</h2>
           <h2 className="text-center font-semibold text-[15px] mb-2">स्वयंघोषणापत्र</h2>
           <p>
@@ -168,9 +196,17 @@ function Form10() {
 
         <div className="border-2 border-black rounded-[10px] p-4">
           <div>
-            <div className="border w-28 h-28  ">
-               <img className="w-28 h-28" src={images[7]} />
-            </div>
+          <div 
+            className="border w-40 h-40 ml-[50vw] print:bg-cover print:bg-center print-background-image"
+            style={{
+               backgroundImage: `url(${imageUrl})`,
+               backgroundSize: 'cover',
+               backgroundPosition: 'center',
+            }}
+            id="camera"
+            onClick={handleCameraClick}
+         >
+         </div>
             <h2 className="text-center font-semibold text-[15px]"> शासन निर्णय क्रमांक :प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ</h2>
             <h2 className="text-center font-semibold text-[15px] mb-2"> प्रपत्र – अ</h2>
             <h2 className="text-center font-semibold text-[15px] mb-2">स्वयंघोषणापत्र</h2>
@@ -234,9 +270,17 @@ function Form10() {
 
         <div className="border-2 border-black rounded-[10px] p-4">
           <div>
-            <div className="border w-28 h-28  ">
-               <img className="w-28 h-28" src={images[7]} />
-            </div>
+          <div 
+            className="border w-40 h-40 ml-[50vw] print:bg-cover print:bg-center print-background-image"
+            style={{
+               backgroundImage: `url(${imageUrl})`,
+               backgroundSize: 'cover',
+               backgroundPosition: 'center',
+            }}
+            id="camera"
+            onClick={handleCameraClick}
+         >
+         </div>
             <h2 className="text-center font-semibold text-[15px]">   शासन निर्णय क्रमांक :प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ</h2>
             <h2 className="text-center font-semibold text-[15px] mb-2"> प्रपत्र – अ</h2>
             <h2 className="text-center font-semibold text-[15px] mb-2">स्वयंघोषणापत्र</h2>
@@ -273,9 +317,17 @@ function Form10() {
         </div>
 
         <div className="border-2 border-black rounded-[10px] p-4 mt-40">
-            <div className="border w-28 h-28  ">
-               <img className="w-28 h-28" src={images[7]} />
-            </div>
+        <div 
+            className="border w-40 h-40 ml-[50vw]  print:bg-cover print:bg-center print-background-image"
+            style={{
+               backgroundImage: `url(${imageUrl})`,
+               backgroundSize: 'cover',
+               backgroundPosition: 'center',
+            }}
+            id="camera"
+            onClick={handleCameraClick}
+         >
+         </div>
             <h2 className="text-center font-semibold text-[15px]">शासन निर्णय क्रमांक :प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ प्रपत्र–अ</h2>
             <h2 className="text-center font-semibold text-[15px] mb-2">स्वयंघोषणापत्र</h2>
             <p>
@@ -374,9 +426,17 @@ function Form10() {
 
         <div className="border-2 border-black rounded-[10px] p-4 mt-40">
           <div>
-            <div className="border w-28 h-28  ">
-               <img className="w-28 h-28" src={images[7]} />
-            </div>
+          <div 
+            className="border w-40 h-40 ml-[50vw] print:bg-cover print:bg-center print-background-image"
+            style={{
+               backgroundImage: `url(${imageUrl})`,
+               backgroundSize: 'cover',
+               backgroundPosition: 'center',
+            }}
+            id="camera"
+            onClick={handleCameraClick}
+         >
+         </div>
             <h2 className="text-center font-semibold text-[15px]"> शासन निर्णय क्रमांक :प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ</h2>
             <h2 className="text-center font-semibold text-[15px] mb-2"> प्रपत्र – अ</h2>
             <h2 className="text-center font-semibold text-[15px] mb-2">स्वयंघोषणापत्र</h2>

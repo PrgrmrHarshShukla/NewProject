@@ -4,6 +4,7 @@ import {  useNavigate } from 'react-router-dom'
 
 function Form9() {
    const navigate = useNavigate()
+   // const [imageUrl, setImageUrl] = useState("")
    
 
    const goHome = (e) => {
@@ -18,6 +19,7 @@ function Form9() {
       window.print()
       navigate("/")      
    }
+   
 
   return (
    <div className="w-[80vw] mx-[10vw] h-auto">
