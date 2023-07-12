@@ -52,7 +52,7 @@ function Form2() {
    
   return (
    <div className="w-[80vw] mx-[10vw] h-auto">
-      <div  className="m-4 pt-0 p-4 overflow-x-hidden overflow-y-auto border-2 border-black rounded-[10px] text-[12px] ">
+      <div  className="m-4 pt-0 p-0 overflow-x-hidden overflow-y-auto text-[12px] ">
 
 
       <div className="p-4">
@@ -104,19 +104,19 @@ function Form2() {
 
 
 
-      <div className="border-2 border-black rounded-[10px] p-4 text-center">
-         <div 
-            className="border w-40 h-40 ml-[50vw]"
-            style={{
-               backgroundImage: `url(${imageUrl})`,
-               backgroundSize: 'cover',
-               backgroundPosition: 'center',
-            }}
-            onClick={handleCameraClick}
-         >
+      <div className="border-2 border-black rounded-[10px] p-2 -mt-4 text-center">
+            <img 
+               className="border w-40 h-40 ml-[40vw] z-20"
+               // style={{
+               //    backgroundImage: `url(${imageUrl})`,
+               //    backgroundSize: 'cover',
+               //    backgroundPosition: 'center',
+               // }}
+               src={`${imageUrl}`}
+               id="camera"
+               onClick={handleCameraClick}
+            />
             <input type="file" onChange={handleImage} id="fileInput" style={{ display: 'none' }} />
-            {/* <img src={images[7]} className="w-40 h-40" /> */}
-         </div>
          <h2 className="text-[15px] font-semibold ml-[0vw] text-center">शासन निर्णय क्रमांक: प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ</h2>
          <h3 className="text-[15px] font-semibold ml-[0vw] text-center">प्रपत्र – अ</h3>
          <h3 className="text-[15px] font-semibold ml-[0vw] text-center">स्वयंघोषणापत्र</h3>

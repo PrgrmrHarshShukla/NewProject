@@ -1,6 +1,6 @@
-import { useContext, useState } from 'react';
+import {  useState } from 'react';
 import {  useNavigate } from 'react-router-dom'
-import { UidContext } from './UidContext';
+// import { UidContext } from './UidContext';
 
 
 function Form5() {
@@ -20,7 +20,8 @@ function Form5() {
    const [city, setCity] = useState('');
    const [date, setDate] = useState('');
    const [applicantName, setApplicantName] = useState('');
-   const {images} = useContext(UidContext)
+   const [imageUrl, setImageUrl] = useState("");
+   //  const {images} = useContext(UidContext)
 
    const goHome = (e) => {
       e.preventDefault()
@@ -35,12 +36,33 @@ function Form5() {
       navigate("/")      
    }
 
+   
+   const handleCameraClick = () => {
+    document.getElementById('fileInput').click();
+  };
+
+ const handleImage = (e) => {
+    const file = e.target.files[0]
+    if(file) {
+       const reader = new FileReader();
+    
+       reader.readAsDataURL(file);
+       
+       reader.onload = (event) => {
+          setImageUrl(event.target.result);
+       }
+    }
+ }
+
+
+
+
 
   return (
    <div className="w-[80vw] mx-[10vw] h-auto">
 
 
-    <div  className="m-4 pt-0 p-4 overflow-x-hidden overflow-y-auto border-2 border-black rounded-[10px] text-[12px] ">
+    <div  className="m-4 pt-0 p-4 overflow-x-hidden overflow-y-auto text-[12px] ">
         <div>
         <h3 className=" text-[15px]  mt-2"> प्रती, </h3>
         <h3 className=" text-[15px] ">मा.उपविभागीय अधिकारी साहेब,</h3>
@@ -90,9 +112,17 @@ function Form5() {
         <h1 className="text-[15px] ">शासन निर्णय क्रमांक :प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ</h1>
         <h2 className="text-[15px] font-semibold">प्रपत्र – अ</h2>
         <h3 className="text-[15px] font-semibold">स्वयंघोषणापत्र</h3>
-        <div className="w-28 h-28 border ml-[40vw] -mt-16 mb-2">
-          <img className="w-28 h-28" src={images[7]} />
-        </div>
+            <img 
+               className="border w-40 h-40 ml-[40vw] z-20"
+               // style={{
+               //    backgroundImage: `url(${imageUrl})`,
+               //    backgroundSize: 'cover',
+               //    backgroundPosition: 'center',
+               // }}
+               src={`${imageUrl}`}
+               id="camera"
+               onClick={handleCameraClick}
+            />
 
         <p>
           मी <input type="text" className="text-center text-blue-500" value={caste}  /> यांचा/यांची मुलगी/मुलगा पत्नी वय{' '}
@@ -133,15 +163,23 @@ function Form5() {
       </p>
       </div>
 
-      <div className="border-2 border-black rounded-[10px] p-4 mb-4">
+      <div className="border-2 border-black rounded-[10px] p-2 mb-4">
         <p>
           प्रपत्र – अ <br />
           स्वयघोषणपत्र
         </p>
-        <div className="border w-20 h-20 ml-[50vw] -mt-4">
-        <img className="w-20 h-20" src={images[7]} />
-
-        </div>
+            <img 
+               className="border w-40 h-40 ml-[40vw] z-20 -mt-8"
+               // style={{
+               //    backgroundImage: `url(${imageUrl})`,
+               //    backgroundSize: 'cover',
+               //    backgroundPosition: 'center',
+               // }}
+               src={`${imageUrl}`}
+               id="camera"
+               onClick={handleCameraClick}
+            />
+            <input type="file" onChange={handleImage} id="fileInput" style={{ display: 'none' }} />
         <p>
           श्री/श्रीमती 
           <input type="text" className="text-center text-blue-500" />
@@ -177,7 +215,7 @@ function Form5() {
       </div>
 
 
-      <div>
+      <div className="mt-28">
       <h2 className="font-semibold text-[15px] text-center">अर्जसोबत जोडावयाच्या शपथपत्राचा नमुना</h2>
       <h2 className="font-semibold text-[15px] text-center">परिशिष्ट “ब”</h2>
       <p>
@@ -226,15 +264,22 @@ function Form5() {
 
       </p>
 
-      <div className="border-2 border-black rounded-[10px] p-4 mb-4">
+      <div className="border-2 border-black rounded-[10px] p-4 mb-4 mt-80">
         <p>
           प्रपत्र – अ <br />
           स्वयघोषणपत्र
         </p>
-        <div className="border w-20 h-20 ml-[50vw] -mt-4">
-        <img className="w-20 h-20" src={images[7]} />
-
-        </div>
+            <img 
+               className="border w-40 h-40 ml-[40vw] z-20"
+               // style={{
+               //    backgroundImage: `url(${imageUrl})`,
+               //    backgroundSize: 'cover',
+               //    backgroundPosition: 'center',
+               // }}
+               src={`${imageUrl}`}
+               id="camera"
+               onClick={handleCameraClick}
+            />
         <p>
           श्री/श्रीमती 
           <input type="text" className="text-center text-blue-500" />

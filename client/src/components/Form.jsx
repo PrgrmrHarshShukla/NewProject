@@ -1,17 +1,39 @@
 import {  useNavigate } from 'react-router-dom'
 
-import { UidContext } from './UidContext'
-import { useContext, useState } from 'react'
+// import { UidContext } from './UidContext'
+import {  useState } from 'react'
 
 function Form() {
    const navigate = useNavigate()
-   const { images } = useContext(UidContext)
+   // const { images } = useContext(UidContext)
 
    const [name, setName] = useState("")
    const [name1, setName1] = useState("")
    const [name2, setName2] = useState("")
+   const [imageUrl, setImageUrl] = useState("");
+
    // const [fatherName, setFatherName] = useState("")
    // const [surname, setSurname] = useState("")
+   
+
+   const handleCameraClick = () => {
+      document.getElementById('fileInput').click();
+    };
+
+   const handleImage = (e) => {
+      const file = e.target.files[0]
+      if(file) {
+         const reader = new FileReader();
+      
+         reader.readAsDataURL(file);
+         
+         reader.onload = (event) => {
+            setImageUrl(event.target.result);
+         }
+      }
+   }
+
+
 
    const goHome = (e) => {
       e.preventDefault()
@@ -40,7 +62,19 @@ function Form() {
    <div id="main" className="flex flex-col">
    <div className="m-4 pt-0 p-4 overflow-x-hidden overflow-y-auto border-2 border-black rounded-[10px] text-[12px] ">
 
-      <img src={images[0]} className="w-28 h-28" />
+      
+            <img 
+               className="border w-28 h-28 z-20"
+               // style={{
+               //    backgroundImage: `url(${imageUrl})`,
+               //    backgroundSize: 'cover',
+               //    backgroundPosition: 'center',
+               // }}
+               src={`${imageUrl}`}
+               id="camera"
+               onClick={handleCameraClick}
+            />
+            <input type="file" onChange={handleImage} id="fileInput" style={{ display: 'none' }} />
 
 
       <div className="flex flex-col w-[100vw] h-[12vh] items-center justify-center mb-2 ml-0 sm:-ml-12 mt-2 sm:-mt-8">
@@ -49,7 +83,7 @@ function Form() {
          <span>FORM FOR CHANGE OF NAME</span>
          <span>NOTICE</span>
       </div>
-
+ 
       <div className="flex flex-col mb-1">
       <span>N.B-</span> 
       <span>Instructions may be followed carefully before filling up this form. Only one word should be written in each space printed below. Please fill up this form in English version and in BLOCK LETTERS only It is hereby notified that the undersigned has changed his/her name from</span>

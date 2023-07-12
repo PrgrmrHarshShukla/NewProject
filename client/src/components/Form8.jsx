@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import {  useNavigate } from 'react-router-dom'
-import { UidContext } from './UidContext'
-import { useContext } from 'react'
+// import { UidContext } from './UidContext'
+// import { useContext } from 'react'
 
 
 function Form8() {
    const navigate = useNavigate()
-   const {images} = useContext(UidContext)
-   const [a1, setA1] = useState("")
+   // const {images} = useContext(UidContext)
+   const [a1, setA1] = useState("");
+   const [imageUrl, setImageUrl] = useState("");
    
 
    const goHome = (e) => {
@@ -23,15 +24,35 @@ function Form8() {
       navigate("/")      
    }
 
+
+   const handleCameraClick = () => {
+      document.getElementById('fileInput').click();
+    };
+
+   const handleImage = (e) => {
+      const file = e.target.files[0]
+      if(file) {
+         const reader = new FileReader();
+      
+         reader.readAsDataURL(file);
+         
+         reader.onload = (event) => {
+            setImageUrl(event.target.result);
+         }
+      }
+   }
+
+   
+
+
+
   return (
    <div className="w-[80vw] mx-[10vw] h-auto">
 
       <div className="m-4 pt-0 p-4 overflow-x-hidden overflow-y-auto text-[12px]">
          <div>
             <h6 className="underline font-semibold text-center">शपथपत्र</h6>
-            <h6 className="underline font-semibold text-center">आर्थिक दुष्ट्या दुर्बल घटकाचे प्रमाणपत्र बाबत</h6><br />
-            
-                                                                           
+            <h6 className="underline font-semibold text-center">आर्थिक दुष्ट्या दुर्बल घटकाचे प्रमाणपत्र बाबत</h6><br />                                                                                 
 
             <h6 className="underline font-semibold">तहसीलदार साहेब</h6>
             <h6 className="underline font-semibold"> तथा कार्यकारी दंडाधिकारी,</h6>
@@ -50,16 +71,24 @@ function Form8() {
 
 
          <p>
-           <p className="text-red-500 text-[16px] font-semibold mt-20">सदरील प्रमाणपत्रासाठी मी मध्ये चारही नियमामध्ये मी पात्र आहे. व कुटुंबातील इतर व्यक्तीच्या नावाने शहरी भागात कुठे हि जमीन,प्लॉट,घर  नाही  करीता मी सदरील शपथपत्र लिहून देत आहे.</p>
+           <p className="text-red-500 text-[16px] font-semibold mt-2">सदरील प्रमाणपत्रासाठी मी मध्ये चारही नियमामध्ये मी पात्र आहे. व कुटुंबातील इतर व्यक्तीच्या नावाने शहरी भागात कुठे हि जमीन,प्लॉट,घर  नाही  करीता मी सदरील शपथपत्र लिहून देत आहे.</p>
            वरील सर्व माहिती माझ्या व्यक्तीगत माहिती वस मजुतिनुसार खरी आहे.सदर माहिती खोटी आढळून आल्यास भारतीय दंड सहिता कलम 193(2),199 व 190 अन्वेये आणि/ किंवा संबंधितकायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मी शिक्षेस पात्र राहीन याची मला पूर्ण जाणीव आहे.
          </p>
 
 
-         <div className="border-2 border-black p-4 rounded-[10px] mt-4">
-            <div className="border w-28 h-28 ml-[50vw] ">
-            {/* <img className="w-28 h-28" src={images[7]} /> */}
-            </div>
-
+         <div className="border-2 border-black p-2  rounded-[10px] mt-2 mb-4">
+            <img 
+               className="border w-40 h-40 ml-[40vw] z-20"
+               // style={{
+               //    backgroundImage: `url(${imageUrl})`,
+               //    backgroundSize: 'cover',
+               //    backgroundPosition: 'center',
+               // }}
+               src={`${imageUrl}`}
+               id="camera"
+               onClick={handleCameraClick}
+            />
+            <input type="file" onChange={handleImage} id="fileInput" style={{ display: 'none' }} />
             <h5 className=" text-center text-[15px]">शासन निर्णय क्रमांक :प्रसुद्धा १६१४/ ३४५प्र.क्र ७१/१८/-37 </h5>
             <h5 className="mb-4 text-center text-[15px] font-semibold">स्वयंघोषणापत्र</h5>
 
@@ -82,7 +111,7 @@ function Form8() {
 
          <div>
             
-            <h6 className="underline font-semibold text-center mt-20">शपथपत्र</h6>
+            <h6 className="underline font-semibold text-center ">शपथपत्र</h6>
             प्रती, <br />
             मा. तहसीलदार साहेब,<br />
             तहसील कार्यालय, अंबड <br />
@@ -99,10 +128,18 @@ function Form8() {
                <p className="ml-[50vw]">  नाव:-  <input type="text" className="text-center text-blue-500"  />  </p>            
 
 
-            <div className="border-2 border-black p-4 rounded-[10px] mt-2">
-               <div className="border w-28 h-28  -mt-4 ml-[50vw]">
-               {/* <img className="w-28 h-28" src={images[7]} /> */}
-               </div>
+            <div className="border-2 border-black p-2 rounded-[10px]">
+                  <img 
+                  className="border w-40 h-40 ml-[40vw] "
+                  // style={{
+                  //    backgroundImage: `url(${imageUrl})`,
+                  //    backgroundSize: 'cover',
+                  //    backgroundPosition: 'center',
+                  // }}
+                  src={`${imageUrl}`}
+                  id="camera"
+                  onClick={handleCameraClick}
+                  /> 
 
                <h5 className=" text-center text-[15px]">शासन निर्णय क्रमांक :प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ</h5>
                <h5 className="text-center text-[15px] font-semibold">प्रपत्र–अ</h5>

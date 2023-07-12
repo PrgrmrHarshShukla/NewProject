@@ -39,7 +39,7 @@ function App() {
     const getImages = async () => {
 
       // try {
-        const url1 = await getDownloadURL(ref(storage, "gs://janta-suvidha.appspot.com/form.png"))
+        const url1 = "empty"
   
   
       const url2 = await getDownloadURL(ref(storage, "gs://janta-suvidha.appspot.com/jantasuvidha-logo-removebg.png"))

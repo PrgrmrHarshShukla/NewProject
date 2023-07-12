@@ -1,6 +1,6 @@
-import { useContext, useState } from 'react';
+import {  useState } from 'react';
 import {  useNavigate } from 'react-router-dom'
-import { UidContext } from './UidContext';
+// import { UidContext } from './UidContext';
 
 
 function Form4() {
@@ -13,7 +13,8 @@ function Form4() {
 //   const [relation4, setRelation4] = useState('');
   const [location, setLocation] = useState('');
   const [district, setDistrict] = useState('');
-  const {images} = useContext(UidContext)
+//   const {images} = useContext(UidContext)
+  const [imageUrl, setImageUrl] = useState("");
 
   const goHome = (e) => {
    e.preventDefault()
@@ -28,10 +29,29 @@ function Form4() {
    navigate("/")      
   }
 
+    
+  const handleCameraClick = () => {
+   document.getElementById('fileInput').click();
+ };
+
+const handleImage = (e) => {
+   const file = e.target.files[0]
+   if(file) {
+      const reader = new FileReader();
+   
+      reader.readAsDataURL(file);
+      
+      reader.onload = (event) => {
+         setImageUrl(event.target.result);
+      }
+   }
+}
+
+
 
   return (
     <div>
-      <div  className="m-4 pt-0 p-4 overflow-x-hidden overflow-y-auto border-2 border-black rounded-[10px] text-[12px]">
+      <div  className="m-4 pt-0 p-4 overflow-x-hidden overflow-y-auto  text-[12px]">
          <div className="p-4">
             <h2 className="text-[15px] font-bold text-center">शपथपत्र</h2>
             <h2 className="text-[15px] font-semibold text-center">भूमिहीन प्रमाणपत्रा बाबत...</h2>
@@ -110,7 +130,7 @@ function Form4() {
             </tbody>
             </table>
 
-            <p className="max-w-[60vw] ml-[10vw]">
+            <p className="max-w-[70vw] ml-[10vw]">
             तरी मौजे.
             <input type="text" className="text-center text-blue-500" value={location} onChange={(e) => setLocation(e.target.value)} />
             शिवारात माझ्या नावे जमीन नसून ता.
@@ -119,14 +139,23 @@ function Form4() {
             </p>
          </div>
 
-         <div className="p-4 border-2 border-black rounded-[10px] ">
+         <div className="px-2 py-1 border-2 border-black rounded-[10px] ">
             <h1 className="text-[15px] font-semibold ml-[20vw]">शासन निर्णय क्रमांक: प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ</h1>
             <h3 className="text-[15px] font-semibold ml-[26vw]">प्रपत्र – अ</h3>
             <h3 className="text-[15px] font-semibold ml-[25vw] mt-[3vh]">स्वयंघोषणापत्र</h3>
-            <div className="border w-28 h-28 ml-[70vw] mb-2 -mt-[9vh]">
-               <img src={images[7]} className="w-40 h-40" />
-            </div>
-            <p className="ml-[10vw] max-w-[60vw]">
+            <img 
+               className="border w-40 h-40 ml-[60vw] z-20"
+               // style={{
+               //    backgroundImage: `url(${imageUrl})`,
+               //    backgroundSize: 'cover',
+               //    backgroundPosition: 'center',
+               // }}
+               src={`${imageUrl}`}
+               id="camera"
+               onClick={handleCameraClick}
+            />
+            <input type="file" onChange={handleImage} id="fileInput" style={{ display: 'none' }} />
+            <p className="ml-[10vw] max-w-[60vw] text-center w-[80vw]">
             मी 
             <input type="text" className="text-center text-blue-500" value={name} onChange={(e) => setName(e.target.value)} /> 
             श्री.
@@ -157,6 +186,13 @@ function Form4() {
             </p>
          </div>
       </div>
+
+
+
+
+
+
+
 
       <div id="last" className="w-[90vw] flex flex-row justify-center gap-[5vw] mb-8">
          <button 

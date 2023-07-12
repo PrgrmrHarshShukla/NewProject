@@ -1,6 +1,6 @@
-import { useContext, useState } from 'react';
-import {  useNavigate } from 'react-router-dom'
-import { UidContext } from './UidContext';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
+// import { UidContext } from './UidContext';
 
 
 function Form3() {
@@ -15,8 +15,29 @@ function Form3() {
    const [beneficiaryNameMarathi, setBeneficiaryNameMarathi] = useState('');
    const [birthdate, setBirthdate] = useState('');
    const [mobile, setMobile] = useState('');
-   const { images } = useContext(UidContext)
+   // const { images } = useContext(UidContext)
+   const [imageUrl, setImageUrl] = useState("");
 
+
+
+   
+
+   const handleCameraClick = () => {
+      document.getElementById('fileInput').click();
+    };
+
+   const handleImage = (e) => {
+      const file = e.target.files[0]
+      if(file) {
+         const reader = new FileReader();
+      
+         reader.readAsDataURL(file);
+         
+         reader.onload = (event) => {
+            setImageUrl(event.target.result);
+         }
+      }
+   }
 
 
 
@@ -34,18 +55,22 @@ function Form3() {
    }
 
   return (
-    <div className="w-[80vw] mx-[10vw] h-auto">
+    <div className="w-[100vw] max-w-[90vw] ml-[5vw] h-auto  ">
       
 
-      <div  className="m-4 pt-0 p-4 overflow-x-hidden overflow-y-auto border-2 border-black rounded-[10px] text-[12px] ">
+      <div  className="m-4 pt-0 p-4 overflow-x-hidden overflow-y-auto text-[12px] ">
 
-         <div className=" p-4">
+         <div className=" p-4 border-2 border-black rounded-[10px] ">
             <h2 className="font-semibold text-center text-[18px] underline -mt-4 -mb-2">स्वघोषणापत्र</h2>
-            <hr className="-ml-[20vw] w-[100vw] border-2 border-black text-black" />
-            <div className="border w-20 h-20 ml-[50vw] -mt-4">
-               <img src={images[7]} className="w-20 h-20" />
-            </div>
-            <p className="max-w-[60vw]">
+            {/* <hr className="-ml-[20vw] w-[100vw] border-2 border-black text-black" /> */}
+            <img 
+               className="border w-28 h-28 ml-[50vw] z-20 -mt-4"
+               src={`${imageUrl}`}
+               id="camera"
+               onClick={handleCameraClick}
+            />
+            <input type="file" onChange={handleImage} id="fileInput" style={{ display: 'none' }} />
+            <p className="max-w-[80vw]">
             मी
             <input type="text" className="text-blue-500 text-center" value={name} onChange={(e) => setName(e.target.value)} />
             वय
@@ -64,26 +89,34 @@ function Form3() {
             अर्जदाराची सही
             <input type="text" className="text-blue-500 text-center"  />
             </p>
-            <p  className="">
+            <p  className="-mb-4">
             दिनांक
-            <input type="text" className="text-blue-500 text-center mr-[10vw]" value={date} onChange={(e) => setDate(e.target.value)} />
+            <input type="text" className="text-blue-500 text-center mr-[10vw] -mb-8" value={date} onChange={(e) => setDate(e.target.value)} />
             अर्जदाराचे नाव
-            <input type="text" className="text-blue-500 text-center"  />
+            <input type="text" className="text-blue-500 text-center -mb-8" value={name} onChange={(e) => setName(e.target.value)}  />
             </p>
-            <hr className="-ml-[20vw] w-[100vw] border-2 border-black" />
-            <hr className="-ml-[20vw] w-[100vw] border-2 border-black" />
+            {/* <hr className="-ml-[20vw] w-[100vw] border-2 border-black" /> */}
+            {/* <hr className="-ml-[20vw] w-[100vw] border-2 border-black" /> */}
          </div>
 
 
 
 
-         <div className=" p-4 pt-0">
-            <h2 className="font-semibold text-center text-[18px] underline -mt-8 -mb-2">रहिवाशी स्वघोषनापत्र</h2>
-            <hr className="-ml-[20vw] w-[100vw] border-2 border-black text-black" />
-            <div className="border w-20 h-20 mb-4 -mt-4">
-               <img src={images[7]} className="w-20 h-20" />
-            </div>
-            <p className="max-w-[60vw]">
+         <div className=" p-4 mt-4 pt-0 border-2 border-black rounded-[10px] ">
+            <h2 className="font-semibold text-center text-[18px] underline -mb-2 mt-2 ">रहिवाशी स्वघोषनापत्र</h2>
+            {/* <hr className="-ml-[20vw] w-[100vw] border-2 border-black text-black" /> */}
+            <img 
+               className="border w-28 h-28 ml-[50vw] z-20 -mt-4"
+               // style={{
+               //    backgroundImage: `url(${imageUrl})`,
+               //    backgroundSize: 'cover',
+               //    backgroundPosition: 'center',
+               // }}
+               src={`${imageUrl}`}
+               id="camera"
+               onClick={handleCameraClick}
+            />
+            <p className="max-w-[80vw]">
             मी
             <input type="text" className="text-blue-500 text-center" value={name} onChange={(e) => setName(e.target.value)} />
             वय
@@ -102,44 +135,51 @@ function Form3() {
             अर्जदाराची सही
             <input type="text" className="text-blue-500 text-center"  />
             </p>
-            <p>
+            <p className="-mb-4">
             दिनांक
             <input type="text" className="text-blue-500 text-center  mr-[10vw]" />
             अर्जदाराचे नाव
-            <input type="text" className="text-blue-500 text-center"  />
+            <input type="text" className="text-blue-500 text-center" value={name} onChange={(e) => setName(e.target.value)}  />
             </p>
-            <hr className="-ml-[20vw] w-[100vw] border-2 border-black text-black" />
+            {/* <hr className="-ml-[20vw] w-[100vw] border-2 border-black text-black" /> */}
 
-
-            <div className="flex gap-2">
-               <h2 className="text-[15px] font-semibold">लाभार्थ्याचे नाव(इंग्रजी) :  </h2>
-               <input type="text" className="text-blue-500 text-center  w-[20vw]" value={beneficiaryNameEnglish} onChange={(e) => setBeneficiaryNameEnglish(e.target.value)} />
             </div>
 
-            <div className="flex gap-2">
-               <h2 className="text-[15px] font-semibold">लाभार्थ्याचे नाव(मराठी) :  </h2>
-               <input type="text" className="text-blue-500 text-center  w-[20vw]" value={beneficiaryNameMarathi} onChange={(e) => setBeneficiaryNameMarathi(e.target.value)} />
-            </div>
 
-            <div className="flex gap-2">
-               <h2 className="text-[15px] font-semibold">जन्म तारीख (TC प्रमाणे) :  </h2>
-               <input type="text" className="text-blue-500 text-center  w-[20vw]" value={birthdate} onChange={(e) => setBirthdate(e.target.value)} />
-            </div>
 
-            <div className="flex gap-16">
-               <h2 className="text-[15px] font-semibold">मोबाईल :  </h2>
-               <input type="text" className="text-blue-500 text-center w-[40vw]" value={mobile} onChange={(e) => setMobile(e.target.value)} />
-            </div>
 
-            <div className="flex gap-2 -mb-8">
-               <h2 className="text-[15px] font-semibold">कागदपत्रे: </h2>
-               <ol className="flex gap-2">
-                  <li>{`1) TC/बोनाफाईड/प्रवेश निर्गम`}</li>
-                  <li>{`2) आधार कार्ड`}</li>
-                  <li>{`3) रेशन कार्ड/वीज बील/गॅस कार्ड`}</li>
-               </ol>
+
+            <div className="mt-4 p-2 border-2 border-black rounded-[10px]">
+               <div className="flex gap-2 ">
+                  <h2 className="text-[15px] font-semibold">लाभार्थ्याचे नाव(इंग्रजी) :  </h2>
+                  <input type="text" className="text-blue-500 text-center  w-[20vw]" value={beneficiaryNameEnglish} onChange={(e) => setBeneficiaryNameEnglish(e.target.value)} />
+               </div>
+
+               <div className="flex gap-2">
+                  <h2 className="text-[15px] font-semibold">लाभार्थ्याचे नाव(मराठी) :  </h2>
+                  <input type="text" className="text-blue-500 text-center  w-[20vw]" value={beneficiaryNameMarathi} onChange={(e) => setBeneficiaryNameMarathi(e.target.value)} />
+               </div>
+
+               <div className="flex gap-2">
+                  <h2 className="text-[15px] font-semibold">जन्म तारीख (TC प्रमाणे) :  </h2>
+                  <input type="text" className="text-blue-500 text-center  w-[20vw]" value={birthdate} onChange={(e) => setBirthdate(e.target.value)} />
+               </div>
+
+               <div className="flex gap-16">
+                  <h2 className="text-[15px] font-semibold">मोबाईल :  </h2>
+                  <input type="text" className="text-blue-500 text-center w-[40vw]" value={mobile} onChange={(e) => setMobile(e.target.value)} />
+               </div>
+
+               <div className="flex gap-2">
+                  <h2 className="text-[15px] font-semibold">कागदपत्रे: </h2>
+                  <ol className="flex gap-2">
+                     <li>{`1) TC/बोनाफाईड/प्रवेश निर्गम`}</li>
+                     <li>{`2) आधार कार्ड`}</li>
+                     <li>{`3) रेशन कार्ड/वीज बील/गॅस कार्ड`}</li>
+                  </ol>
+               </div>
             </div>
-         </div>
+         
 
       </div>
 

@@ -76,19 +76,19 @@ function Form10() {
           शिक्षेस पात्र राहील.
           </p>
         </div>
-        <div className="border-2 border-black rounded-[10px] p-4">
-        <div 
-            className="border w-40 h-40 ml-[50vw] print:bg-cover print:bg-center print-background-image"
-            style={{
-               backgroundImage: `url(${imageUrl})`,
-               backgroundSize: 'cover',
-               backgroundPosition: 'center',
-            }}
+        <div className="border-2 border-black rounded-[10px] p-4 mb-24">
+        <img 
+            className="border w-40 h-40 ml-[40vw] "
+            // style={{
+            //    backgroundImage: `url(${imageUrl})`,
+            //    backgroundSize: 'cover',
+            //    backgroundPosition: 'center',
+            // }}
+            src={`${imageUrl}`}
             id="camera"
             onClick={handleCameraClick}
-         >
+          />
             <input type="file" onChange={handleImage} id="fileInput" style={{ display: 'none' }} />
-         </div>
 
 
           <h2 className="text-center font-semibold text-[15px]">शासन निर्णय क्रमांक :प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-18</h2>
@@ -194,19 +194,19 @@ function Form10() {
         </div>
 
 
-        <div className="border-2 border-black rounded-[10px] p-4">
+        <div className="border-2 border-black rounded-[10px] p-4 mb-80">
           <div>
-          <div 
-            className="border w-40 h-40 ml-[50vw] print:bg-cover print:bg-center print-background-image"
-            style={{
-               backgroundImage: `url(${imageUrl})`,
-               backgroundSize: 'cover',
-               backgroundPosition: 'center',
-            }}
+          <img 
+            className="border w-40 h-40 ml-[40vw] "
+            // style={{
+            //    backgroundImage: `url(${imageUrl})`,
+            //    backgroundSize: 'cover',
+            //    backgroundPosition: 'center',
+            // }}
+            src={`${imageUrl}`}
             id="camera"
             onClick={handleCameraClick}
-         >
-         </div>
+          />
             <h2 className="text-center font-semibold text-[15px]"> शासन निर्णय क्रमांक :प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ</h2>
             <h2 className="text-center font-semibold text-[15px] mb-2"> प्रपत्र – अ</h2>
             <h2 className="text-center font-semibold text-[15px] mb-2">स्वयंघोषणापत्र</h2>
@@ -270,17 +270,17 @@ function Form10() {
 
         <div className="border-2 border-black rounded-[10px] p-4">
           <div>
-          <div 
-            className="border w-40 h-40 ml-[50vw] print:bg-cover print:bg-center print-background-image"
-            style={{
-               backgroundImage: `url(${imageUrl})`,
-               backgroundSize: 'cover',
-               backgroundPosition: 'center',
-            }}
+          <img 
+            className="border w-40 h-40 ml-[40vw] "
+            // style={{
+            //    backgroundImage: `url(${imageUrl})`,
+            //    backgroundSize: 'cover',
+            //    backgroundPosition: 'center',
+            // }}
+            src={`${imageUrl}`}
             id="camera"
             onClick={handleCameraClick}
-         >
-         </div>
+          />
             <h2 className="text-center font-semibold text-[15px]">   शासन निर्णय क्रमांक :प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ</h2>
             <h2 className="text-center font-semibold text-[15px] mb-2"> प्रपत्र – अ</h2>
             <h2 className="text-center font-semibold text-[15px] mb-2">स्वयंघोषणापत्र</h2>
@@ -317,17 +317,17 @@ function Form10() {
         </div>
 
         <div className="border-2 border-black rounded-[10px] p-4 mt-40">
-        <div 
-            className="border w-40 h-40 ml-[50vw]  print:bg-cover print:bg-center print-background-image"
-            style={{
-               backgroundImage: `url(${imageUrl})`,
-               backgroundSize: 'cover',
-               backgroundPosition: 'center',
-            }}
+        <img 
+            className="border w-40 h-40 ml-[40vw] e"
+            // style={{
+            //    backgroundImage: `url(${imageUrl})`,
+            //    backgroundSize: 'cover',
+            //    backgroundPosition: 'center',
+            // }}
+            src={`${imageUrl}`}
             id="camera"
             onClick={handleCameraClick}
-         >
-         </div>
+          />
             <h2 className="text-center font-semibold text-[15px]">शासन निर्णय क्रमांक :प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ प्रपत्र–अ</h2>
             <h2 className="text-center font-semibold text-[15px] mb-2">स्वयंघोषणापत्र</h2>
             <p>
@@ -363,7 +363,7 @@ function Form10() {
         </div>
 
 
-        <div>
+        <div className="mb-80">
           <h2 className="font-semibold text-center mt-20">शपथपत्र</h2>
           <p>
           मा. तहसिलदारसाहेब तथा कार्यकारी दंडाधिकारी, अंबड. यांच्या समोर <br />
@@ -426,17 +426,17 @@ function Form10() {
 
         <div className="border-2 border-black rounded-[10px] p-4 mt-40">
           <div>
-          <div 
-            className="border w-40 h-40 ml-[50vw] print:bg-cover print:bg-center print-background-image"
-            style={{
-               backgroundImage: `url(${imageUrl})`,
-               backgroundSize: 'cover',
-               backgroundPosition: 'center',
-            }}
+          <img 
+            className="border w-40 h-40 ml-[40vw] "
+            // style={{
+            //    backgroundImage: `url(${imageUrl})`,
+            //    backgroundSize: 'cover',
+            //    backgroundPosition: 'center',
+            // }}
+            src={`${imageUrl}`}
             id="camera"
             onClick={handleCameraClick}
-         >
-         </div>
+          />
             <h2 className="text-center font-semibold text-[15px]"> शासन निर्णय क्रमांक :प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ</h2>
             <h2 className="text-center font-semibold text-[15px] mb-2"> प्रपत्र – अ</h2>
             <h2 className="text-center font-semibold text-[15px] mb-2">स्वयंघोषणापत्र</h2>
