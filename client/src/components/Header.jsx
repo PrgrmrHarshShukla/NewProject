@@ -4,10 +4,11 @@ import { getAuth, signOut } from "firebase/auth";
 import { UidContext } from "./UidContext";
 
 import '@fortawesome/fontawesome-free/css/all.css';
+import logo from "./logo.png"
 
 
 function Header() {
-   const { uid, setUid, images } = useContext(UidContext)
+   const { uid, setUid } = useContext(UidContext)
    const auth = getAuth()
 
    const handleClick = async (e) => {
@@ -34,7 +35,7 @@ function Header() {
    return (      
          <div className="flex flex-col justify-between items-center w-[20vw] fixed rounded-tr-[60px] overflow-y-hidden mb-0 h-[100vh]">
 
-               <img src={images[1]} className="z-20 w-[20vw] min-h-[18vh] min-w-[20vw] px-2" />  
+               <img src={logo} className="z-20 w-[20vw] min-h-[18vh] min-w-[20vw] px-2" />  
 
 
                <ul className="z-0 flex flex-col justify-center items-start w-[20vw] h-[82vh] min-h-[82vh] bg-green-300 text-[1.3rem] overflow-x-hidden border rounded-[10px]">

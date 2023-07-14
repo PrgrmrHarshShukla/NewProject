@@ -8,6 +8,7 @@ function Form6() {
    const navigate = useNavigate()
    const [imageUrl, setImageUrl] = useState("");
    // const {images} = useContext(UidContext)
+   const [name, setName] = useState("")
   
 
    const goHome = (e) => {
@@ -59,9 +60,9 @@ function Form6() {
          <p className="font-semibold my-2">विषय :  अल्पभूधारक प्रमाणपत्र मिळणे बाबत...</p>
 
          मी 
-         <input type="text" className="text-center text-blue-500" />
+         <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="text-center text-blue-500" />
           वय 
-         <input type="text" className="text-center text-blue-500" />
+         <input type="text" className="text-center w-8 text-blue-500" />
            वर्ष  धंदा  
          <input type="text" className="text-center text-blue-500" />
           रा.  
@@ -108,7 +109,7 @@ function Form6() {
             <h5 className=" text-center text-[15px]">शासन निर्णय क्रमांक :प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ प्रपत्र–अ</h5>
             <h5 className="mb-4 text-center text-[15px] font-semibold">स्वयंघोषणापत्र</h5>
 
-            मी <input type="text" className="text-center text-blue-500" />  श्री <input type="text" className="text-center text-blue-500" />  यांचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text" className="text-center text-blue-500" />  वर्ष, व्यवसाय <input type="text" className="text-center text-blue-500" /> रा <input type="text" className="text-center text-blue-500" /> ता. <input type="text" className="text-center text-blue-500" /> जि.जालना याद्वारे घोषितकरतो/करते की, वरील सर्व माहिती माझ्या व्यक्तीगत माहिती व समजुतिनुसार खरी आहे.सदर माहिती खोटी आढळून आल्यास , भारतीय दंड सहिता कलम 193(2),199 व 200 अन्वेये आणि/किंवा संबंधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मी शिक्षेस पात्र राहीन याची मला पूर्ण जाणीव आहे. 
+            मी <input type="text" value={name}  className="text-center text-blue-500" />  श्री <input type="text" className="text-center text-blue-500" />  यांचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text" className="text-center w-8 text-blue-500" />  वर्ष, व्यवसाय <input type="text" className="text-center text-blue-500" /> रा <input type="text" className="text-center text-blue-500" /> ता. <input type="text" className="text-center text-blue-500" /> जि.जालना याद्वारे घोषितकरतो/करते की, वरील सर्व माहिती माझ्या व्यक्तीगत माहिती व समजुतिनुसार खरी आहे.सदर माहिती खोटी आढळून आल्यास , भारतीय दंड सहिता कलम 193(2),199 व 200 अन्वेये आणि/किंवा संबंधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मी शिक्षेस पात्र राहीन याची मला पूर्ण जाणीव आहे. 
 
             <p className="ml-[10vw]">
                ठिकाण: <input type="text" className="text-center text-blue-500 mr-[10vw]"  /> अर्जदाराची सही{' '}
@@ -116,14 +117,14 @@ function Form6() {
                </p>
                <p className="ml-[10vw]">
                दि: <input type="text" className="text-center text-blue-500 mr-[10vw]"  /> अर्जदाराचे नाव:-{' '}
-               <input type="text" className="text-center text-blue-500"  />
+               <input type="text" value={name}  className="text-center text-blue-500"  />
             </p>
          </div>
 
          <div className="mt-20">
             <h6  className=" text-center text-[15px]">अल्पभूधारक प्रमाणपत्र मिळणे बाबत...</h6>
             <h6  className=" text-center text-[15px] font-semibold">स्वयंघोषणापत्र</h6>
-            मी श्री/श्रीमती नवनाथ <input type="text" className="text-center text-blue-500" />  वय <input type="text" className="text-center text-blue-500" />  वर्षे  धंदा  <input type="text" className="text-center text-blue-500" />  रा. <input type="text" className="text-center text-blue-500" />  ता. <input type="text" className="text-center text-blue-500" /> जि. जालना येथील रहिवाशी असून  स्वयंघोषणापत्र लिहून देतो/देते की, वरील ठिकाणचा / ठिकाणची रहिवाशी आहे. मला तहसील कार्यालय अंबड येथून अल्पभूधारक प्रमाणपत्र काढायचे आहे . करिता मी अल्पभूधारक प्रमाणपत्र मिळणे बाबत स्वयंघोषणापत्र लिहून देत आहे .तरी माझ्या कुटुंबात खालीलप्रमाणे व्यक्ती आहेत.
+            मी श्री/श्रीमती नवनाथ <input type="text" className="text-center text-blue-500" />  वय <input type="text" className="text-center w-8 text-blue-500" />  वर्षे  धंदा  <input type="text" className="text-center text-blue-500" />  रा. <input type="text" className="text-center text-blue-500" />  ता. <input type="text" className="text-center text-blue-500" /> जि. जालना येथील रहिवाशी असून  स्वयंघोषणापत्र लिहून देतो/देते की, वरील ठिकाणचा / ठिकाणची रहिवाशी आहे. मला तहसील कार्यालय अंबड येथून अल्पभूधारक प्रमाणपत्र काढायचे आहे . करिता मी अल्पभूधारक प्रमाणपत्र मिळणे बाबत स्वयंघोषणापत्र लिहून देत आहे .तरी माझ्या कुटुंबात खालीलप्रमाणे व्यक्ती आहेत.
 
 
             <table className="mt-4 mb-2">
@@ -221,7 +222,7 @@ function Form6() {
             <h5 className=" text-center text-[15px]">शासन निर्णय क्रमांक :प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ प्रपत्र–अ</h5>
             <h5 className="mb-4 text-center text-[15px] font-semibold">स्वयंघोषणापत्र</h5>
 
-            मी <input type="text" className="text-center text-blue-500" />  श्री <input type="text" className="text-center text-blue-500" />  यांचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text" className="text-center text-blue-500" />  वर्ष, व्यवसाय <input type="text" className="text-center text-blue-500" /> रा <input type="text" className="text-center text-blue-500" /> ता. <input type="text" className="text-center text-blue-500" /> जि.जालना याद्वारे घोषितकरतो/करते की, वरील सर्व माहिती माझ्या व्यक्तीगत माहिती व समजुतिनुसार खरी आहे.सदर माहिती खोटी आढळून आल्यास , भारतीय दंड सहिता कलम 193(2),199 व 200 अन्वेये आणि/किंवा संबंधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मी शिक्षेस पात्र राहीन याची मला पूर्ण जाणीव आहे. 
+            मी <input type="text" value={name}  className="text-center text-blue-500" />  श्री <input type="text" className="text-center text-blue-500" />  यांचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text" className="text-center w-8 text-blue-500" />  वर्ष, व्यवसाय <input type="text" className="text-center text-blue-500" /> रा <input type="text" className="text-center text-blue-500" /> ता. <input type="text" className="text-center text-blue-500" /> जि.जालना याद्वारे घोषितकरतो/करते की, वरील सर्व माहिती माझ्या व्यक्तीगत माहिती व समजुतिनुसार खरी आहे.सदर माहिती खोटी आढळून आल्यास , भारतीय दंड सहिता कलम 193(2),199 व 200 अन्वेये आणि/किंवा संबंधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मी शिक्षेस पात्र राहीन याची मला पूर्ण जाणीव आहे. 
 
             <p className="ml-[10vw]">
                ठिकाण: <input type="text" className="text-center text-blue-500 mr-[10vw]"  /> अर्जदाराची सही{' '}
@@ -229,7 +230,7 @@ function Form6() {
                </p>
                <p className="ml-[10vw]">
                दि: <input type="text" className="text-center text-blue-500 mr-[10vw]"  /> अर्जदाराचे नाव:-{' '}
-               <input type="text" className="text-center text-blue-500"  />
+               <input type="text" value={name}  className="text-center text-blue-500"  />
             </p>
          </div>
 

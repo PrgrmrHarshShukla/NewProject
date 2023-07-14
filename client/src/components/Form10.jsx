@@ -59,7 +59,7 @@ function Form10() {
           मा. तहसिलदारसाहेब तथा कार्यकारी दंडाधिकारी, अंबड. यांच्या समोर <br />
           विषय: जात प्रमाणपत्र मिळणेबाबत द्यावयाचे शपथपत्र <br />
           मी: <input type="text" className="text-center text-blue-500" value={name} onChange={(e) => setName(e.target.value)} /> <br />
-          वय: <input type="text" className="text-center text-blue-500" /> <br />
+          वय: <input type="text" className="text-center text-blue-500 w-8 " /> <br />
           धंदा: <input type="text" className="text-center text-blue-500" /> <br />
           राहणार: <input type="text" className="text-center text-blue-500" /> ता. <input type="text" className="text-center text-blue-500" /> जि. <input type="text" className="text-center text-blue-500" /> <br />
           </p>
@@ -94,7 +94,7 @@ function Form10() {
           <h2 className="text-center font-semibold text-[15px]">शासन निर्णय क्रमांक :प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-18</h2>
           <h2 className="text-center font-semibold text-[15px] mb-2">स्वयंघोषणापत्र</h2>
           <p>
-            मी. <input type="text"  className="text-center text-blue-500" value={name} onChange={(e) => setName(e.target.value)} /> श्री <input type="text"  className="text-center text-blue-500" /> याचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text"  className="text-center text-blue-500" /> वर्ष,व्यवसाय{' '}
+            मी. <input type="text"  className="text-center text-blue-500" value={name} onChange={(e) => setName(e.target.value)} /> श्री <input type="text"  className="text-center text-blue-500" /> याचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text"  className="text-center text-blue-500 w-8" /> वर्ष,व्यवसाय{' '}
             <input type="text"  className="text-center text-blue-500" /> रा. <input type="text"  className="text-center text-blue-500" /> ता. <input type="text"  className="text-center text-blue-500" /> जि. <input type="text"  className="text-center text-blue-500" /> याद्वारे घोषितकरतो/करते की, वरील सर्व माहिती माझ्या व्यक्तीगत माहिती व समजुतिनुसार खरी आहे. सदर माहिती खोटी आढळून आल्यास, भारतीय दंड सहिता अन्वेये आणि/किंवा संबंधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मी शिक्षेस पात्र राहीन याची मला पूर्ण जाणीव आहे.
           </p>
           <p>
@@ -211,7 +211,7 @@ function Form10() {
             <h2 className="text-center font-semibold text-[15px] mb-2"> प्रपत्र – अ</h2>
             <h2 className="text-center font-semibold text-[15px] mb-2">स्वयंघोषणापत्र</h2>
             <p>
-              मी. <input type="text"  className="text-center text-blue-500" value={name} /> श्री <input type="text"  className="text-center text-blue-500" /> याचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text"  className="text-center text-blue-500" /> वर्ष,व्यवसाय{' '}
+              मी. <input type="text"  className="text-center text-blue-500" value={name} /> श्री <input type="text"  className="text-center text-blue-500" /> याचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text"  className="text-center text-blue-500 w-8" /> वर्ष,व्यवसाय{' '}
               <input type="text"  className="text-center text-blue-500" /> रा. <input type="text"  className="text-center text-blue-500" /> ता. <input type="text"  className="text-center text-blue-500" /> जि. <input type="text"  className="text-center text-blue-500" /> याद्वारे घोषितकरतो/करते की, वरील सर्व माहिती माझ्या व्यक्तीगत माहिती व समजुतिनुसार खरी आहे.सदर माहिती खोटी आढळून आल्यास , भारतीय दंड सहिता कलम 193(2),199 व 200 अन्वेये आणि/ किंवा संबंधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मी शिक्षेस पात्र राहीन याची मला पूर्ण जाणीव आहे. 
 
             </p>
@@ -285,7 +285,7 @@ function Form10() {
             <h2 className="text-center font-semibold text-[15px] mb-2"> प्रपत्र – अ</h2>
             <h2 className="text-center font-semibold text-[15px] mb-2">स्वयंघोषणापत्र</h2>
             <p>
-              मी. <input type="text"  className="text-center text-blue-500" value={name} /> श्री <input type="text"  className="text-center text-blue-500" /> याचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text"  className="text-center text-blue-500" /> वर्ष,व्यवसाय{' '}
+              मी. <input type="text"  className="text-center text-blue-500" value={name} /> श्री <input type="text"  className="text-center text-blue-500" /> याचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text"  className="text-center text-blue-500 w-8" /> वर्ष,व्यवसाय{' '}
               <input type="text"  className="text-center text-blue-500" /> रा. <input type="text"  className="text-center text-blue-500" /> ता. <input type="text"  className="text-center text-blue-500" /> जि. <input type="text"  className="text-center text-blue-500" />  याद्वारे घोषितकरतो/करते की, वरील सर्व माहिती माझ्या व्यक्तीगत माहिती वसमजुतिनुसार खरी आहे.सदर माहिती खोटी आढळून आल्यास , भारतीय दंड सहिता अन्वेये आणि/ किंवा संबंधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मी शिक्षेस पात्र राहीन याची मला पूर्ण जाणीव आहे. 
 
 
@@ -331,7 +331,7 @@ function Form10() {
             <h2 className="text-center font-semibold text-[15px]">शासन निर्णय क्रमांक :प्रसुद्धा १६१४/३४५प्र.क्र ७१/१८/-अ प्रपत्र–अ</h2>
             <h2 className="text-center font-semibold text-[15px] mb-2">स्वयंघोषणापत्र</h2>
             <p>
-              मी. <input type="text"  className="text-center text-blue-500" value={name} /> श्री <input type="text"  className="text-center text-blue-500" /> याचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text"  className="text-center text-blue-500" /> वर्ष,व्यवसाय{' '}
+              मी. <input type="text"  className="text-center text-blue-500" value={name} /> श्री <input type="text"  className="text-center text-blue-500" /> याचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text"  className="text-center text-blue-500 w-8" /> वर्ष,व्यवसाय{' '}
               <input type="text"  className="text-center text-blue-500" /> रा. <input type="text"  className="text-center text-blue-500" /> ता. <input type="text"  className="text-center text-blue-500" /> जि. <input type="text"  className="text-center text-blue-500" /> याद्वारे घोषितकरतो/करते की, वरील सर्व माहिती माझ्या व्यक्तीगत माहिती व समजुतिनुसार खरी आहे.सदर माहिती खोटी आढळून आल्यास , भारतीय दंड सहिता अन्वेये आणि/ किंवा संबंधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मी शिक्षेस पात्र राहीन याची मला पूर्ण जाणीव आहे. 
 
 
@@ -356,7 +356,7 @@ function Form10() {
           अर्जदार : -<input type="text" className="text-center text-blue-500" value={name} />   <br /> 
           विषय :- वडील अशिक्षित असल्याबाबत व वडीलाचे  जात प्रमाणपत्र नसल्या बाबत .<br />
           महोदय,<br /><br />
-          वरील विषयी विनंती पूर्वक अर्ज करतो कि आपल्या कार्यालयात जात प्रमाणपत्र काढण्यासाठी मी अर्ज केला आहे त्या अनुषंगाने मी <input type="text" className="text-center text-blue-500" value={name} />  वय <input type="text" className="text-center text-blue-500" />    धंदा <input type="text" className="text-center text-blue-500" /> रा. <input type="text" className="text-center text-blue-500" />  ता. अंबड. जि जालना येथील रहिवाशी असून, वरील अनु शंगाने असे शपथपत्र लिहून देतो कि  माझ्या वडिलांनी कोणत्याही शाळेत प्रवेश घेतला नाही व गरज न पडल्या मुळे वडिलांनी जात प्रमाणपत्र काढले नाही. म्हणून मी हे शपथपत्र लिहून देत आहे जे सत्य आहे शपथपत्रावरील सर्व मचकूर खरा आहे मचकूर खोटा आढळून आल्यास भारतीय दंड विधान सहिता (ips ) कलम १९९व २०० नुसार शिक्षेस पात्र राहील.
+          वरील विषयी विनंती पूर्वक अर्ज करतो कि आपल्या कार्यालयात जात प्रमाणपत्र काढण्यासाठी मी अर्ज केला आहे त्या अनुषंगाने मी <input type="text" className="text-center text-blue-500" value={name} />  वय <input type="text" className="text-center w-8  text-blue-500" />    धंदा <input type="text" className="text-center text-blue-500" /> रा. <input type="text" className="text-center text-blue-500" />  ता. अंबड. जि जालना येथील रहिवाशी असून, वरील अनु शंगाने असे शपथपत्र लिहून देतो कि  माझ्या वडिलांनी कोणत्याही शाळेत प्रवेश घेतला नाही व गरज न पडल्या मुळे वडिलांनी जात प्रमाणपत्र काढले नाही. म्हणून मी हे शपथपत्र लिहून देत आहे जे सत्य आहे शपथपत्रावरील सर्व मचकूर खरा आहे मचकूर खोटा आढळून आल्यास भारतीय दंड विधान सहिता (ips ) कलम १९९व २०० नुसार शिक्षेस पात्र राहील.
 
 
           </p>
@@ -378,7 +378,7 @@ function Form10() {
             मी 
             <input type="text" className="text-center text-blue-500" value={name} /> 
             वय 
-            <input type="text" className="text-center text-blue-500" />
+            <input type="text" className="text-center w-8  text-blue-500" />
                वर्षे , धंदा 
                <input type="text" className="text-center text-blue-500" /> रा <input type="text" className="text-center text-blue-500" />  ता अंबड. जि. जालना येथील रहिवासी असून मी शपथपूर्वक लिहून देते कि माझे नाव 
             <input type="text" className="text-center text-blue-500" value={name} />
@@ -397,7 +397,7 @@ function Form10() {
         <p>केंद्र शासनाच्या इतर मागास प्रवर्गात मोडणाऱ्या अर्जदाराने आरक्षणाचा फायदा मिळण्याकरीता व व प्रगत व्यक्ति / गट (क्रिमिलेअर) यामध्ये मोडत नसल्याबाबत सादर करावयाचे शपथपत्र</p>
         मी, श्री/श्रीमती/ कुमार /कुमारी 
         <input type="text"  className="text-center text-blue-500" value={name} />
-         श्री <input type="text"  className="text-center text-blue-500" /> यांची मुलगा / मुलगी त्रय <input type="text"  className="text-center text-blue-500" />  वर्षे, व्यवसाय शिक्षण
+         श्री <input type="text"  className="text-center text-blue-500" /> यांची मुलगा / मुलगी त्रय <input type="text"  className="text-center w-8  text-blue-500" />  वर्षे, व्यवसाय शिक्षण
         गाव/ शहर <input type="text"  className="text-center text-blue-500" />  तहसी अंबड जिल्हा जालना  राज्य महाराष्ट्र   येथील रहिवार असून याद्वारे दृढपुर्वक कथन करतो की, मी- <input type="text"  className="text-center text-blue-500" />  या 
         जातीचा / जमातीचा असून ही जात जमात केंद्र शासन, मिनिस्ट्री ऑफ पर्सोनेल, पब्लिक ग्रिव्हन्सेस अॅण्ड पेन्शन्स डिपार्टमेंट ऑफ 
         पर्सोनेल अॅण्ड ट्रेनिंग कडील कार्यालयीन ज्ञापन क्रमांक - ३६०१२/ २२/९३ - इएसटीटी (एस.सी.टी.) दिनांक ८ सप्टेंबर, १९९३ 
@@ -441,7 +441,7 @@ function Form10() {
             <h2 className="text-center font-semibold text-[15px] mb-2"> प्रपत्र – अ</h2>
             <h2 className="text-center font-semibold text-[15px] mb-2">स्वयंघोषणापत्र</h2>
             <p>
-              मी. <input type="text"  className="text-center text-blue-500" value={name} /> श्री <input type="text"  className="text-center text-blue-500" /> याचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text"  className="text-center text-blue-500" /> वर्ष,व्यवसाय{' '}
+              मी. <input type="text"  className="text-center text-blue-500" value={name} /> श्री <input type="text"  className="text-center text-blue-500" /> याचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text"  className="text-center text-blue-500 w-8" /> वर्ष,व्यवसाय{' '}
               <input type="text"  className="text-center text-blue-500" /> रा. <input type="text"  className="text-center text-blue-500" /> ता. <input type="text"  className="text-center text-blue-500" /> जि. <input type="text"  className="text-center text-blue-500" /> याद्वारे घोषितकरतो/करते की, वरील सर्व माहिती माझ्या व्यक्तीगत माहिती व समजुति नुसार खरी आहे.सदर माहिती खोटी आढळून आल्यास , भारतीय दंड सहिता अन्वेये आणि/ किंवा संबंधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मी शिक्षेस पात्र राहीन याची मला पूर्ण जाणीव आहे. 
 
             </p>

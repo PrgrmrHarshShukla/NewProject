@@ -59,7 +59,7 @@ const handleImage = (e) => {
             मी
             <input type="text" className="text-center text-blue-500" value={name} onChange={(e) => setName(e.target.value)} />
             वय
-            <input type="text" className="text-center text-blue-500" value={age} onChange={(e) => setAge(e.target.value)} />
+            <input type="text" className="text-center w-8 text-blue-500" value={age} onChange={(e) => setAge(e.target.value)} />
             धंदा
             <input type="text" className="text-center text-blue-500" value={relation1} onChange={(e) => setRelation1(e.target.value)} />
             रा.
@@ -145,11 +145,6 @@ const handleImage = (e) => {
             <h3 className="text-[15px] font-semibold ml-[25vw] mt-[3vh]">स्वयंघोषणापत्र</h3>
             <img 
                className="border w-40 h-40 ml-[60vw] z-20"
-               // style={{
-               //    backgroundImage: `url(${imageUrl})`,
-               //    backgroundSize: 'cover',
-               //    backgroundPosition: 'center',
-               // }}
                src={`${imageUrl}`}
                id="camera"
                onClick={handleCameraClick}
@@ -161,7 +156,7 @@ const handleImage = (e) => {
             श्री.
             <input type="text" className="text-center text-blue-500"  />
              यांचा/यांची मुलगी/मुलगा/पत्नी वय{' '}
-            <input type="text" className="text-center text-blue-500" value={age} onChange={(e) => setAge(e.target.value)} /> 
+            <input type="text" className="text-center text-blue-500 w-8" value={age} onChange={(e) => setAge(e.target.value)} /> 
             वर्ष, व्यवसाय{' '}
             <input type="text" className="text-center text-blue-500" value={relation1} onChange={(e) => setRelation1(e.target.value)}  /> 
             रा.
@@ -178,9 +173,9 @@ const handleImage = (e) => {
             </p>
             <p className="ml-[10vw]">
             दि: <input type="text" className="text-center text-blue-500 mr-[10vw]"  /> अर्जदाराचे नाव:-{' '}
-            <input type="text" className="text-center text-blue-500"  />
+            <input type="text" value={name} className="text-center text-blue-500"  />
             </p>
-            <p className=" ml-[30vw]">मोबाईल नंबर: - <input type="text" className="text-center text-blue-500"  /></p>
+            <p className=" ml-[30vw]">मोबाईल नंबर: - +91<input type="number" className="text-center text-blue-500"  /></p>
             <p className="ml-[10vw] max-w-[60vw]">
                वरील सर्व माहिती माझ्या व्यक्तिगत माहिती व समजुती नुसार खरी आहे. तथापी भूमिहीन प्रमाणपत्र बाबत माहिती खोटी आढळून आल्यास भूमिहीन प्रमाणपत्र आधारे उचल करण्यात आलेल्या या योजनेच्या शासकीय रक्कमा शासनाकडे जमा करण्यास मी बाधील राहील. भारतीय दंड संहिता 1960 चे कलम 199 व 200 व अन्य संबधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मी दंडास/शिक्षेस पात्र राहील. याची मला पूर्णपणे जाणीव आहे. करिता हे शपथपत्र लिहून दिले ते खरे व बरोबर आहे.
             </p>

@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { UidContext } from './UidContext';
-import { getDownloadURL, getStorage, ref } from 'firebase/storage';
+// import { getDownloadURL, getStorage, ref } from 'firebase/storage';
 
 
 import './App.css'
@@ -33,50 +33,50 @@ import Form10 from './Form10';
 function App() {
   const [uid, setUid] = useState("")
   const [images, setImages] = useState([])
-  const storage = getStorage()
+  // const storage = getStorage()
 
-  useEffect(() => {
-    const getImages = async () => {
+  // useEffect(() => {
+  //   const getImages = async () => {
 
-      // try {
-        const url1 = "empty"
+  //     // try {
+  //       const url1 = "empty"
   
   
-      const url2 = await getDownloadURL(ref(storage, "gs://janta-suvidha.appspot.com/jantasuvidha-logo-removebg.png"))
+  //     const url2 = await getDownloadURL(ref(storage, "gs://janta-suvidha.appspot.com/jantasuvidha-logo-removebg.png"))
   
   
-      const url3 = await getDownloadURL(ref(storage, "gs://janta-suvidha.appspot.com/Screenshot (151).png"))
+  //     const url3 = await getDownloadURL(ref(storage, "gs://janta-suvidha.appspot.com/Screenshot (151).png"))
   
   
-      const url4 = await getDownloadURL(ref(storage, "gs://janta-suvidha.appspot.com/slider2.png"))
+  //     const url4 = await getDownloadURL(ref(storage, "gs://janta-suvidha.appspot.com/slider2.png"))
   
   
-      const url5 = await getDownloadURL(ref(storage, "gs://janta-suvidha.appspot.com/slider3.png"))
+  //     const url5 = await getDownloadURL(ref(storage, "gs://janta-suvidha.appspot.com/slider3.png"))
   
   
-      const url6 = await getDownloadURL(ref(storage, "gs://janta-suvidha.appspot.com/text.png"))
+  //     const url6 = await getDownloadURL(ref(storage, "gs://janta-suvidha.appspot.com/text.png"))
     
   
-      const url8 = await getDownloadURL(ref(storage, "gs://janta-suvidha.appspot.com/topRightIcon.png"))
+  //     const url8 = await getDownloadURL(ref(storage, "gs://janta-suvidha.appspot.com/topRightIcon.png"))
 
       
 
-      // const urlUser = await getDownloadURL(ref(storage, `gs://janta-suvidha.appspot.com/${uid}: userPhoto`)) 
+  //     // const urlUser = await getDownloadURL(ref(storage, `gs://janta-suvidha.appspot.com/${uid}: userPhoto`)) 
          
 
     
   
-      setImages([url1, url2, url3, url4, url5, url6, url8])
-      // }
-      // catch(err) {
-      //   alert("An error occured while fetching your image.")
-      // }
+  //     setImages([url1, url2, url3, url4, url5, url6, url8])
+  //     // }
+  //     // catch(err) {
+  //     //   alert("An error occured while fetching your image.")
+  //     // }
   
-      // console.log(images);
-    }
-    getImages()
-    // uid ? getImages() : alert("Please login to continue.")  
-  }, [uid])
+  //     // console.log(images);
+  //   }
+  //   getImages()
+  //   // uid ? getImages() : alert("Please login to continue.")  
+  // }, [uid])
 
 
 

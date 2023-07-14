@@ -1,11 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.css';
 import { Carousel } from "react-bootstrap";
 import { UidContext } from './UidContext';
 import { useContext } from 'react';
 import { Link } from "react-router-dom"
 import { getAuth, signOut } from "firebase/auth";
 
-import '@fortawesome/fontawesome-free/css/all.css';
+import topRightIcon from "./topRightIcon.png"
+import logo from "./logo.png"
+import slider1 from "./slider1.png"
+import slider3 from "./slider3.png"
 
 
 import Login from './Login'
@@ -15,7 +19,7 @@ import Contact from './Contact'
 
 function Home() {
 
-  const { uid, setUid, images } = useContext(UidContext)
+  const { uid, setUid } = useContext(UidContext)
   const auth = getAuth()
 
   const handleClick = async (e) => {
@@ -44,8 +48,8 @@ function Home() {
       <div className="flex flex-col justify-between items-center w-[100vw] gap-4 h-[30vh]">
 
         <div className="z-20 w-[100vw] h-[10vh] max-h-[10vh] flex flex-row justify-between pl-[7vw] -pr-[2vw] sm:px-0 md:ml-8">
-          <img src={images[1]} className="w-[20vw] h-[15vh]" />  
-          <img src={images[6]} className="w-[60vw] sm:w-[40vw] h-[15vh]" />  
+          <img src={logo} className="w-[20vw] h-[15vh]" />  
+          <img src={topRightIcon} className="w-[60vw] sm:w-[40vw] h-[15vh]" />  
         </div>
 
 
@@ -106,14 +110,14 @@ function Home() {
           <Carousel.Item>
             <img
               className="w-[95vw] min-w-[75vw] h-[45vh]  rounded-[10px]"
-              src={images[2]}
+              src={slider1}
               alt="First slide"
             />
           </Carousel.Item>
           <Carousel.Item className="">
             <img
               className="w-[95vw] min-w-[75vw] h-[45vh]  rounded-[10px]"
-              src={images[4]}
+              src={slider3}
               alt="Second slide"
             />
           </Carousel.Item>

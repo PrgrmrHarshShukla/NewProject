@@ -74,7 +74,7 @@ function Form3() {
             मी
             <input type="text" className="text-blue-500 text-center" value={name} onChange={(e) => setName(e.target.value)} />
             वय
-            <input type="text" className="text-blue-500 text-center" value={age} onChange={(e) => setAge(e.target.value)} />
+            <input type="text" className="text-blue-500 w-12 text-center" value={age} onChange={(e) => setAge(e.target.value)} />
             वर्ष व्यवसाय
             <input type="text" className="text-blue-500 text-center" value={residence} onChange={(e) => setResidence(e.target.value)} />
             राहणार
@@ -120,7 +120,7 @@ function Form3() {
             मी
             <input type="text" className="text-blue-500 text-center" value={name} onChange={(e) => setName(e.target.value)} />
             वय
-            <input type="text" className="text-blue-500 text-center" value={age} onChange={(e) => setAge(e.target.value)} />
+            <input type="text" className="text-blue-500 w-12 text-center" value={age} onChange={(e) => setAge(e.target.value)} />
             वर्ष राहणार
             <input type="text" className="text-blue-500 text-center" value={residence} onChange={(e) => setResidence(e.target.value)} />
             ता

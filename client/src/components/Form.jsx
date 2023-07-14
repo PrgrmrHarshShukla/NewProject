@@ -1,4 +1,5 @@
 import {  useNavigate } from 'react-router-dom'
+import top from "./topLeft.png"
 
 // import { UidContext } from './UidContext'
 import {  useState } from 'react'
@@ -10,28 +11,28 @@ function Form() {
    const [name, setName] = useState("")
    const [name1, setName1] = useState("")
    const [name2, setName2] = useState("")
-   const [imageUrl, setImageUrl] = useState("");
+   // const [imageUrl, setImageUrl] = useState("");
 
    // const [fatherName, setFatherName] = useState("")
    // const [surname, setSurname] = useState("")
    
 
-   const handleCameraClick = () => {
-      document.getElementById('fileInput').click();
-    };
+   // const handleCameraClick = () => {
+   //    document.getElementById('fileInput').click();
+   // };
 
-   const handleImage = (e) => {
-      const file = e.target.files[0]
-      if(file) {
-         const reader = new FileReader();
+   // const handleImage = (e) => {
+   //    const file = e.target.files[0]
+   //    if(file) {
+   //       const reader = new FileReader();
       
-         reader.readAsDataURL(file);
+   //       reader.readAsDataURL(file);
          
-         reader.onload = (event) => {
-            setImageUrl(event.target.result);
-         }
-      }
-   }
+   //       reader.onload = (event) => {
+   //          setImageUrl(event.target.result);
+   //       }
+   //    }
+   // }
 
 
 
@@ -47,15 +48,24 @@ function Form() {
       document.getElementById("print").style.visibility = "hidden"
       document.getElementById("nav").style.visibility = "hidden"
       document.getElementById("input11").style.border = "none"
+      document.getElementById("input12").style.border = "none"
       document.getElementById("input13").style.border = "none"
       document.getElementById("input14").style.border = "none"
       document.getElementById("input15").style.border = "none"
+      document.getElementById("input9").style.border = "none"
       document.getElementById("last").remove()
       
       window.print()
       navigate("/")
       
    }
+
+   // function numLimit() {
+   //    let num = document.getElementById("input15");
+   //    console.log(num.value)
+   // }
+   // numLimit()
+
 
 
   return (
@@ -64,17 +74,12 @@ function Form() {
 
       
             <img 
-               className="border w-28 h-28 z-20"
-               // style={{
-               //    backgroundImage: `url(${imageUrl})`,
-               //    backgroundSize: 'cover',
-               //    backgroundPosition: 'center',
-               // }}
-               src={`${imageUrl}`}
+               className="w-28 h-28 z-20"
+               src={top}
                id="camera"
-               onClick={handleCameraClick}
+               // onClick={handleCameraClick}
             />
-            <input type="file" onChange={handleImage} id="fileInput" style={{ display: 'none' }} />
+            {/* <input type="file" onChange={handleImage} id="fileInput" style={{ display: 'none' }} /> */}
 
 
       <div className="flex flex-col w-[100vw] h-[12vh] items-center justify-center mb-2 ml-0 sm:-ml-12 mt-2 sm:-mt-8">
@@ -92,7 +97,7 @@ function Form() {
       <div>
          <div className="flex flex-row gap-1">
             <span>Old Name:</span> 
-            <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input1" />
+            <input type="text" className="w-[25vw] ml-1 text-left pl-2 text-[10px] border-2 border-black" id="input1" />
             <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input2" />
             <input type="text" className="w-[25vw] text-left pl-2 text-[10px] border-2 border-black" id="input3" />
          </div>
@@ -175,11 +180,12 @@ function Form() {
          </div>
          <div className="flex flex-row w-[80vw] gap-9">
             <span>Tel. No.</span>
-            <input type="text" className="text-left pl-2 text-[10px] border-2 border-black w-[50vw]" id="input14" />
+            <input type="number" className="text-left pl-2 text-[10px] border-2 border-black w-[50vw]" id="input14" />
          </div>
          <div className="flex flex-row w-[80vw] gap-3">
             <span>Mobile No.</span>
-            <input type="text" className="text-left pl-2 text-[10px] border-2 border-black w-[50vw]" id="input15" />
+            +91
+            <input type="number" className="text-left pl-2 text-[10px] border-2 border-black w-[47.5vw]" id="input15" />
          </div>
       </div>
 

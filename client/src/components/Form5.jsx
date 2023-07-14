@@ -114,11 +114,6 @@ function Form5() {
         <h3 className="text-[15px] font-semibold">स्वयंघोषणापत्र</h3>
             <img 
                className="border w-40 h-40 ml-[40vw] z-20"
-               // style={{
-               //    backgroundImage: `url(${imageUrl})`,
-               //    backgroundSize: 'cover',
-               //    backgroundPosition: 'center',
-               // }}
                src={`${imageUrl}`}
                id="camera"
                onClick={handleCameraClick}
@@ -126,7 +121,7 @@ function Form5() {
 
         <p>
           मी <input type="text" className="text-center text-blue-500" value={caste}  /> यांचा/यांची मुलगी/मुलगा पत्नी वय{' '}
-          <input type="text" className="text-center text-blue-500" value={age} onChange={(e) => setAge(e.target.value)} /> वर्ष, व्यवसाय{' '}
+          <input type="text" className="text-center w-8 text-blue-500" value={age} onChange={(e) => setAge(e.target.value)} /> वर्ष, व्यवसाय{' '}
           <input type="text" className="text-center text-blue-500" value={occupation} onChange={(e) => setOccupation(e.target.value)} /> रा{' '}
           <input className="text-center text-blue-500" type="text" value={city} onChange={(e) => setCity(e.target.value)} /> याद्वारे घोषित करतो/करते की, वरील सर्व माहिती माझ्या व्यक्तीगत माहिती व समजुतिनुसार खरी आहे.
           सदर माहिती खोटी आढळून आल्यास, भारतीय दंड सहिता अन्वेये आणि/ किंवा संबंधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मी शिक्षेस पात्र राहीन याची मला पूर्ण जाणीव आहे.
@@ -138,7 +133,7 @@ function Form5() {
         </p>
 
         <p>
-          दि :- <input className="text-center text-blue-500" type="text" /> अर्जदाराचे नाव: <input type="text" />
+          दि :- <input className="text-center text-blue-500" type="text" /> अर्जदाराचे नाव: <input value={caste} type="text" />
         </p>
 
       </div>
@@ -152,7 +147,7 @@ function Form5() {
       </h5>
       <p>
         मी 
-        <input type="text" className="text-center text-blue-500" />
+        <input type="text" value={caste} className="text-center text-blue-500" />
         या जातीचा/जातीची असून हि जात /जमात केंद्र शासन, मिनिस्ट्री ऑफ पर्सोनल, पब्लिक ग्रीवेन्सेस अँड पेन्शन्स डिपार्टमेंट ऑफ पर्सोनल अँड ट्रेनिंग कार्यालयीन - ज्ञापन क्रमांक - ३६०१२/२२/९३- इएसटीटी (एस.सी.टी.)दि.०८सप्टेंबर,१९९३ अन्वये सुधारित केल्याप्रमाणे तसेच केंद्र शासनाने आणि राज्यशासनाने यासंदर्भात वेळोवेळी निर्गमित केलेल्या सूचने (Notification) नुसार शासन निर्णयानुसार शासनसेवेतील आरक्षणाच्या लाभाकरिता इतर मागासवर्ग प्रवर्गात गणल्या जाते. सदर जात / जमात राज्य शासनाने विहितकेलेल्या मागासवर्गीयाच्या यादीमधील 
         <input type="text" className="text-center text-blue-500" />
         या प्रवर्गात मोडते.
@@ -182,11 +177,11 @@ function Form5() {
             <input type="file" onChange={handleImage} id="fileInput" style={{ display: 'none' }} />
         <p>
           श्री/श्रीमती 
-          <input type="text" className="text-center text-blue-500" />
+          <input type="text" value={caste} className="text-center text-blue-500" />
           श्री 
           <input type="text" className="text-center text-blue-500" />
           याचा/यांची मुलगा/मुलगी /पत्नी वय 
-          <input type="text" className="text-center text-blue-500" />
+          <input type="text" className="text-center w-8 text-blue-500" />
           वर्ष व्यवसाय 
           <input type="text" className="text-center text-blue-500" />
           रा 
@@ -204,7 +199,7 @@ function Form5() {
           दिनक :- 
           <input type="text" className="text-center text-blue-500" />
           अर्जदाराचे नाव : 
-          <input type="text" className="text-center text-blue-500" />
+          <input type="text" value={caste} className="text-center text-blue-500" />
         </p>
       </div>
 
@@ -225,11 +220,11 @@ function Form5() {
       </p>
       <p>
         मी. श्री. श्रीमती / कुमार/कुमारी. 
-        <input className="text-center text-blue-500" />
+        <input value={caste} className="text-center text-blue-500" />
         श्री  
         <input className="text-center text-blue-500" />
          यांचा मुलगा/यांची मुलगी वय  
-        <input className="text-center text-blue-500" />
+        <input className="text-center w-8 text-blue-500" />
          वर्षे, व्यवसाय 
         <input className="text-center text-blue-500" />
          गाव / शहर 
@@ -255,7 +250,7 @@ function Form5() {
         दिनक :- 
         <input type="text" className="text-center text-blue-500" />
         अर्जदाराचे नाव : 
-        <input type="text" className="text-center text-blue-500" />
+        <input type="text" value={caste} className="text-center text-blue-500" />
       </p>
 
       <p>
@@ -282,11 +277,11 @@ function Form5() {
             />
         <p>
           श्री/श्रीमती 
-          <input type="text" className="text-center text-blue-500" />
+          <input type="text" value={caste} className="text-center text-blue-500" />
           श्री 
           <input type="text" className="text-center text-blue-500" />
           याचा/यांची मुलगा/मुलगी /पत्नी वय 
-          <input type="text" className="text-center text-blue-500" />
+          <input type="text" className="text-center w-8 text-blue-500" />
           वर्ष व्यवसाय 
           <input type="text" className="text-center text-blue-500" />
           रा 
@@ -304,7 +299,7 @@ function Form5() {
           दिनक :- 
           <input type="text" className="text-center text-blue-500" />
           अर्जदाराचे नाव : 
-          <input type="text" className="text-center text-blue-500" />
+          <input type="text" value={caste} className="text-center text-blue-500" />
         </p>
       </div>
 

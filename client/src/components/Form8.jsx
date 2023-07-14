@@ -92,7 +92,7 @@ function Form8() {
             <h5 className=" text-center text-[15px]">शासन निर्णय क्रमांक :प्रसुद्धा १६१४/ ३४५प्र.क्र ७१/१८/-37 </h5>
             <h5 className="mb-4 text-center text-[15px] font-semibold">स्वयंघोषणापत्र</h5>
 
-            मी <input type="text" className="text-center text-blue-500" value={a1}  />  श्री <input type="text" className="text-center text-blue-500" />  यांचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text" className="text-center text-blue-500" />  वर्ष, व्यवसाय <input type="text" className="text-center text-blue-500" /> रा <input type="text" className="text-center text-blue-500" /> ता. <input type="text" className="text-center text-blue-500" /> जि.जालना याद्वारे घोषित करतो/करते की, वरील सर्व माहिती माझ्या व्यक्तीगत माहिती व समजुतिनुसार खरी आहे.सदर माहिती खोटी आढळून आल्यास, भारतीय  दंड सहिता  अन्वेये आणि/ किंवा संबंधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मी शिक्षेस पात्र राहीन याची मला पूर्ण जाणीव आहे
+            मी <input type="text" className="text-center text-blue-500" value={a1}  />  श्री <input type="text" className="text-center text-blue-500" />  यांचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text" className="text-center w-8 text-blue-500" />  वर्ष, व्यवसाय <input type="text" className="text-center text-blue-500" /> रा <input type="text" className="text-center text-blue-500" /> ता. <input type="text" className="text-center text-blue-500" /> जि.जालना याद्वारे घोषित करतो/करते की, वरील सर्व माहिती माझ्या व्यक्तीगत माहिती व समजुतिनुसार खरी आहे.सदर माहिती खोटी आढळून आल्यास, भारतीय  दंड सहिता  अन्वेये आणि/ किंवा संबंधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मी शिक्षेस पात्र राहीन याची मला पूर्ण जाणीव आहे
 
 
             <p className="ml-[10vw]">
@@ -101,7 +101,7 @@ function Form8() {
                </p>
                <p className="ml-[10vw]">
                दि: <input type="text" className="text-center text-blue-500 mr-[10vw]"  /> अर्जदाराचे नाव:-{' '}
-               <input type="text" className="text-center text-blue-500"  />
+               <input type="text" value={a1}  className="text-center text-blue-500"  />
             </p>
          </div>
 
@@ -119,13 +119,13 @@ function Form8() {
             विषय:-  मराठा आरक्षण SEBC या प्रवर्गाचा लाभ न घेता<br />
             EWS प्रमाणपत्र मिळणे बाबत<br />
             महोदय,<br />
-               मी श्री / श्रीमती  <input type="text" className="text-center text-blue-500"  />  वय  <input type="text" className="text-center text-blue-500"  />  रा  <input type="text" className="text-center text-blue-500"  /> व्यवसाय <input type="text" className="text-center text-blue-500"  />  निवेदन करतो करते की मी    जातीने मराठा असून माझी जात शासनाने  SEBC या प्रवर्गामध्ये  समाविष्ट केलेली आहे . परंतु सदर आरक्षणाबाबत मा. सर्वोच न्यायालात प्रकरण प्रलंबित असल्यामुळे मा. उच्च न्यायालय खंडपीठ औरंगाबाद WPSNO: 19513/1919अन्वये सदर निकालात दिलेल्या अटीनुसार मी माझ्यासाठी व माझ्या मुला-मुलींच्या शिक्षणासाठी मराठा SEBC प्रवर्गाचा आरक्षणाचा लाभ घेणार नाही. तसे दोन्ही लाभ घेतल्यास कायदेशीर कार्यवाहीस मी पात्र आहे मला किंवा माझ्या पाल्यास शासनाने दिलेले सर्व शैक्षणिक व आर्थिक लाभ परत करण्यास तयार आहे . करिता मला EWS (आर्थिक दुर्बल घटक ) चे प्रमाणपत्र देण्यात यावे हि  विनंती <br />
+               मी श्री / श्रीमती  <input type="text" className="text-center text-blue-500"  />  वय  <input type="text" className="text-center w-8 text-blue-500"  />  रा  <input type="text" className="text-center text-blue-500"  /> व्यवसाय <input type="text" className="text-center text-blue-500"  />  निवेदन करतो करते की मी    जातीने मराठा असून माझी जात शासनाने  SEBC या प्रवर्गामध्ये  समाविष्ट केलेली आहे . परंतु सदर आरक्षणाबाबत मा. सर्वोच न्यायालात प्रकरण प्रलंबित असल्यामुळे मा. उच्च न्यायालय खंडपीठ औरंगाबाद WPSNO: 19513/1919अन्वये सदर निकालात दिलेल्या अटीनुसार मी माझ्यासाठी व माझ्या मुला-मुलींच्या शिक्षणासाठी मराठा SEBC प्रवर्गाचा आरक्षणाचा लाभ घेणार नाही. तसे दोन्ही लाभ घेतल्यास कायदेशीर कार्यवाहीस मी पात्र आहे मला किंवा माझ्या पाल्यास शासनाने दिलेले सर्व शैक्षणिक व आर्थिक लाभ परत करण्यास तयार आहे . करिता मला EWS (आर्थिक दुर्बल घटक ) चे प्रमाणपत्र देण्यात यावे हि  विनंती <br />
                    उपरोक्त केलेले निवेदन मी शपथपत्र लिहून देते / देतो कि खरे व बरोबर आहे खोटे आढळून आल्यास शासनाने ठरविलेल्या कायदेशीर तरतुदीप्रमाणे कलम 199, 190 व 192 (2) नुसार मी शिक्षेस पात्र राहील याची मला जाणीव आहे. 
                <p className="ml-[50vw]">निवेदक </p>                                                       
                <p className="ml-[50vw]">सही: 
                   <input type="text" className="text-center text-blue-500"  /> 
                </p>                                                       
-               <p className="ml-[50vw]">  नाव:-  <input type="text" className="text-center text-blue-500"  />  </p>            
+               <p className="ml-[50vw]">  नाव:-  <input type="text" value={a1}  className="text-center text-blue-500"  />  </p>            
 
 
             <div className="border-2 border-black p-2 rounded-[10px]">
@@ -145,7 +145,7 @@ function Form8() {
                <h5 className="text-center text-[15px] font-semibold">प्रपत्र–अ</h5>
                <h5 className="mb-4 text-center text-[15px] font-semibold">स्वयंघोषणापत्र</h5>
 
-               मी <input type="text" className="text-center text-blue-500" />  श्री <input type="text" className="text-center text-blue-500" />  यांचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text" className="text-center text-blue-500" />  वर्ष, व्यवसाय <input type="text" className="text-center text-blue-500" /> रा <input type="text" className="text-center text-blue-500" /> ता. <input type="text" className="text-center text-blue-500" /> जि.जालना याद्वारे घोषित करतो/करते की, वरील सर्व माहिती माझ्या व्यक्तीगत माहिती व समजुतिनुसार खरी आहे.सदर माहिती खोटी आढळून आल्यास , भारतीय दंड सहिता कलम 193(2),199 व 190 अन्वेये आणि/ किंवा संबंधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मी शिक्षेस पात्र राहीन याची मला पूर्ण जाणीव आहे. 
+               मी <input type="text"  value={a1}  className="text-center text-blue-500" />  श्री <input type="text" className="text-center text-blue-500" />  यांचा/यांची मुलगी/मुलगा/पत्नी वय <input type="text" className="text-center text-blue-500" />  वर्ष, व्यवसाय <input type="text" className="text-center text-blue-500" /> रा <input type="text" className="text-center text-blue-500" /> ता. <input type="text" className="text-center text-blue-500" /> जि.जालना याद्वारे घोषित करतो/करते की, वरील सर्व माहिती माझ्या व्यक्तीगत माहिती व समजुतिनुसार खरी आहे.सदर माहिती खोटी आढळून आल्यास , भारतीय दंड सहिता कलम 193(2),199 व 190 अन्वेये आणि/ किंवा संबंधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मी शिक्षेस पात्र राहीन याची मला पूर्ण जाणीव आहे. 
 
 
                <p className="ml-[10vw]">
@@ -154,7 +154,7 @@ function Form8() {
                   </p>
                   <p className="ml-[10vw] -mt-4">
                   दि: <input type="text" className="text-center text-blue-500 mr-[10vw]"  /> अर्जदाराचे नाव:-{' '}
-                  <input type="text" className="text-center text-blue-500"  />
+                  <input type="text"  value={a1} className="text-center text-blue-500"  />
                </p>
             </div>                                             
 

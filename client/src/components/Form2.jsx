@@ -61,21 +61,21 @@ function Form2() {
          <h3 className="text-[15px] font-semibold ml-[0vw] ">विषय: शेतकरी असल्या बाबतचे प्रमाणपत्र मिळण्यासाठी</h3>
          <p className="max-w-[60vw] ">
          मी.
-         <input className="text-center" type="text" value={name} onChange={(e) => setName(e.target.value)} />
+         <input className="text-center text-blue-500" type="text" value={name} onChange={(e) => setName(e.target.value)} />
          वय.
-         <input className="text-center" type="text" value={age} onChange={(e) => setAge(e.target.value)} />
+         <input className="text-center text-blue-500 w-8" type="text" value={age} onChange={(e) => setAge(e.target.value)} />
          वर्ष व्यवसाय.
-         <input className="text-center" type="text" value={profession} onChange={(e) => setProfession(e.target.value)} />
+         <input className="text-center text-blue-500" type="text" value={profession} onChange={(e) => setProfession(e.target.value)} />
          रा
-         <input className="text-center" type="text" value={residence} onChange={(e) => setResidence(e.target.value)} />
+         <input className="text-center text-blue-500" type="text" value={residence} onChange={(e) => setResidence(e.target.value)} />
          ता.अंबड जि. जालना येथील रहिवासी असून माझे नावे मोजे
-         <input className="text-center" type="text" value={land} onChange={(e) => setLand(e.target.value)} />
+         <input className="text-center text-blue-500" type="text" value={land} onChange={(e) => setLand(e.target.value)} />
          ता.अंबड या शिवारात गट नं
-         <input className="text-center" type="text" value={group} onChange={(e) => setGroup(e.target.value)} />
+         <input className="text-center text-blue-500" type="text" value={group} onChange={(e) => setGroup(e.target.value)} />
          मध्ये
-         <input className="text-center" type="text" value={declaration} onChange={(e) => setDeclaration(e.target.value)} />
+         <input className="text-center text-blue-500" type="text" value={declaration} onChange={(e) => setDeclaration(e.target.value)} />
          हे.
-         <input className="text-center" type="text" value={signature} onChange={(e) => setSignature(e.target.value)} />
+         <input className="text-center text-blue-500" type="text" value={signature} onChange={(e) => setSignature(e.target.value)} />
          जमीन असून मी शेतकरी आहे म्हणून मी शेतकरी बाबत शासकीय कामासाठी
          शेतकरी असल्याचे प्रमाणपत्राची आवश्यकता आहे करिता मी शेतकरी असून मला माझे
          शैक्षणिक अथवा शासकीय कामासाठी शेतकरी असल्याचे प्रमाणपत्राची आवश्यकता
@@ -88,15 +88,15 @@ function Form2() {
          </p>
          <p className="ml-[20vw]">
          अर्जदाराची सही:-
-         <input className="text-center" type="text" />
+         <input className="text-center text-blue-500" type="text" />
          </p>
          <p className="ml-[20vw]">
          अर्जदाराची नाव: 
-         <input className="text-center" type="text" value={signature} />
+         <input className="text-center text-blue-500" type="text" value={signature} />
          </p>
          <p className="ml-[20vw] ">
-         मोबाईल नंबर 
-         <input className="text-center" type="text" value={mobile} onChange={(e) => setMobile(e.target.value)} />
+         मोबाईल नंबर   +91
+         <input className="text-center text-blue-500" type="number" value={mobile} onChange={(e) => setMobile(e.target.value)} />
          </p>
       </div>
 
@@ -107,11 +107,6 @@ function Form2() {
       <div className="border-2 border-black rounded-[10px] p-2 -mt-4 text-center">
             <img 
                className="border w-40 h-40 ml-[40vw] z-20"
-               // style={{
-               //    backgroundImage: `url(${imageUrl})`,
-               //    backgroundSize: 'cover',
-               //    backgroundPosition: 'center',
-               // }}
                src={`${imageUrl}`}
                id="camera"
                onClick={handleCameraClick}
@@ -122,29 +117,29 @@ function Form2() {
          <h3 className="text-[15px] font-semibold ml-[0vw] text-center">स्वयंघोषणापत्र</h3>
          <p className="max-w-[60vw] ml-[0vw]">
          श्री / श्रीमती
-         <input className="text-center" type="text" value={name} />
+         <input className="text-center text-blue-500" type="text" value={name} />
          श्री
-         <input className="text-center" type="text" />
+         <input className="text-center text-blue-500" type="text" />
          यांचा/यांची मुलगी/मुलगा पत्नी वय
-         <input className="text-center" type="text" value={age} onChange={(e) => setAge(e.target.value)} />
+         <input className="text-center w-8 text-blue-500" type="text" value={age} onChange={(e) => setAge(e.target.value)} />
          वर्ष, व्यवसाय
-         <input className="text-center" type="text" value={profession} onChange={(e) => setProfession(e.target.value)} />
+         <input className="text-center text-blue-500" type="text" value={profession} onChange={(e) => setProfession(e.target.value)} />
          रा
-         <input className="text-center" type="text" value={residence} onChange={(e) => setResidence(e.target.value)} />
+         <input className="text-center text-blue-500" type="text" value={residence} onChange={(e) => setResidence(e.target.value)} />
          ता. अंबड जि. जालना याद्वारे घोषित करतो/करते की, वरील सर्व माहिती माझ्या व्यक्तीगत माहिती व समजुतिनुसार खरी आहे.
          सदर माहिती खोटी आढळून आल्यास, भारतीय दंड सहिता अन्वेये आणि/ किंवा संबंधित कायद्यानुसार माझ्यावर खटला भरला जाईल व त्यानुसार मी शिक्षेस पात्र राहीन याची मला पूर्ण जाणीव आहे.
          </p>
          <p>
          ठिकाण: 
-         <input className="text-center" type="text" />
+         <input className="text-center text-blue-500" type="text" />
          अर्जदाराची सही:
-         <input className="text-center" type="text" />
+         <input className="text-center text-blue-500" type="text" />
          </p>
          <p>
          दि: 
-         <input className="text-center" type="text"  />
+         <input className="text-center text-blue-500" type="text"  />
          अर्जदाराचे नाव: 
-         <input className="text-center" type="text" value={name}  />
+         <input className="text-center text-blue-500" type="text" value={name}  />
          </p>
       </div>
 
